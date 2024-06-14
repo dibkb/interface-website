@@ -29,7 +29,7 @@ export default function Home() {
     requestAnimationFrame(raf)
   }, [])
   return (
-    <main className="flex flex-col justify-center items-center min-h-screen bg-neutral-50">
+    <main className="flex flex-col justify-center items-center min-h-screen bg-neutral-50 scroll-smooth">
       <Navbar />
       <Hero />
       <TrustedBy />

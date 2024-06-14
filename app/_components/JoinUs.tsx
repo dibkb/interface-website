@@ -3,6 +3,7 @@ import { ArrowLeft, Buildings } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import EagleOwl from '@/public/Integrations/Eagleowl.png'
+import Link from "next/link";
 
 const JoinUs = () => {
     const [organised, setOrganised] = useState(false)
@@ -18,7 +19,7 @@ const JoinUs = () => {
         })
     })
     return (
-        <div className="w-full h-screen relative overflow-hidden">
+        <div id="join-us" className="w-full h-screen relative overflow-hidden">
             <div className="bg-[url('/JoinUs/background.svg')] w-full h-full absolute"></div>
             <div className="absolute w-full h-full flex items-center justify-center">
                 <div className="w-[850px] h-[850px] absolute rounded-full border border-zinc-900/opacity-10" />
@@ -209,7 +210,11 @@ const JoinUs = () => {
                                 </p>
                             </div>
                             <div className="flex gap-10 justify-center items-center w-full">
-                                <button id="yes" className={cn("text-center bg-stone-900 text-neutral-50 text-[21.74px] font-semibold leading-7 tracking-tight px-16 py-3", organised && "bg-violet-600")}>book a call</button>
+                                <Link target="_blank" href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
+                                    <button id="yes" className={cn("text-center bg-stone-900 text-neutral-50 text-[21.74px] font-semibold leading-7 tracking-tight px-16 py-3", organised && "bg-violet-600")}>
+                                        book a call
+                                    </button>
+                                </Link>
                                 <button onClick={() => {
                                     setNewsLetter(true);
                                     // setOrganised(true)

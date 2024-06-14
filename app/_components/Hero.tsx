@@ -3,6 +3,7 @@ import { VscSparkle } from 'react-icons/vsc'
 import MarqueeComponent from './MarqueeComponent';
 import "@devnomic/marquee/dist/index.css";
 import { marqueeContent } from './data';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -15,9 +16,11 @@ const Hero = () => {
                 <h1 className="text-violet-600 font-extrabold lowercase leading-[85px] text-8xl">
                     run your inventory on autopilot.
                 </h1>
-                <button className="bg-stone-900 justify-center items-center inline-flex text-center text-neutral-50 text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
-                    book a 15-min call
-                </button>
+                <Link target='_blank' href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
+                    <button className="bg-stone-900 justify-center items-center inline-flex text-center text-neutral-50 text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
+                        book a 15-min call
+                    </button>
+                </Link>
             </div>
             <div className='h-screen flex gap-6 justify-end'>
                 <Marquee className='h-[100vh] p-0 m-0 [--duration:25s]' innerClassName='gap-4' direction='up'>
@@ -30,7 +33,7 @@ const Hero = () => {
                 <Marquee className='h-[100vh] p-0 m-0 [--duration:25s]' innerClassName='gap-4' direction='up' reverse>
                     {marqueeContent.map((content, index) => {
                         return (
-                            <MarqueeComponent key={index} image={marqueeContent[marqueeContent.length-index-1].image} text={marqueeContent[marqueeContent.length-index-1].text} />
+                            <MarqueeComponent key={index} image={marqueeContent[marqueeContent.length - index - 1].image} text={marqueeContent[marqueeContent.length - index - 1].text} />
                         )
                     })}
                 </Marquee>

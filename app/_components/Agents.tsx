@@ -7,14 +7,16 @@ const Agents = () => {
         target: container,
         offset: ['start -0.1', '0.9 end']
     })
-    const x = useTransform(scrollYProgress, [0, 1], ["12.5%", "-12.5%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["5%", "-25%"]);
     return (
-        <section ref={container} className="h-[250vh] w-full relative px-32">
+        <section id="agents" ref={container} className="h-[250vh] w-full relative px-32">
             <div className="h-screen sticky top-0 w-full flex flex-col items-center justify-center gap-16 overflow-hidden">
                 <h1 className="text-center text-black text-[64px] font-extrabold leading-[70.40px]">
                     Introducing the future of work
                 </h1>
-                <motion.div style={{ x: x }} className="flex gap-11">
+                <motion.div style={{ x: x }} className="flex justify-end gap-11">
+                    <div className="w-[496px]">
+                    </div>
                     <div className="border w-[496px] border-dashed border-neutral-400">
                         <video src="/Agents/Olivia.mp4" loop autoPlay className="w-[496px] h-[400px] object-fill border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center p-6 justify-center gap-4">
