@@ -113,7 +113,7 @@ const Define = () => {
                         <div className="w-1/2 aspect-square border border-dashed border-neutral-400">
                             <div className="w-full aspect-square border-b border-dashed border-neutral-400 flex flex-col justify-center items-center relative">
                                 <div className='absolute h-full w-full flex flex-col items-center justify-center z-10'>
-                                    <div className=' px-6 py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-[28px] font-semibold leading-7'>
+                                    <div className=' xl:px-6 px-3 py-2 xl:py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-xs lg:text-[28px] font-semibold leading-7'>
                                         interface
                                     </div>
                                 </div>
@@ -122,10 +122,10 @@ const Define = () => {
                                 <div className='h-full w-[1px] absolute bg-stone-900/20'></div>
                                 <div className='h-[1px] -rotate-45 w-full absolute bg-stone-900/20'></div>
                                 <div className='h-[1px] rotate-45 w-full absolute bg-stone-900/20'></div> */}
-                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-5 py-12'>
+                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-2 xl:px-5 py-12'>
                                     <div className='w-full flex justify-between px-10 h-1/3'>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 0 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={EagleOwl} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={EagleOwl} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 EagelOwl
                                             </p>
@@ -141,7 +141,7 @@ const Define = () => {
                                             </AnimatePresence>
                                         </div>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 1 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={Drive} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={Drive} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 Drive
                                             </p>
@@ -159,7 +159,7 @@ const Define = () => {
                                     </div>
                                     <div className='w-full flex justify-between px-2 h-1/3'>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 2 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={Brightpearl} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={Brightpearl} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 Brigthpearl
                                             </p>
@@ -175,7 +175,7 @@ const Define = () => {
                                             </AnimatePresence>
                                         </div>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 3 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={epos} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={epos} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 eposnow
                                             </p>
@@ -193,7 +193,7 @@ const Define = () => {
                                     </div>
                                     <div className='w-full flex justify-center h-1/3 px-5'>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 4 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={Netsuite} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={Netsuite} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 Netsuite
                                             </p>
@@ -224,8 +224,8 @@ const Define = () => {
                         how we define efficiency
                     </h1>
                     <div className="w-full flex flex-col gap-10 lg:flex-row justify-center items-center lg:items-stretch lg:justify-around">
-                        <div className="lg:w-[439px] w-[400px] border border-dashed border-neutral-400">
-                            <div className="w-full h-[400px] lg:h-[439px] border-b border-dashed border-neutral-400 flex items-center justify-center relative">
+                        <div className="lg:w-[439px] w-full border border-dashed border-neutral-400">
+                            <div className="w-full aspect-square lg:h-[439px] border-b border-dashed border-neutral-400 flex items-center justify-center relative">
                                 {/* <Image src={opti} alt='' quality={100} /> */}
                                 <div className='absolute h-full w-full flex items-center justify-center z-50'>
                                     <div className="h-32 w-32 p-5 rounded-full bg-white/80 shadow flex flex-col justify-center gap-1 items-center backdrop-blur">
@@ -279,17 +279,17 @@ const Define = () => {
                                 <p className="text-center text-black text-2xl font-extrabold leading-normal p-6">costs optimised due to our agents</p>
                             </div>
                         </div>
-                        <div className="w-full aspect-square md:w-[400px] border border-dashed border-neutral-400">
+                        <div className="w-full aspect-square border border-dashed border-neutral-400">
                             <div className="w-full aspect-square border-b border-dashed border-neutral-400 flex flex-col justify-center items-center relative">
                                 <div className='absolute h-full w-full flex flex-col items-center justify-center z-10'>
-                                    <div className=' px-6 py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-[28px] font-semibold leading-7'>
+                                    <div className=' px-3 py-2 lg:px-6 lg:py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-sm lg:text-[28px] font-semibold leading-7'>
                                         interface
                                     </div>
                                 </div>
-                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-5 py-12'>
+                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-2 sm:px-5 py-12'>
                                     <div className='w-full flex justify-between px-10 h-1/3'>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 0 && "drop-shadow-md")}>
-                                            <Image src={EagleOwl} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={EagleOwl} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 EagelOwl
                                             </p>
@@ -305,7 +305,7 @@ const Define = () => {
                                             </AnimatePresence>
                                         </div>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 1 && "drop-shadow-md")}>
-                                            <Image src={Drive} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={Drive} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 Drive
                                             </p>
@@ -323,7 +323,7 @@ const Define = () => {
                                     </div>
                                     <div className='w-full flex justify-between px-2 h-1/3'>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 2 && "drop-shadow-md")}>
-                                            <Image src={Brightpearl} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={Brightpearl} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 Brigthpearl
                                             </p>
@@ -339,7 +339,7 @@ const Define = () => {
                                             </AnimatePresence>
                                         </div>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 3 && "drop-shadow-md")}>
-                                            <Image src={epos} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={epos} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 eposnow
                                             </p>
@@ -357,7 +357,7 @@ const Define = () => {
                                     </div>
                                     <div className='w-full flex justify-center h-1/3 px-5'>
                                         <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 4 && "drop-shadow-md")}>
-                                            <Image src={Netsuite} alt='integration' quality={100} className='h-12 w-12 rounded-full' />
+                                            <Image src={Netsuite} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
                                             <p className='text-xs'>
                                                 Netsuite
                                             </p>

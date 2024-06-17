@@ -28,7 +28,7 @@ const Agents = () => {
             <h1 className="text-center text-black text-5xl lg:text-[64px] font-extrabold lg:leading-[70.40px]">
                 Introducing the future of work
             </h1>
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex items-center justify-center w-full">
                 <div className="w-full xl:w-full 2xl:w-[85%] text-left border-dashed border border-neutral-400 flex">
                     <div className="w-6/12 flex flex-col items-start">
                         <button onClick={() => {

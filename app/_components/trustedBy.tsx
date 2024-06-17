@@ -17,8 +17,8 @@ const TrustedBy = () => {
                 {trustedByBrands.map((brand, index) => {
                     return (
                         <div key={index} className="flex gap-2 p-4 border border-dashed border-neutral-400 items-center">
-                            <Image src={brand.logo} alt={brand.brandName} quality={100} className="lg:w-fit w-4 h-4 lg:h-fit" />
-                            <p className="text-center text-black lg:text-2xl font-extrabold leading-normal">
+                            <Image src={brand.logo} alt={brand.brandName} quality={100} className="lg:w-fit w-6 h-6 lg:h-fit" />
+                            <p className="text-center text-black text-xs sm:text-sm lg:text-lg font-extrabold leading-normal">
                                 {brand.brandName}
                             </p>
                         </div>
