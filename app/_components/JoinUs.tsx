@@ -3,6 +3,10 @@ import { ArrowLeft, Buildings } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import EagleOwl from '@/public/Integrations/Eagleowl.png'
+import Drive from '@/public/Integrations/Drive.png'
+import epos from '@/public/Integrations/eposnow.png'
+import Netsuite from '@/public/Integrations/Netsuite.png'
+import Brightpearl from '@/public/Integrations/Brightpearl.png'
 import Link from "next/link";
 
 const JoinUs = () => {
@@ -22,31 +26,31 @@ const JoinUs = () => {
         <div id="join-us" className="w-full h-screen relative overflow-hidden">
             <div className="bg-[url('/JoinUs/background.svg')] w-full h-full absolute"></div>
             <div className="absolute w-full h-full flex items-center justify-center">
-                <div className="w-[850px] h-[850px] absolute rounded-full border border-zinc-900/opacity-10" />
-                <div className="w-[1250px] h-[1250px] relative rounded-[1000px] border border-zinc-900/opacity-10" />
+                <div className="lg:w-[850px] w-[425px] h-[425px] lg:h-[850px] absolute rounded-full border border-zinc-900/opacity-10" />
+                <div className="lg:w-[1250px] w-[625px] h-[625px] lg:h-[1250px] relative rounded-full border border-zinc-900/opacity-10" />
             </div>
             <div className="absolute top-0 left-0 h-full w-full z-10">
                 <div className="relative w-full h-full">
-                    <div className={cn("w-[72px] h-[72px] top-16 right-[40%] absolute p-3 rotate-[20.12deg] bg-white rounded-[6.86px] shadow border border-zinc-900/20 justify-center items-center inline-flex transition-all ease-in-out duration-700", (organised || newsletter) && "opacity-0 top-[50%] right-[50%]")}>
+                    <div className={cn("w-[72px] h-[72px] right-44 top-16 xl:top-16 xl:right-[40%] absolute p-3 rotate-[20.12deg] bg-white rounded-[6.86px] shadow border border-zinc-900/20 justify-center items-center inline-flex transition-all ease-in-out duration-700", (organised || newsletter) && "opacity-0 top-[50%] xl:right-[50%] xl:top-[50%] right-[50%] rotate-0 scale-0")}>
                         <Image className="rotate-180" src={EagleOwl} alt="" />
                     </div>
-                    <div className={cn("w-[72px] h-[72px] rotate-[-30.37deg] p-3 bottom-96 left-32 absolute bg-white rounded-[6.86px] shadow border border-zinc-900/20 justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100", (organised || newsletter) && "opacity-0 bottom-[50%] left-[50%]")}>
-                        <Image className="" src={EagleOwl} alt="" />
+                    <div className={cn("w-[72px] h-[72px] rotate-[-30.37deg] p-3 bottom-72 left-16 xl:bottom-96 xl:left-32 absolute bg-white rounded-[6.86px] shadow border border-zinc-900/20 justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100", (organised || newsletter) && "opacity-0 bottom-[50%] xl:left-[50%] xl:bottom-[50%] left-[50%] rotate-0 scale-0")}>
+                        <Image className="" src={Brightpearl} alt="" />
                     </div>
-                    <div className={cn("w-[72px] h-[72px] rotate-[-18.46deg] bottom-24 left-96 absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-150 p-4 ease-in-out", (organised || newsletter) && "opacity-0 bottom-[50%] left-[50%]")}>
-                        <Image className="" src={EagleOwl} alt="" />
+                    <div className={cn("w-[72px] h-[72px] rotate-[-18.46deg] bottom-20 left-20 xl:bottom-24 xl:left-96 absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-150 p-4 ease-in-out", (organised || newsletter) && "opacity-0 bottom-[50%] left-[50%] rotate-0 scale-0 xl:left-[50%] xl:bottom-[50%]")}>
+                        <Image className="" src={Drive} alt="" />
                     </div>
-                    <div className={cn("w-[72px] h-[72px] rotate-[17.99deg] bottom-24 right-[50%] absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-200 p-4 ease-in-out", (organised || newsletter) && "opacity-0 bottom-[50%] right-[50%]")}>
-                        <Image className="" src={EagleOwl} alt="" />
+                    <div className={cn("w-[72px] h-[72px] rotate-[17.99deg] bottom-24 right-[50%] absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-200 p-4 ease-in-out", (organised || newsletter) && "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] right-[50%] rotate-0 scale-0")}>
+                        <Image className="" src={Netsuite} alt="" />
                     </div>
-                    <div className={cn("w-[214px] h-[245px] origin-top-left rotate-[42.48deg] bg-white rounded-3xl shadow border border-zinc-900/20 transition-all duration-1000 ease-in-out absolute", organised || newsletter ? "opacity-0 top-[50%] right-[50%]" : "opacity-100 top-10 right-40")}>
+                    <div className={cn("w-[214px] h-[245px] origin-top-left rotate-[42.48deg] bg-white rounded-3xl shadow border border-zinc-900/20 transition-all duration-1000 ease-in-out absolute opacity-100 top-10 -right-48 xl:right-24", (organised || newsletter) && "opacity-0 top-[50%] right-[50%] xl:right-[50%] xl:top-[50%] rotate-0 scale-0")}>
                         <div className="left-[23.16px] top-[27.27px] absolute text-zinc-400 text-xl font-extrabold">Invoice</div>
                         <div className="left-[151px] top-[206px] absolute text-zinc-400 text-[8px] font-extrabold">sign here</div>
                         <div className="w-40 h-[17px] left-[23.16px] top-[73.27px] absolute bg-zinc-300 rounded-3xl" />
                         <div className="w-[107px] h-[17px] left-[23.15px] top-[104.27px] absolute bg-zinc-300 rounded-3xl" />
                         <div className="w-12 h-12 left-[145px] top-[158px] absolute" />
                     </div>
-                    <div className={cn("w-[214px] h-[245px] origin-top-left rotate-[-33.98deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-150 duration-1000", organised || newsletter ? "opacity-0 top-[50%] left-[50%]" : "opacity-100 top-52 left-32")}>
+                    <div className={cn("w-[214px] h-[245px] origin-top-left rotate-[-33.98deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-150 duration-1000 opacity-100 top-64 xl:top-52 -left-16 xl:left-24", (organised || newsletter) && "opacity-0 top-[50%] left-[50%] rotate-0 scale-0 xl:left-[50%] xl:top-[50%]")}>
                         <div className="left-[23.16px] top-[27.27px] absolute text-zinc-400 text-xl font-extrabold ">Purchase Orders</div>
                         <div className="left-[22.32px] top-[63.94px] absolute text-zinc-400 text-[11px] font-extrabold ">Vendor:</div>
                         <div className="w-[88.34px] h-[9.39px] left-[22.09px] top-[87.80px] absolute bg-zinc-300 rounded-[13.25px]" />
@@ -61,7 +65,7 @@ const JoinUs = () => {
                             <div className="text-zinc-400 text-[8px] font-extrabold ">sign here</div>
                         </div>
                     </div>
-                    <div className={cn("w-[424px] h-[218px] overflow-hidden origin-top-left rotate-[-25.84deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-200 duration-1000", organised || newsletter ? "opacity-0 bottom-[50%] right-[50%]" : "opacity-100 bottom-0 right-52")}>
+                    <div className={cn("w-[424px] h-[218px] overflow-hidden origin-top-left rotate-[-25.84deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-200 duration-1000 opacity-100 bottom-0 -right-40 xl:right-24", (organised || newsletter) && "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] scale-0 right-[50%] rotate-0")}>
                         <div className="left-[23.16px] top-[27.27px] absolute text-zinc-400 text-xl font-extrabold ">Goods Received Note (GRN)</div>
                         <div className="left-[20px] top-[63px] absolute flex-col justify-start items-start inline-flex">
                             <div className="justify-start items-start inline-flex">
@@ -195,8 +199,8 @@ const JoinUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute top-0 left-0 h-full w-full z-50 flex flex-col items-center justify-center">
-                <div className={cn("flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-24 gap-9 transition-all ease-in-out", organised && "drop-shadow-[0_12px_12px_rgba(114,77,255,0.25)]")}>
+            <div className="absolute top-0 left-0 h-full w-full z-50 flex flex-col items-center justify-center px-32">
+                <div className={cn("flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-10 lg:p-24 gap-4 lg:gap-9 transition-all ease-in-out", organised && "drop-shadow-[0_12px_12px_rgba(114,77,255,0.25)]")}>
                     {!newsletter &&
                         <>
                             <div className="flex flex-col items-center justify-center gap-3">
@@ -205,50 +209,50 @@ const JoinUs = () => {
                                         Interface AI・[V1.0]
                                     </p>
                                 </div>
-                                <p className="text-center text-stone-900 text-[44.12px] font-semibold  leading-[58.50px]">
+                                <p className="text-center w-max text-stone-900 text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
                                     Ready to get organized?
                                 </p>
                             </div>
-                            <div className="flex gap-10 justify-center items-center w-full">
+                            <div className="flex gap-5 lg:gap-10 justify-center items-center w-full">
                                 <Link target="_blank" href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
-                                    <button id="yes" className={cn("text-center bg-stone-900 text-neutral-50 text-[21.74px] font-semibold leading-7 tracking-tight px-16 py-3", organised && "bg-violet-600")}>
+                                    <button id="yes" className={cn("text-center bg-stone-900 text-neutral-50 text-sm lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-8 w-max lg:px-16 py-3", organised && "bg-violet-600")}>
                                         book a call
                                     </button>
                                 </Link>
                                 <button onClick={() => {
                                     setNewsLetter(true);
                                     // setOrganised(true)
-                                }} id="no" className="text-center text-stone-900 text-[21.74px] font-semibold  leading-7 tracking-tight py-3 px-16 border border-dashed border-neutral-400">No?</button>
+                                }} id="no" className="text-center text-stone-900 text-sm lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-3 px-8 lg:px-16 border border-dashed border-neutral-400">No?</button>
                             </div>
-                            <div className="text-center text-zinc-600 text-[21.92px] font-semibold flex gap-5 leading-loose items-center mt-2">
+                            <div className="text-center text-zinc-600 text-sm w-max lg:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
                                 <Buildings weight="duotone" size={32} />
                                 Custom to your company requirements
                             </div>
                         </>}
                     {newsletter &&
                         <>
-                            <div className="w-[523px] h-[274.50px] flex-col justify-center items-center gap-[42px] inline-flex">
+                            <div className="flex-col justify-center items-center gap-[42px] inline-flex">
                                 <div className="flex-col justify-start items-center gap-9 flex">
                                     <div className="flex-col justify-start items-center gap-3 flex">
                                         <button onClick={() => {
                                             setNewsLetter(false)
-                                        }} className="p-2 border border-neutral-400 border-dashed justify-center items-center gap-3 inline-flex text-stone-900 text-lg font-semibold  leading-snug">
+                                        }} className="p-2 border border-neutral-400 border-dashed justify-center items-center gap-3 inline-flex text-stone-900 text-sm lg:text-lg font-semibold  leading-snug">
                                             <ArrowLeft /> Go back
                                         </button>
-                                        <div className="text-center text-stone-900 text-5xl font-semibold leading-[58.50px]">Follow our journey</div>
+                                        <div className="text-center text-stone-900 text-2xl lg:text-5xl font-semibold leading-[58.50px]">Follow our journey</div>
                                     </div>
                                     <div className="justify-start flex border border-dashed border-neutral-400">
                                         {/* <div className="bg-neutral-50 border border-neutral-400 justify-start items-center flex">
                                             <div className="text-center text-neutral-500 text-lg font-semibold  leading-snug">Enter your mail</div>
                                         </div> */}
-                                        <input placeholder="Enter your mail" className="text-neutral-500 text-lg font-semibold  leading-snug bg-neutral-50 px-8" />
-                                        <button className="px-8 py-4 bg-stone-900 border border-neutral-400 justify-center items-center flex text-center text-neutral-50 text-lg font-semibold  leading-snug">
+                                        <input placeholder="Enter your mail" className="text-neutral-500 text-sm lg:text-lg font-semibold  leading-snug bg-neutral-50 px-4 lg:px-8" />
+                                        <button className="lg:px-8 px-4 py-2 lg:py-4 bg-stone-900 border border-neutral-400 justify-center items-center flex text-center text-neutral-50 text-sm lg:text-lg font-semibold  leading-snug">
                                             Get Updates
                                         </button>
                                     </div>
                                 </div>
                                 <div className="justify-start items-center gap-2 inline-flex">
-                                    <div className="text-center text-zinc-600 text-[21.92px] font-semibold  leading-loose">Get emails for new feature launches. Nothing else.</div>
+                                    <div className="text-center text-zinc-600 text-sm lg:text-[21.92px] font-semibold  leading-loose">Get emails for new feature launches. Nothing else.</div>
                                 </div>
                             </div>
                         </>}

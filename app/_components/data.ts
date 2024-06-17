@@ -2,6 +2,7 @@ import image from '@/public/Image.png'
 import image1 from '@/public/Image1.png'
 import image2 from '@/public/Image2.png'
 import image3 from '@/public/Image3.png'
+import image4 from '@/public/Image4.png'
 
 import fnp from '@/public/Trusted By/fnp.png'
 import pizzabakery from '@/public/Trusted By/pizzaBakery.png'
@@ -20,11 +21,15 @@ export const marqueeContent = [
     },
     {
         image : image2,
-        text : "Why does my staff keep quitting?"
+        text : "stockouts =  unhappy customers :("
     },
     {
         image : image3,
         text : "We end up overstocking essential items all the time"
+    },
+    {
+        image : image3,
+        text : "Why does my staff keep quitting?"
     },
 ]
 

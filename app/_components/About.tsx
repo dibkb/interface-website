@@ -22,7 +22,7 @@ const About = () => {
         }
     }, [isInView])
     return (
-        <section ref={scrollContainer} id='about' className='bg-stone-900 relative h-[250vh] w-full px-64'>
+        <section ref={scrollContainer} id='about' className='bg-stone-900 relative h-[250vh] w-full px-10 lg:px-32 2xl:px-64'>
             <div ref={container} className='w-full h-screen items-center justify-center sticky top-0 flex'>
                 <div className='flex flex-wrap w-full items-center'>
                     {words.map((word, i) => {

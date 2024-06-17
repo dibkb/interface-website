@@ -7,7 +7,7 @@ interface MarqueeComponentProp {
 
 const MarqueeComponent = ({image, text} : MarqueeComponentProp) => {
     return (
-        <div className="w-[293px] border border-dashed border-neutral-400 h-fit relative">
+        <div className="w-[293px] border border-dashed border-neutral-400 h-fit relative mx-2">
             <div className='w-full'>
                 <Image className="h-[218px] w-full border-b border-dashed border-neutral-400 grayscale" src={image} alt='image' quality={100} />
             </div>
