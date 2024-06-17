@@ -4,13 +4,13 @@ import { trustedByBrands } from "./data";
 const TrustedBy = () => {
     return (
         <div className="py-20 px-10 xl:px-20 2xl:px-32">
-            <p className="text-center text-black text-3xl lg:text-5xl font-extrabold">
+            <p className="text-center hidden lg:block text-black text-3xl lg:text-5xl font-extrabold">
                 is this you? you’re not alone
             </p>
-            <p className="text-center text-black text-3xl lg:text-2xl lg:text-neutral-400 lg:pt-5 font-extrabold">
+            <p className="text-center text-black hidden lg:block text-3xl lg:text-2xl lg:text-neutral-400 lg:pt-5 font-extrabold">
                 trusted by inventory teams at
             </p>
-            <p className="text-center text-black text-3xl lg:hidden lg:pt-5 font-extrabold">
+            <p className="text-center text-black text-3xl block lg:hidden lg:pt-5 font-extrabold">
                 trusted by teams at
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8 items-center mt-10">
