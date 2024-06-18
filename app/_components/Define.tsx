@@ -49,8 +49,8 @@ const Define = () => {
     // }, [agent])
     return (
         <>
-            <section className='lg:h-[150vh] hidden md:block w-full'>
-                <section ref={container} className="lg:h-screen min-h-screen sticky top-0 flex flex-col items-center justify-center px-10 py-20 lg:py-0 xl:px-20 2xl:px-32 gap-16 w-full">
+            <section className='hidden md:block w-full'>
+                <section ref={container} className="min-h-screen sticky top-0 flex flex-col items-center justify-center px-10 py-20 lg:py-0 xl:px-20 2xl:px-32 gap-16 w-full">
                     <h1 className="text-center text-black text-5xl lg:text-6xl font-extrabold leading-[70.40px]">
                         how we define efficiency
                     </h1>
