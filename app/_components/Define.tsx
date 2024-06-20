@@ -289,7 +289,7 @@ const Define = () => {
                                     </div> */}
                                     <Image src={logo} quality={100} alt='logo' className='xl:h-20 xl:w-20 lg:w-16 lg:h-16 md:h-14 md:w-14 h-12 w-12 sm:w-14 sm:h-14' />
                                 </div>
-                                <div className='absolute top-0 w-full h-full gap-y-[41.5px] md:gap-y-20 z-10 flex flex-col py-[44px] px-5 xl:px-5'>
+                                <div className='absolute top-0 w-full h-full gap-y-[41.5px] md:gap-y-20 z-10 flex flex-col py-[44px] sm:py-12 px-5 xl:px-5'>
                                     <div className='w-full flex justify-between px-10 h-full'>
                                         <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
                                             <Image src={EagleOwl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 0 && "shadow-lg shadow-violet-600/20")} />
