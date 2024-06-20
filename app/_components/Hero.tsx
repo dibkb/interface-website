@@ -18,12 +18,12 @@ const Hero = () => {
                 </h1>
                 <div className='flex items-center gap-10'>
                     <Link target='_blank' href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
-                        <button className="justify-center border border-dashed border-neutral-400 items-center inline-flex text-center text-stone-900 text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
+                        <button className="justify-center border border-dashed border-neutral-400 items-center inline-flex text-center text-stone-900 lg:text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
                             sign up
                         </button>
                     </Link>
                     <Link target='_blank' href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
-                        <button className="bg-stone-900 justify-center items-center inline-flex text-center text-neutral-50 text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
+                        <button className="bg-stone-900 justify-center items-center inline-flex text-center text-neutral-50 lg:text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
                             book a 15-min call
                         </button>
                     </Link>

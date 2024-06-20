@@ -14,6 +14,7 @@ import Netsuite from '@/public/Integrations/Netsuite.png'
 import Brightpearl from '@/public/Integrations/Brightpearl.png'
 import { cn } from '@/lib/utils';
 import { CheckCircle } from '@phosphor-icons/react';
+import logo from '@/public/logo.png'
 
 const Define = () => {
     const container = useRef(null)
@@ -113,9 +114,10 @@ const Define = () => {
                         <div className="w-1/2 aspect-square border border-dashed border-neutral-400">
                             <div className="w-full aspect-square border-b border-dashed border-neutral-400 flex flex-col justify-center items-center relative">
                                 <div className='absolute h-full w-full flex flex-col items-center justify-center z-10'>
-                                    <div className=' xl:px-6 px-3 py-2 xl:py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-xs lg:text-[28px] font-semibold leading-7'>
+                                    {/* <div className=' px-3 py-2 lg:px-6 lg:py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-sm lg:text-[28px] font-semibold leading-7'>
                                         interface
-                                    </div>
+                                    </div> */}
+                                    <Image src={logo} quality={100} alt='logo' className='xl:h-20 xl:w-20 lg:w-16 lg:h-16 md:h-14 md:w-14 w-10 h-10' />
                                 </div>
                                 {/* <div className='h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-50/20 from-0% to-neutral-50 to-80% absolute z-10'></div>
                                 <div className='h-[1px] w-full absolute bg-stone-900/20'></div>
@@ -282,9 +284,10 @@ const Define = () => {
                         <div className="w-full aspect-square border border-dashed border-neutral-400">
                             <div className="w-full aspect-square border-b border-dashed border-neutral-400 flex flex-col justify-center items-center relative">
                                 <div className='absolute h-full w-full flex flex-col items-center justify-center z-10'>
-                                    <div className=' px-3 py-2 lg:px-6 lg:py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-sm lg:text-[28px] font-semibold leading-7'>
+                                    {/* <div className=' px-3 py-2 lg:px-6 lg:py-4 bg-white rounded-[10px] shadow border-2 border-violet-600/40 justify-center items-center gap-2.5 inline-flex text-center text-violet-600 text-sm lg:text-[28px] font-semibold leading-7'>
                                         interface
-                                    </div>
+                                    </div> */}
+                                    <Image src={logo} quality={100} alt='logo' className='xl:h-20 xl:w-20 lg:w-16 lg:h-16 md:h-14 md:w-14 h-12 w-12 sm:w-14 sm:h-14' />
                                 </div>
                                 <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-5 xl:px-5 py-14'>
                                     <div className='w-full flex justify-between px-10 h-1/3'>
