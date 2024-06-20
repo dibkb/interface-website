@@ -259,7 +259,7 @@ const Define = () => {
                                     animate={{ top: `50%`, right: `50%`, opacity: 0.5, transform: 'translate(50%, -50%)' }}
                                     transition={{ duration: 1.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'loop', repeatDelay: 5.5, delay: 2 }}
                                     className='absolute p-2 rounded-full overflow-hidden z-20 bg-white/60'>
-                                    <Image src={Olivia} alt='agent' quality={100} className='h-12 w-12 rounded-full' />
+                                    <Image src={Rio} alt='agent' quality={100} className='h-12 w-12 rounded-full' />
                                 </motion.div>
                                 {/* } */}
                                 {/* {agent == 2 && */}
@@ -268,7 +268,7 @@ const Define = () => {
                                     animate={{ bottom: `50%`, left: `50%`, opacity: 0.5, transform: 'translate(-50%, 50%)' }}
                                     transition={{ duration: 1.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'loop', repeatDelay: 5.5, delay: 4 }}
                                     className='absolute p-2 rounded-full overflow-hidden z-20 bg-white/60'>
-                                    <Image src={Olivia} alt='agent' quality={100} className='h-12 w-12 rounded-full' />
+                                    <Image src={Astrid} alt='agent' quality={100} className='h-12 w-12 rounded-full' />
                                 </motion.div>
                                 {/* } */}
                                 <div className='h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-50/20 from-0% to-neutral-50 to-80% absolute z-10'></div>
@@ -289,8 +289,8 @@ const Define = () => {
                                     </div> */}
                                     <Image src={logo} quality={100} alt='logo' className='xl:h-20 xl:w-20 lg:w-16 lg:h-16 md:h-14 md:w-14 h-12 w-12 sm:w-14 sm:h-14' />
                                 </div>
-                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-5 xl:px-5 py-14'>
-                                    <div className='w-full flex justify-between px-10 h-1/3'>
+                                <div className='absolute top-0 w-full h-full gap-y-[41.5px] md:gap-y-20 z-10 flex flex-col py-[44px] px-5 xl:px-5'>
+                                    <div className='w-full flex justify-between px-10 h-full'>
                                         <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
                                             <Image src={EagleOwl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 0 && "shadow-lg shadow-violet-600/20")} />
                                             <p className='text-xs mt-2'>
@@ -298,8 +298,8 @@ const Define = () => {
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 0 &&
-                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-xs items-center rounded-full bg-white flex gap-2'>
-                                                        <CheckCircle size={16} weight='fill' className='text-violet-600' />
+                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-[10px] sm:text-xs items-center rounded-full bg-white flex gap-2'>
+                                                        <CheckCircle size={14} weight='fill' className='text-violet-600' />
                                                         <motion.p initial={{ width: 0 }} animate={{ width: 'fit-content' }} transition={{ ease: 'easeInOut', delay: 1 }} className='overflow-hidden'>
                                                             Connected
                                                         </motion.p>
@@ -314,8 +314,8 @@ const Define = () => {
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 1 &&
-                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-xs items-center rounded-full bg-white flex gap-2'>
-                                                        <CheckCircle size={16} weight='fill' className='text-violet-600' />
+                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-[10px] sm:text-xs items-center rounded-full bg-white flex gap-2'>
+                                                        <CheckCircle size={14} weight='fill' className='text-violet-600' />
                                                         <motion.p initial={{ width: 0 }} animate={{ width: 'fit-content' }} transition={{ ease: 'easeInOut', delay: 1 }} className='overflow-hidden'>
                                                             Connected
                                                         </motion.p>
@@ -324,7 +324,7 @@ const Define = () => {
                                             </AnimatePresence>
                                         </div>
                                     </div>
-                                    <div className='w-full flex justify-between px-2 h-1/3'>
+                                    <div className='w-full flex justify-between px-2 h-full'>
                                         <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
                                             <Image src={Brightpearl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 2 && "shadow-lg shadow-violet-600/20")} />
                                             <p className='text-xs mt-2'>
@@ -332,8 +332,8 @@ const Define = () => {
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 2 &&
-                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-xs items-center rounded-full bg-white flex gap-2'>
-                                                        <CheckCircle size={16} weight='fill' className='text-violet-600' />
+                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-[10px] sm:text-xs items-center rounded-full bg-white flex gap-2'>
+                                                        <CheckCircle size={14} weight='fill' className='text-violet-600' />
                                                         <motion.p initial={{ width: 0 }} animate={{ width: 'fit-content' }} transition={{ ease: 'easeInOut', delay: 1 }} className='overflow-hidden'>
                                                             Connected
                                                         </motion.p>
@@ -348,8 +348,8 @@ const Define = () => {
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 3 &&
-                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-xs items-center rounded-full bg-white flex gap-2'>
-                                                        <CheckCircle size={16} weight='fill' className='text-violet-600' />
+                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-[10px] sm:text-xs items-center rounded-full bg-white flex gap-2'>
+                                                        <CheckCircle size={14} weight='fill' className='text-violet-600' />
                                                         <motion.p initial={{ width: 0 }} animate={{ width: 'fit-content' }} transition={{ ease: 'easeInOut', delay: 1 }} className='overflow-hidden'>
                                                             Connected
                                                         </motion.p>
@@ -358,7 +358,7 @@ const Define = () => {
                                             </AnimatePresence>
                                         </div>
                                     </div>
-                                    <div className='w-full flex justify-center h-1/3 px-5'>
+                                    <div className='w-full flex justify-center px-5 h-full'>
                                         <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
                                             <Image src={Netsuite} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 4 && "shadow-lg shadow-violet-600/20")} />
                                             <p className='text-xs mt-2'>
@@ -366,8 +366,8 @@ const Define = () => {
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 4 &&
-                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-xs items-center rounded-full bg-white flex gap-2'>
-                                                        <CheckCircle size={16} weight='fill' className='text-violet-600' />
+                                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ ease: 'easeInOut' }} className='absolute transition-all ease-in-out -top-10 p-2 text-[10px] sm:text-xs items-center rounded-full bg-white flex gap-2'>
+                                                        <CheckCircle size={14} weight='fill' className='text-violet-600' />
                                                         <motion.p initial={{ width: 0 }} animate={{ width: 'fit-content' }} transition={{ ease: 'easeInOut', delay: 1 }} className='overflow-hidden'>
                                                             Connected
                                                         </motion.p>
