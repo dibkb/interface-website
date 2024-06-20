@@ -28,7 +28,7 @@ export const marqueeContent = [
         text : "We end up overstocking essential items all the time"
     },
     {
-        image : image3,
+        image : image4,
         text : "Why does my staff keep quitting?"
     },
 ]

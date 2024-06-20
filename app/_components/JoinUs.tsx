@@ -204,28 +204,28 @@ const JoinUs = () => {
                     {!newsletter &&
                         <>
                             <div className="flex flex-col items-center justify-center gap-3">
-                                <div className="text-stone-900 text-base font-semibold border border-dashed border-neutral-400 p-2 leading-tight w-fit">
+                                <div className="text-stone-900 text-xs sm:text-base font-semibold border border-dashed border-neutral-400 p-2 leading-tight w-fit">
                                     <p>
                                         Interface AI・[V1.0]
                                     </p>
                                 </div>
-                                <p className="text-center w-max text-stone-900 text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
+                                <p className="text-center w-max text-stone-900 text-lg md:text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
                                     Ready to get organized?
                                 </p>
                             </div>
                             <div className="flex gap-5 lg:gap-10 justify-center items-center w-full">
                                 <Link target="_blank" href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
-                                    <button id="yes" className={cn("text-center bg-stone-900 text-neutral-50 text-sm lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-8 w-max lg:px-16 py-3", organised && "bg-violet-600")}>
+                                    <button id="yes" className={cn("text-center bg-stone-900 text-neutral-50 text-xs md:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-4 w-max lg:px-16 py-3", organised && "bg-violet-600")}>
                                         book a call
                                     </button>
                                 </Link>
                                 <button onClick={() => {
                                     setNewsLetter(true);
                                     // setOrganised(true)
-                                }} id="no" className="text-center text-stone-900 text-sm lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-3 px-8 lg:px-16 border border-dashed border-neutral-400">No?</button>
+                                }} id="no" className="text-center text-stone-900 text-xs md:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-3 px-4 lg:px-16 border border-dashed border-neutral-400">No?</button>
                             </div>
-                            <div className="text-center text-zinc-600 text-sm w-max lg:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
-                                <Buildings weight="duotone" size={32} />
+                            <div className="text-center text-zinc-600 text-xs w-max md:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
+                                <Buildings weight="duotone" size={24} />
                                 Custom to your company requirements
                             </div>
                         </>}
@@ -236,23 +236,23 @@ const JoinUs = () => {
                                     <div className="flex-col justify-start items-center gap-3 flex">
                                         <button onClick={() => {
                                             setNewsLetter(false)
-                                        }} className="p-2 border border-neutral-400 border-dashed justify-center items-center gap-3 inline-flex text-stone-900 text-sm lg:text-lg font-semibold  leading-snug">
+                                        }} className="p-2 border border-neutral-400 border-dashed justify-center items-center gap-3 inline-flex text-stone-900 text-xs md::text-lg font-semibold  leading-snug">
                                             <ArrowLeft /> Go back
                                         </button>
-                                        <div className="text-center text-stone-900 text-2xl lg:text-5xl font-semibold leading-[58.50px]">Follow our journey</div>
+                                        <div className="text-center text-stone-900 text-lg md:text-2xl lg:text-5xl font-semibold leading-[58.50px]">Follow our journey</div>
                                     </div>
                                     <div className="justify-start flex border border-dashed border-neutral-400">
                                         {/* <div className="bg-neutral-50 border border-neutral-400 justify-start items-center flex">
                                             <div className="text-center text-neutral-500 text-lg font-semibold  leading-snug">Enter your mail</div>
                                         </div> */}
                                         <input placeholder="Enter your mail" className="text-neutral-500 text-sm lg:text-lg font-semibold  leading-snug bg-neutral-50 px-4 lg:px-8" />
-                                        <button className="lg:px-8 px-4 py-2 lg:py-4 bg-stone-900 border border-neutral-400 justify-center items-center flex text-center text-neutral-50 text-sm lg:text-lg font-semibold  leading-snug">
+                                        <button className="lg:px-8 px-4 py-2 lg:py-4 bg-stone-900 border border-neutral-400 justify-center items-center flex text-center text-neutral-50 text-xs md:text-sm lg:text-lg font-semibold  leading-snug">
                                             Get Updates
                                         </button>
                                     </div>
                                 </div>
                                 <div className="justify-start items-center gap-2 inline-flex">
-                                    <div className="text-center text-zinc-600 text-sm lg:text-[21.92px] font-semibold  leading-loose">Get emails for new feature launches. Nothing else.</div>
+                                    <div className="text-center text-zinc-600 text-xs md:text-sm lg:text-[21.92px] font-semibold  leading-loose">Get emails for new feature launches. Nothing else.</div>
                                 </div>
                             </div>
                         </>}
