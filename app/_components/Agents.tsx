@@ -1,10 +1,11 @@
+import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const videos = [
     "/Agents/Olivia.mp4",
-    "/Agents/Rio.mp4",
-    "/Agents/Rio.mp4",
+    "/Agents/Rio1.mp4",
+    "/Agents/Astrid1.mp4",
     "/Agents/Rio.mp4",
 ]
 
@@ -24,7 +25,7 @@ const Agents = () => {
     }, [agent]);
     const x = useTransform(scrollYProgress, [0, 1], ["5%", "-25%"]);
     return (
-        <div className="lg:h-screen min-h-screen w-full flex flex-col items-center py-20 px-10 xl:px-20 2xl:px-32 justify-center gap-16 overflow-hidden">
+        <div className="min-h-screen w-full flex flex-col items-center py-20 px-10 xl:px-20 2xl:px-32 justify-center gap-16 overflow-hidden">
             <h1 className="text-center text-black text-5xl lg:text-[64px] font-extrabold lg:leading-[70.40px]">
                 Introducing the future of work
             </h1>
@@ -34,7 +35,7 @@ const Agents = () => {
                         <button onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(0)
-                        }} className="w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4">
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 0 && "bg-gray-200")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Olivia- your data entry agent</div>
                             </div>
@@ -43,7 +44,7 @@ const Agents = () => {
                         <div role="button" onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(1)
-                        }} className="w-full h-1/4 border-b border-dashed justify-center border-neutral-400 p-6 flex flex-col gap-4">
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 1 && "bg-gray-200")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Rio- your procurement analyst</div>
                             </div>
@@ -52,7 +53,7 @@ const Agents = () => {
                         <button onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(2)
-                        }} className="w-full h-1/4 border-b border-dashed justify-center border-neutral-400 p-6 flex flex-col gap-4">
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 2 && "bg-gray-200")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Astrid- your data scientist</div>
                             </div>
@@ -61,7 +62,7 @@ const Agents = () => {
                         <button onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(3)
-                        }} className="w-full h-1/4 p-6 justify-center flex flex-col gap-4">
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 3 && "bg-gray-200")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Train your own agent</div>
                             </div>
@@ -69,7 +70,7 @@ const Agents = () => {
                         </button>
                     </div>
                     <div className="w-6/12 h-full border-l border-dashed border-neutral-400">
-                        <video src={videos[agent]} autoPlay loop className="w-full aspect-square object-fill"></video>
+                        <video src={videos[agent]} autoPlay loop className="w-full aspect-square object-cover"></video>
                     </div>
                 </div>
             </div>

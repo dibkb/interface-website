@@ -50,7 +50,7 @@ const Define = () => {
     return (
         <>
             <section className='hidden md:block w-full'>
-                <section ref={container} className="min-h-screen sticky top-0 flex flex-col items-center justify-center px-10 py-20 lg:py-0 xl:px-20 2xl:px-32 gap-16 w-full">
+                <section ref={container} className="min-h-screen sticky top-0 flex flex-col items-center justify-center px-10 py-20 xl:px-20 2xl:px-32 gap-16 w-full">
                     <h1 className="text-center text-black text-5xl lg:text-6xl font-extrabold leading-[70.40px]">
                         how we define efficiency
                     </h1>
@@ -122,11 +122,11 @@ const Define = () => {
                                 <div className='h-full w-[1px] absolute bg-stone-900/20'></div>
                                 <div className='h-[1px] -rotate-45 w-full absolute bg-stone-900/20'></div>
                                 <div className='h-[1px] rotate-45 w-full absolute bg-stone-900/20'></div> */}
-                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-2 xl:px-5 py-12'>
+                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-5 xl:px-5 py-14'>
                                     <div className='w-full flex justify-between px-10 h-1/3'>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 0 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={EagleOwl} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={EagleOwl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 0 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 EagelOwl
                                             </p>
                                             <AnimatePresence>
@@ -140,9 +140,9 @@ const Define = () => {
                                                 }
                                             </AnimatePresence>
                                         </div>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 1 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={Drive} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={Drive} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 1 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 Drive
                                             </p>
                                             <AnimatePresence>
@@ -158,10 +158,10 @@ const Define = () => {
                                         </div>
                                     </div>
                                     <div className='w-full flex justify-between px-2 h-1/3'>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 2 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={Brightpearl} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
-                                            <p className='text-xs'>
-                                                Brigthpearl
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={Brightpearl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 2 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
+                                                Brightpearl
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 2 &&
@@ -174,9 +174,9 @@ const Define = () => {
                                                 }
                                             </AnimatePresence>
                                         </div>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 3 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={epos} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={epos} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 3 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 eposnow
                                             </p>
                                             <AnimatePresence>
@@ -192,9 +192,9 @@ const Define = () => {
                                         </div>
                                     </div>
                                     <div className='w-full flex justify-center h-1/3 px-5'>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 4 && "shadow-lg shadow-violet-600/20")}>
-                                            <Image src={Netsuite} alt='integration' quality={100} className='xl:h-12 h-8 w-8 xl:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={Netsuite} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 4 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 Netsuite
                                             </p>
                                             <AnimatePresence>
@@ -286,11 +286,11 @@ const Define = () => {
                                         interface
                                     </div>
                                 </div>
-                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-2 sm:px-5 py-12'>
+                                <div className='absolute top-0 w-full h-full gap-y-20 z-10 grid grid-rows-3 px-5 xl:px-5 py-14'>
                                     <div className='w-full flex justify-between px-10 h-1/3'>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 0 && "drop-shadow-md")}>
-                                            <Image src={EagleOwl} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={EagleOwl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 0 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 EagelOwl
                                             </p>
                                             <AnimatePresence>
@@ -304,9 +304,9 @@ const Define = () => {
                                                 }
                                             </AnimatePresence>
                                         </div>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 1 && "drop-shadow-md")}>
-                                            <Image src={Drive} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={Drive} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 1 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 Drive
                                             </p>
                                             <AnimatePresence>
@@ -322,10 +322,10 @@ const Define = () => {
                                         </div>
                                     </div>
                                     <div className='w-full flex justify-between px-2 h-1/3'>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 2 && "drop-shadow-md")}>
-                                            <Image src={Brightpearl} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
-                                            <p className='text-xs'>
-                                                Brigthpearl
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={Brightpearl} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 2 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
+                                                Brightpearl
                                             </p>
                                             <AnimatePresence>
                                                 {connected === 2 &&
@@ -338,9 +338,9 @@ const Define = () => {
                                                 }
                                             </AnimatePresence>
                                         </div>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 3 && "drop-shadow-md")}>
-                                            <Image src={epos} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={epos} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 3 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 eposnow
                                             </p>
                                             <AnimatePresence>
@@ -356,9 +356,9 @@ const Define = () => {
                                         </div>
                                     </div>
                                     <div className='w-full flex justify-center h-1/3 px-5'>
-                                        <div className={cn('w-fit h-fit p-3 flex flex-col items-center gap-1 bg-white rounded-2xl transition-all ease-in-out relative', connected == 4 && "drop-shadow-md")}>
-                                            <Image src={Netsuite} alt='integration' quality={100} className='md:h-12 h-6 w-6 md:w-12 rounded-full' />
-                                            <p className='text-xs'>
+                                        <div className={cn('w-fit h-fit flex flex-col items-center gap-1 rounded-2xl transition-all ease-in-out relative')}>
+                                            <Image src={Netsuite} alt='integration' quality={100} className={cn('xl:h-16 sm:w-12 sm:h-12 h-8 w-8 xl:w-16 rounded-full', connected == 4 && "shadow-lg shadow-violet-600/20")} />
+                                            <p className='text-xs mt-2'>
                                                 Netsuite
                                             </p>
                                             <AnimatePresence>
