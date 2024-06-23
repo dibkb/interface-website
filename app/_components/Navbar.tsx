@@ -7,29 +7,44 @@ const Navbar = () => {
     return (
         <>
             <nav className={cn("flex justify-start lg:justify-evenly px-10 xl:px-20 2xl:px-32 items-center w-full fixed top-0 z-[999] transition-all ease-in-out", mode === "light" ? "bg-neutral-50" : "bg-stone-900")}>
-                <Link href={""}>
+                <Link href={""} onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+                }}>
                     <p className="text-center text-violet-600 text-2xl lg:text-[28px] font-semibold leading-7 py-6">
                         interface
                     </p>
                 </Link>
                 <div className='hidden lg:block'>
                     <div className="w-full flex gap-6 items-center justify-center py-6">
-                        <Link href="#agents">
+                        <Link href="#agents" onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("agents")?.scrollIntoView({ behavior: "smooth" });
+                        }}>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 agents
                             </button>
                         </Link>
-                        <Link href="#faq">
+                        <Link href="#faq" onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+                        }}>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 faq
                             </button>
                         </Link>
-                        <Link href='#join-us'>
+                        <Link href='#join-us' onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
+                        }}>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 join us
                             </button>
                         </Link>
-                        <Link href='#contact-us'>
+                        <Link href='#contact-us' onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
+                        }}>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 contact us
                             </button>
@@ -44,22 +59,34 @@ const Navbar = () => {
             </nav>
             <div className={cn("fixed w-full bottom-0 z-[999] lg:hidden border-t border-dashed block border-neutral-400 px-10 xl:px-20 2xl:px-32 transition-all ease-in-out", mode === "light" ? "bg-neutral-50" : "bg-stone-900")}>
                 <div className="lg:border-r lg:border-dashed lg:border-neutral-400 w-full flex gap-6 items-center justify-center lg:justify-start py-6">
-                    <Link href="#agents">
+                    <Link href="#agents" onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById("agents")?.scrollIntoView({ behavior: "smooth" });
+                    }}>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             agents
                         </button>
                     </Link>
-                    <Link href="#faq">
+                    <Link href="#faq" onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+                    }}>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             faq
                         </button>
                     </Link>
-                    <Link href='#join-us'>
+                    <Link href='#join-us' onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
+                    }}>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             join us
                         </button>
                     </Link>
-                    <Link href='#contact-us'>
+                    <Link href='#contact-us' onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
+                    }}>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             contact us
                         </button>
