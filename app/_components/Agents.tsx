@@ -25,7 +25,7 @@ const Agents = () => {
     }, [agent]);
     const x = useTransform(scrollYProgress, [0, 1], ["5%", "-25%"]);
     return (
-        <div className="min-h-screen w-full flex flex-col items-center py-20 px-10 xl:px-20 2xl:px-32 justify-center gap-16 overflow-hidden">
+        <div id="agents" className="min-h-screen w-full flex flex-col items-center py-20 px-10 xl:px-20 2xl:px-32 justify-center gap-16 overflow-hidden">
             <h1 className="text-center text-black text-5xl lg:text-[64px] font-extrabold lg:leading-[70.40px]">
                 Introducing the future of work
             </h1>

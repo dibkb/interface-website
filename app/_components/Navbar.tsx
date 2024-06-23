@@ -7,9 +7,11 @@ const Navbar = () => {
     return (
         <>
             <nav className={cn("flex justify-start lg:justify-evenly px-10 xl:px-20 2xl:px-32 items-center w-full fixed top-0 z-[999] transition-all ease-in-out", mode === "light" ? "bg-neutral-50" : "bg-stone-900")}>
-                <p className="text-center text-violet-600 text-2xl lg:text-[28px] font-semibold leading-7 py-6">
-                    interface
-                </p>
+                <Link href={""}>
+                    <p className="text-center text-violet-600 text-2xl lg:text-[28px] font-semibold leading-7 py-6">
+                        interface
+                    </p>
+                </Link>
                 <div className='hidden lg:block'>
                     <div className="w-full flex gap-6 items-center justify-center py-6">
                         <Link href="#agents">
