@@ -17,7 +17,7 @@ const Hero = () => {
                     run your inventory on autopilot.
                 </h1>
                 <div className='flex items-center gap-10'>
-                    <Link target='_blank' href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
+                    <Link target='_blank' href={'https://app.getinterface.tech'}>
                         <button className="justify-center border border-dashed border-neutral-400 items-center inline-flex text-center text-stone-900 lg:text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
                             sign up
                         </button>
