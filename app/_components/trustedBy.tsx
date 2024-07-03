@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const TrustedBy = () => {
     return (
         <div className="py-20 overflow-x-hidden w-full">
-            <div className="px-10 xl:px-20 2xl:px-32">
+            <div className="px-10 xl:px-20 2xl:px-32 flex flex-col items-center justify-center">
                 <p className="text-center hidden lg:block text-black text-3xl lg:text-5xl font-extrabold">
                     is this you? you’re not alone
                 </p>
@@ -15,7 +15,7 @@ const TrustedBy = () => {
                 <p className="text-center text-black text-3xl block lg:hidden lg:pt-5 font-extrabold">
                     trusted by teams at
                 </p>
-                <div className="w-full hidden lg:block">
+                <div className="w-fit hidden lg:block">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 items-center mt-10">
                         {trustedByBrands.map((brand, index) => {
                             return (
