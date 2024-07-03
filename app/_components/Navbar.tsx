@@ -27,7 +27,7 @@ const Navbar = () => {
                         </Link>
                         <Link href="#faq" onClick={(e) => {
                             e.preventDefault();
-                            document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+                            document.getElementById("faq")?.scrollIntoView({ behavior: "smooth", block : 'end' });
                         }}>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 faq
@@ -38,10 +38,7 @@ const Navbar = () => {
                                 join us
                             </button>
                         </Link>
-                        <Link href='#contact-us' onClick={(e) => {
-                            e.preventDefault();
-                            document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
-                        }}>
+                        <Link href='https://calendly.com/rebhav-getinterface/30min'>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 contact us
                             </button>
@@ -64,23 +61,20 @@ const Navbar = () => {
                             agents
                         </button>
                     </Link>
-                    <Link href="#faq" onClick={(e) => {
+                    <div role='button' onClick={(e) => {
                         e.preventDefault();
-                        document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+                        document.getElementById("faq")?.scrollIntoView({ behavior: "smooth", block : 'end'});
                     }}>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             faq
                         </button>
-                    </Link>
+                    </div>
                     <Link href='https://theinterfacecompany.notion.site/Interface-AI-Hiring-68fca33b53d6421dbd9b706f54fa035a?pvs=4'>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             join us
                         </button>
                     </Link>
-                    <Link href='#contact-us' onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
-                    }}>
+                    <Link href='https://calendly.com/rebhav-getinterface/30min'>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             contact us
                         </button>
