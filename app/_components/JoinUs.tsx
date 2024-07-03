@@ -200,7 +200,7 @@ const JoinUs = () => {
                 </div>
             </div>
             <div className="absolute top-0 left-0 h-full w-full z-50 flex flex-col items-center justify-center px-32">
-                <div className={cn("flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-7 lg:p-24 gap-4 lg:gap-9 transition-all ease-in-out md:min-w-[50vw] lg:min-w-[50vw] xl:min-w-[45vw] min-w-[90vw]", organised && "drop-shadow-[0_12px_12px_rgba(114,77,255,0.25)]")}>
+                <div className={cn("flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-7 lg:p-24 gap-4 lg:gap-9 transition-all ease-in-out h-fit aspect-square sm:aspect-video", organised && "drop-shadow-[0_12px_12px_rgba(114,77,255,0.25)]")}>
                     {!newsletter &&
                         <>
                             <div className="flex flex-col items-center justify-center gap-3">
@@ -221,7 +221,7 @@ const JoinUs = () => {
                                 </Link>
                                 <button onClick={() => {
                                     setNewsLetter(true);
-                                    // setOrganised(true)
+                                    setOrganised(false)
                                 }} id="no" className="text-center text-stone-900 text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-3 px-4 lg:px-16 border border-dashed border-neutral-400">no?</button>
                             </div>
                             <div className="text-center text-zinc-600 text-xs w-max lg:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
@@ -244,17 +244,17 @@ const JoinUs = () => {
                                     Follow our journey
                                 </p>
                             </div>
-                            <div className="flex justify-between w-full border border-dashed border-neutral-400 mt-5 max-w-sm">
+                            <div className="flex justify-between border border-dashed border-neutral-400 mt-5 w-full">
                                 {/* <div> */}
-                                    <input placeholder="Enter your mail" className="pl-4 outline-none bg-transparent placeholder:text-neutral-500 w-full" />
-                                    <button className={cn("text-center min-w-max bg-stone-900 text-neutral-50 text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-4 w-max lg:px-4 py-3")}>
+                                    <input placeholder="Enter your mail" className="pl-4 outline-none bg-transparent placeholder:text-neutral-500 w-full text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight" />
+                                    <button className={cn("text-center min-w-max bg-stone-900 text-neutral-50 text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight w-max px-3 py-3")}>
                                         Get Updates
                                     </button>
                                 {/* </div> */}
                             </div>
                             <div className="text-center text-zinc-600 text-xs lg:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
                                 {/* <Buildings weight="duotone" size={24} /> */}
-                                Get emails for new feature launches. Nothing else.
+                                Get emails for new features. Nothing else.
                             </div>
                         </>}
                 </div>

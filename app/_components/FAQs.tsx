@@ -21,7 +21,7 @@ const FAQs = () => {
     })
     const headingOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1])
     return (
-        <section id="faq" ref={scrollContainer} className="lg:h-[250vh] h-fit bg-stone-900 w-full py-20 lg:py-0 px-10 xl:px-20 2xl:px-32">
+        <section ref={scrollContainer} className="lg:h-[250vh] h-fit bg-stone-900 w-full py-20 lg:py-0 px-10 xl:px-20 2xl:px-32">
             <div ref={container} className="lg:sticky top-0 min-h-screen lg:h-screen bg-stone-900 w-full flex flex-col items-center justify-center gap-10 lg:gap-16">
                 <div className="relative">
                     <motion.h1 className="text-neutral-50 text-5xl lg:text-6xl font-extrabold lg:leading-[70.40px]">faqs</motion.h1>
@@ -83,6 +83,7 @@ const FAQs = () => {
                     })}
                 </div>
             </div>
+            <div className="h-[2px]" id="faq"></div>
         </section>
     );
 }

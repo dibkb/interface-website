@@ -70,14 +70,14 @@ const Agents = () => {
                         </button>
                     </div>
                     <div className="w-6/12 h-full border-l border-dashed border-neutral-400">
-                        <video src={videos[agent]} autoPlay loop className="w-full aspect-square object-cover"></video>
+                        <video src={videos[agent]} autoPlay playsInline loop className="w-full aspect-square object-cover"></video>
                     </div>
                 </div>
             </div>
             <div className="block lg:hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 justify-center">
                     <div className="border border-dashed border-neutral-400">
-                        <video src="/Agents/Olivia.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
+                        <video playsInline src="/Agents/Olivia.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-bold leading-tight">olivia</div>
@@ -86,7 +86,7 @@ const Agents = () => {
                         </div>
                     </div>
                     <div className="border border-dashed border-neutral-400">
-                        <video src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
+                        <video playsInline src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-bold leading-tight">rio</div>
@@ -95,7 +95,7 @@ const Agents = () => {
                         </div>
                     </div>
                     <div className="border border-dashed border-neutral-400">
-                        <video src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
+                        <video playsInline src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-bold leading-tight">astrid</div>
@@ -104,7 +104,7 @@ const Agents = () => {
                         </div>
                     </div>
                     <div className="border border-dashed border-neutral-400">
-                        <video src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
+                        <video playsInline src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-bold leading-tight">train your own agent</div>
