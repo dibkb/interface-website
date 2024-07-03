@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section id='home' className="min-h-screen overflow-hidden flex flex-col justify-between py-20 gap-10 w-full">
-            <div className="w-full flex flex-col items-center justify-center gap-5 px-10 pt-20 xl:px-20 2xl:px-32">
+        <section id='home' className="min-h-screen overflow-hidden flex flex-col justify-between py-20 md:gap-10 w-full">
+            <div className="w-full flex flex-col items-center justify-center gap-5 px-10 md:pt-20 xl:px-20 2xl:px-32">
                 <div className="text-zinc-900 font-semibold leading-tight p-2 border border-dashed flex gap-3 items-center w-fit">
                     <VscSparkle className='text-violet-600' />
                     Interface AI・[V1.0]
@@ -22,9 +22,9 @@ const Hero = () => {
                             sign up
                         </button>
                     </Link>
-                    <Link target='_blank' href={'https://calendly.com/rebhavbharadwaj/introductory-call'}>
+                    <Link target='_blank' href={'https://calendly.com/rebhav-getinterface/30min'}>
                         <button className="bg-stone-900 justify-center items-center inline-flex text-center text-neutral-50 lg:text-xl font-bold leading-tight w-fit mt-5 py-4 px-6">
-                            book a 15-min call
+                            book a call
                         </button>
                     </Link>
                 </div>

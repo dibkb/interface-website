@@ -35,7 +35,7 @@ const Agents = () => {
                         <button onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(0)
-                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 0 && "bg-gray-200")}>
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 0 && "bg-[#EAEAEA]")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Olivia- your data entry agent</div>
                             </div>
@@ -44,7 +44,7 @@ const Agents = () => {
                         <div role="button" onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(1)
-                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 1 && "bg-gray-200")}>
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 1 && "bg-[#EAEAEA]")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Rio- your procurement analyst</div>
                             </div>
@@ -53,7 +53,7 @@ const Agents = () => {
                         <button onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(2)
-                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 2 && "bg-gray-200")}>
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 2 && "bg-[#EAEAEA]")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Astrid- your data scientist</div>
                             </div>
@@ -62,7 +62,7 @@ const Agents = () => {
                         <button onClick={() => {
                             clearTimeout(timer.current)
                             setAgent(3)
-                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 3 && "bg-gray-200")}>
+                        }} className={cn("w-full h-1/4 border-b border-dashed border-neutral-400 p-6 justify-center flex flex-col gap-4 transition-all ease-in-out", agent !== 3 && "bg-[#EAEAEA]")}>
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
                                 <div className="text-stone-900 text-base font-extrabold leading-tight">Train your own agent</div>
                             </div>
@@ -80,36 +80,36 @@ const Agents = () => {
                         <video src="/Agents/Olivia.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
-                                <div className="text-stone-900 text-base font-extrabold leading-tight">olivia</div>
+                                <div className="text-stone-900 text-base font-bold leading-tight">olivia</div>
                             </div>
-                            <p className="text-neutral-400 text-sm font-semibold leading-[16.80px] text-left">your data entry agent</p>
+                            <p className="text-stone-900 text-sm font-extrabold leading-[16.80px] text-left">your data entry agent</p>
                         </div>
                     </div>
                     <div className="border border-dashed border-neutral-400">
                         <video src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
-                                <div className="text-stone-900 text-base font-extrabold leading-tight">rio</div>
+                                <div className="text-stone-900 text-base font-bold leading-tight">rio</div>
                             </div>
-                            <p className="text-neutral-400 text-sm font-semibold leading-[16.80px] text-left">your procurement agent</p>
+                            <p className="text-stone-900 text-sm font-extrabold leading-[16.80px] text-left">your procurement agent</p>
                         </div>
                     </div>
                     <div className="border border-dashed border-neutral-400">
                         <video src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
-                                <div className="text-stone-900 text-base font-extrabold leading-tight">Astrid</div>
+                                <div className="text-stone-900 text-base font-bold leading-tight">astrid</div>
                             </div>
-                            <p className="text-neutral-400 text-sm font-semibold leading-[16.80px] text-left">your data scientist</p>
+                            <p className="text-stpne-900 text-sm font-extrabold leading-[16.80px] text-left">your data scientist</p>
                         </div>
                     </div>
                     <div className="border border-dashed border-neutral-400">
                         <video src="/Agents/Rio.mp4" autoPlay loop className="w-full object-fill aspect-square border-b border-dashed border-neutral-400"></video>
                         <div className="w-full flex flex-col items-center justify-center py-4 gap-4">
                             <div className="p-2 border border-dashed border-neutral-400 w-fit">
-                                <div className="text-stone-900 text-base font-extrabold leading-tight">Train your own agent</div>
+                                <div className="text-stone-900 text-base font-bold leading-tight">train your own agent</div>
                             </div>
-                            {/* <p className="text-neutral-400 text-sm font-semibold leading-[16.80px] text-left">your data scientist</p> */}
+                            <p className="text-stone-900 text-sm font-extrabold leading-[16.80px] text-left">on your personal workflow</p>
                         </div>
                     </div>
                 </div>

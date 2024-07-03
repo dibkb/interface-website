@@ -33,10 +33,7 @@ const Navbar = () => {
                                 faq
                             </button>
                         </Link>
-                        <Link href='#join-us' onClick={(e) => {
-                            e.preventDefault();
-                            document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
-                        }}>
+                        <Link href='https://theinterfacecompany.notion.site/Interface-AI-Hiring-68fca33b53d6421dbd9b706f54fa035a?pvs=4'>
                             <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                                 join us
                             </button>
@@ -51,8 +48,8 @@ const Navbar = () => {
                         </Link>
                     </div>
                 </div>
-                <Link target='_blank' href={'https://calendly.com/rebhavbharadwaj/introductory-call'} className='hidden lg:block'>
-                    <button className={cn("text-center text-base font-bold leading-none py-3 px-6 transition-all ease-in-out text-neutral-50 bg-stone-900")}>
+                <Link target='_blank' href={'https://calendly.com/rebhav-getinterface/30min'} className='hidden lg:block'>
+                    <button className={cn("text-center text-base font-bold leading-none py-3 px-6 transition-all ease-in-out text-neutral-50 bg-stone-900", mode === "light" ? "text-neutral-50 bg-stone-900" : "bg-neutral-50 text-stone-900")}>
                         book a call
                     </button>
                 </Link>
@@ -75,10 +72,7 @@ const Navbar = () => {
                             faq
                         </button>
                     </Link>
-                    <Link href='#join-us' onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
-                    }}>
+                    <Link href='https://theinterfacecompany.notion.site/Interface-AI-Hiring-68fca33b53d6421dbd9b706f54fa035a?pvs=4'>
                         <button className={cn("font-semibold leading-tight transition-all ease-in-out", mode === "light" ? "text-zinc-900" : "text-white")}>
                             join us
                         </button>

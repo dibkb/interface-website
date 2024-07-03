@@ -7,7 +7,7 @@ const About = () => {
     const container = useRef(null);
     const scrollContainer = useRef(null)
     const {mode, setMode} = useMode()
-    const paragraph = "At some point, business became bogged down by manual processes and data silos. Instead of simplifying work they made it more complicated So, we stripped it all away and focused on the most fundamental need: efficiency"
+    const paragraph = "At some point, businesses became bogged down by manual processes and data silos. Instead of simplifying work they made it more complicated So, we stripped it all away and focused on the most fundamental need: efficiency"
     const words = paragraph.split(" ")
     const { scrollYProgress } = useScroll({
         target: scrollContainer,
