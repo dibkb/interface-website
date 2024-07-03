@@ -27,7 +27,7 @@ const Agents = () => {
     return (
         <div id="agents" className="min-h-screen w-full flex flex-col items-center py-20 px-10 xl:px-20 2xl:px-32 justify-center gap-16 overflow-hidden">
             <h1 className="text-center text-black text-5xl lg:text-[64px] font-extrabold lg:leading-[70.40px]">
-                Introducing the future of work
+                introducing the future of work
             </h1>
             <div className="hidden lg:flex items-center justify-center w-full">
                 <div className="w-full xl:w-full 2xl:w-[85%] text-left border-dashed border border-neutral-400 flex">

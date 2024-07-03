@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section id='home' className="min-h-screen overflow-hidden flex flex-col justify-between py-20 md:gap-10 w-full">
+        <section id='home' className="min-h-screen overflow-hidden flex flex-col justify-between py-20 gap-10 w-full">
             <div className="w-full flex flex-col items-center justify-center gap-5 px-10 md:pt-20 xl:px-20 2xl:px-32">
                 <div className="text-zinc-900 font-semibold leading-tight p-2 border border-dashed flex gap-3 items-center w-fit">
                     <VscSparkle className='text-violet-600' />
