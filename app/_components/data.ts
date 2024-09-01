@@ -71,7 +71,7 @@ export const faqs = [
     },
     {
         question : "How can Interface help my business?",
-        answer : "Our pricing is flexible and tailored to each client. Contact us for details."
+        answer : "Our pricing is flexible and tailored to each client. <Link href={\"https://calendly.com/rebhav-getinterface/30min\"} className=\"underline\">Contact us<\/Link> for details."
     },
     {
         question : "How do I get started?",
