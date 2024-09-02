@@ -78,7 +78,11 @@ const FAQs = () => {
           >
             {faqs.map((faq, index) => {
               return (
-                <AccordionItem value={"item-" + index} className="w-full">
+                <AccordionItem
+                  key={index}
+                  value={"item-" + index}
+                  className="w-full"
+                >
                   <AccordionTrigger className="w-full lg:text-xl border-t border-r text-sm border-l border-neutral-200 px-5 text-left font-medium hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
