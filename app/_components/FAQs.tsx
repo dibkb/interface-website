@@ -30,7 +30,7 @@ const grotesk = localFont({
       path: "../../public/Font/ClashGrotesk-Medium.woff2",
       weight: "500",
     },
-    { path: "../../public/Font/ClashGrotesk-SemiBold.woff2", weight: "600" },
+    { path: "../../public/Font/ClashGrotesk-Semibold.woff2", weight: "600" },
     { path: "../../public/Font/ClashGrotesk-Bold.woff2", weight: "700" },
   ],
 });
