@@ -2,7 +2,7 @@ import { useMode } from "@/app/Providers/NavbarColor";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Outfit } from "next/font/google";
-import { X } from "@phosphor-icons/react";
+import { ArrowLineUpRight, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -52,13 +52,19 @@ const Navbar = () => {
               exit={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ease: "easeInOut", duration: 0.1 }}
-              className="w-full py-2 text-xs lg:text-sm flex justify-between px-2 lg:px-5 items-center bg-primary-green font-medium"
+              className="w-full py-2 text-xs lg:text-sm flex justify-between px-5 lg:px-5 items-center bg-primary-green font-medium"
             >
-              <div className="hidden lg:block"></div>
-              <div className="text-center text-xs lg:text-lg">
-                ⚠️ {timeLeft} : Claim 18 months of Amazon Refunds before new
-                Reimbursement Policy
-              </div>
+              <div className="block"></div>
+              <Link
+                href={"https://calendly.com/rebhav-getinterface/30min"}
+                target="_blank"
+              >
+                <div className="text-center text-xs lg:text-lg inline-flex items-center gap-2 px-4">
+                  ⚠️ {timeLeft} : Claim 18 months of Amazon Refunds before new
+                  Reimbursement Policy
+                  {/* <ArrowLineUpRight /> */}
+                </div>
+              </Link>
               <div
                 role="button"
                 onClick={() => {
@@ -96,7 +102,7 @@ const Navbar = () => {
           </Link>
           <Link
             target="_blank"
-            href={"https://calendly.com/rebhav-getinterface/30min"}
+            href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
             className="lg:hidden block"
           >
             <button
@@ -152,7 +158,7 @@ const Navbar = () => {
               </Link>
               <Link
                 target="_blank"
-                href={"https://calendly.com/rebhav-getinterface/30min"}
+                href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
                 className="hidden lg:block"
               >
                 <button

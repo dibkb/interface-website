@@ -104,13 +104,13 @@ const JoinUs = () => {
               Settlement Report
             </div>
             <div className="left-[22.32px] top-[63.94px] absolute text-zinc-400 text-[11px] font-extrabold ">
-              Vendor:
+              FBA Fees:
             </div>
             <div className="w-[88.34px] h-[9.39px] left-[22.09px] top-[87.80px] absolute bg-zinc-300 rounded-[13.25px]" />
             <div className="w-[59.08px] h-[9.39px] left-[22.09px] top-[104.92px] absolute bg-zinc-300 rounded-[13.25px]" />
             <div className="left-[22.09px] top-[130.80px] absolute flex-col justify-start items-start gap-[9px] inline-flex">
               <div className="text-zinc-400 text-[11px] font-extrabold ">
-                Ship To:
+                Amount Settled:
               </div>
               <div className="w-[88.34px] h-[9.39px] bg-zinc-300 rounded-[13.25px]" />
               <div className="w-[59.08px] h-[9.39px] bg-zinc-300 rounded-[13.25px]" />
@@ -267,7 +267,7 @@ const JoinUs = () => {
       <div className="absolute top-0 left-0 h-full w-full z-50 flex flex-col items-center justify-center px-32">
         <div
           className={cn(
-            "flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-7 lg:p-24 gap-4 lg:gap-9 transition-all ease-in-out h-fit aspect-square sm:aspect-video rounded-xl",
+            "flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-7 lg:p-24 gap-4 lg:gap-9 transition-all duration-500 ease-in-out h-fit aspect-square sm:aspect-video rounded-xl",
             organised && "drop-shadow-[0_12px_12px_rgba(81,235,130,0.45)]",
           )}
         >
@@ -284,7 +284,7 @@ const JoinUs = () => {
               <div className="flex gap-5 lg:gap-10 justify-center items-center w-full mt-2">
                 <Link
                   target="_blank"
-                  href={"https://calendly.com/rebhav-getinterface/30min"}
+                  href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
                 >
                   <button
                     id="yes"

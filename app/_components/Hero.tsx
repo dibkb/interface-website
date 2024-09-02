@@ -14,6 +14,7 @@ import Brand2 from "@/public/Brand2.png";
 import Brand3 from "@/public/Brand3.png";
 import Image from "next/image";
 import localFont from "next/font/local";
+import ArrowRightSVG from "@/public/ArrowRight.svg";
 
 const outfit = Outfit({ weight: "variable", subsets: ["latin"] });
 const grotesk = localFont({
@@ -64,10 +65,13 @@ const Hero = () => {
           </span>
           <br />
           <span className="inline-flex gap-2 text-center items-center">
-            <span className="flex xl:text-3xl text-3xl 2xl:text-4xl font-black">
-              <CaretRight weight="bold" />
-              <CaretRight weight="bold" />
-              <CaretRight weight="bold" />
+            <span className="flex xl:text-3xl text-3xl 2xl:text-6xl tracking-tighter font-black">
+              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
+              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
+              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
+              {/* <CaretRight weight="bold" /> */}
+              {/* <CaretRight weight="bold" /> */}
+              {/* <CaretRight weight="bold" /> */}
             </span>
             with AI
           </span>
@@ -112,7 +116,7 @@ const Hero = () => {
           <div className="relative">
             <Link
               target="_blank"
-              href={"https://calendly.com/rebhav-getinterface/30min"}
+              href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
             >
               <button
                 className={cn(
@@ -138,7 +142,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-0 left-0 w-full">
         <div className="flex flex-col items-center justify-center text-[#A9A9A9] gap-2 pb-10 z-10">
-          <p className="text-center lg:text-base text-sm 2xl:text-lg font-medium text-[#A9A9A9]">
+          <p className="text-center xl:text-lg text-base 2xl:text-xl font-medium text-[#A9A9A9]">
             See how much you can save
           </p>
           <div className="flex flex-col items-center justify-center">

@@ -94,7 +94,7 @@ const About = () => {
         </div>
         <div className="flex flex-col gap-2 items-center justify-center">
           <Link
-            href={"https://calendly.com/rebhav-getinterface/30min"}
+            href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
             target="_blank"
           >
             <button className="bg-neutral-50 py-2 px-5 rounded-xl text-interface-black font-medium lg:text-base text-sm 2xl:text-lg border border-r-2 border-b-4 border-neutral-400 flex gap-2 items-center">
@@ -102,7 +102,7 @@ const About = () => {
             </button>
           </Link>
           <p className="text-center font-semibold lg:text-base text-sm 2xl:text-lg">
-            Lorem ipsum dolor ipsum dolor
+            save time and money
           </p>
         </div>
       </div>
