@@ -21,7 +21,7 @@ const Navbar = () => {
       const timeDifference: number = targetDate.getTime() - now.getTime();
 
       if (timeDifference <= 0) {
-        setTimeLeft("00:00:00");
+        setTimeLeft("00:00:00:00");
         return;
       }
 
@@ -32,17 +32,48 @@ const Navbar = () => {
       const minutes: number = Math.floor(
         (timeDifference % (1000 * 60 * 60)) / (1000 * 60),
       );
+      const seconds: number = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-      const formattedTime: string = `${String(days).padStart(2, "0")}:${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+      const formattedTime: string = `${String(days).padStart(2, "0")}:${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
       setTimeLeft(formattedTime);
     };
 
-    const intervalId = setInterval(updateTimer, 60000); // Update every minute
+    const intervalId = setInterval(updateTimer, 1000); // Update every second
 
     updateTimer(); // Initial call to set the timer immediately
 
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, []);
+  // useEffect(() => {
+  //   const targetDate: Date = new Date("2024-10-23T00:00:00Z");
+  //
+  //   const updateTimer = () => {
+  //     const now: Date = new Date();
+  //     const timeDifference: number = targetDate.getTime() - now.getTime();
+  //
+  //     if (timeDifference <= 0) {
+  //       setTimeLeft("00:00:00");
+  //       return;
+  //     }
+  //
+  //     const days: number = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  //     const hours: number = Math.floor(
+  //       (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+  //     );
+  //     const minutes: number = Math.floor(
+  //       (timeDifference % (1000 * 60 * 60)) / (1000 * 60),
+  //     );
+  //
+  //     const formattedTime: string = `${String(days).padStart(2, "0")}:${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+  //     setTimeLeft(formattedTime);
+  //   };
+  //
+  //   const intervalId = setInterval(updateTimer, 60000); // Update every minute
+  //
+  //   updateTimer(); // Initial call to set the timer immediately
+  //
+  //   return () => clearInterval(intervalId); // Clean up the interval on component unmount
+  // }, []);
   return (
     <>
       <nav className={"w-full fixed top-0 z-[999] border-b border-neutral-200"}>
