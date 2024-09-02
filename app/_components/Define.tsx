@@ -8,6 +8,7 @@ import Diagnose from "@/public/Features/Diagnose.png";
 import Retrieve from "@/public/Features/Retrieve.png";
 import Dispute from "@/public/Features/Dispute.png";
 import FollowUp from "@/public/Features/FollowUp.png";
+import localFont from "next/font/local";
 
 const playfair = Playfair_Display({
   weight: "variable",
@@ -18,6 +19,23 @@ const playfairNormal = Playfair_Display({
   weight: "variable",
   subsets: ["latin"],
   style: "normal",
+});
+
+const grotesk = localFont({
+  src: [
+    { path: "../../public/Font/ClashGrotesk-Extralight.woff2", weight: "200" },
+    { path: "../../public/Font/ClashGrotesk-Light.woff2", weight: "300" },
+    {
+      path: "../../public/Font/ClashGrotesk-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "../../public/Font/ClashGrotesk-Medium.woff2",
+      weight: "500",
+    },
+    { path: "../../public/Font/ClashGrotesk-SemiBold.woff2", weight: "600" },
+    { path: "../../public/Font/ClashGrotesk-Bold.woff2", weight: "700" },
+  ],
 });
 
 // const Circle = forwardRef<
@@ -51,31 +69,36 @@ const Define = () => {
   const div7Ref = useRef<HTMLDivElement>(null);
   return (
     <section
-      id="faq"
+      // id="faq"
       // ref={scrollContainer}
       className="h-fit w-full py-20 lg:py-10 px-10 xl:px-20 2xl:px-48"
     >
       <div
         ref={container}
-        className="w-full flex flex-col items-center justify-center gap-5 p-10 border border-neutral-200"
+        className="w-full flex flex-col items-center justify-center gap-5 lg:p-10 p-5 border border-neutral-200"
       >
-        <h1 className="text-5xl xl:text-6xl font-semibold text-center">
-          Lorem ipsum dolor sit{" "}
+        <h1
+          className={cn(
+            "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
+            grotesk.className,
+          )}
+        >
+          <span className="z-10">Our Proprietary Models supercharge</span>
+          <br />
           <mark
             className={cn(
-              "bg-primary-green rounded-xl px-4",
-              playfair.className,
+              "bg-primary-green rounded-lg px-4",
+              playfairNormal.className,
             )}
           >
-            ipsum dolor sit
+            win rates to 92.5%
           </mark>{" "}
           <br />
-          Lorem ipsum dolor sit lorem ipsum
         </h1>
-        <div className="border border-neutral-200 w-full grid grid-cols-2 justify-center gap-10 mt-10 py-16">
+        <div className="border border-neutral-200 w-full grid grid-cols-1 md:grid-cols-2 justify-center gap-10 mt-10 py-16">
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-center overflow-hidden border-r border-t border-b p-5",
+              "relative flex flex-col w-full items-center justify-between overflow-hidden md:border-r border-t border-b p-5",
             )}
             ref={containerRef}
           >
@@ -89,12 +112,12 @@ const Define = () => {
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-xl",
+                  "font-semibold text-left text-lg lg:text-xl",
                 )}
               >
                 Diagnose
               </h2>
-              <p className="text-neutral-400 font-medium">
+              <p className="text-neutral-400 font-medium text-sm lg:text-base">
                 We distill LLMs on deductions data to flag huge payment records
                 for discrepancies
               </p>
@@ -102,7 +125,7 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-center overflow-hidden border-l border-t border-b p-5",
+              "relative flex flex-col w-full items-center justify-between overflow-hidden md:border-l border-t border-b p-5",
             )}
             ref={containerRef}
           >
@@ -116,19 +139,20 @@ const Define = () => {
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-xl",
+                  "font-semibold text-left text-lg lg:text-xl",
                 )}
               >
                 Retrieve
               </h2>
-              <p className="text-neutral-400 font-medium">
-                Our browser agents navigate to create a rebuttal package
+              <p className="text-neutral-400 font-medium text-sm lg:text-base">
+                Our browser agents navigate your stack to create a rebuttal
+                package
               </p>
             </div>
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-center overflow-hidden border-r border-t border-b p-5",
+              "relative flex flex-col w-full items-center justify-between overflow-hidden md:border-r border-t border-b p-5",
             )}
             ref={containerRef}
           >
@@ -142,20 +166,20 @@ const Define = () => {
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-xl",
+                  "font-semibold text-left text-lg lg:text-xl",
                 )}
               >
                 Dispute
               </h2>
-              <p className="text-neutral-400 font-medium">
-                Our agents put every retailer through an unique journey on their
-                preferred channels
+              <p className="text-neutral-400 font-medium text-sm lg:text-base">
+                Our agents use chain of thought reasoning to validate and
+                dispute all your false deductions
               </p>
             </div>
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-center overflow-hidden border-l border-t border-b p-5",
+              "relative flex flex-col w-full items-center justify-between overflow-hidden md:border-l border-t border-b p-5",
             )}
             ref={containerRef}
           >
@@ -169,14 +193,14 @@ const Define = () => {
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-xl",
+                  "font-semibold text-left text-lg lg:text-xl",
                 )}
               >
                 Follow Up
               </h2>
-              <p className="text-neutral-400 font-medium">
-                From talking to retailers on the channels they prefer to turning
-                disputes to collections, our agents do it all!
+              <p className="text-neutral-400 font-medium text-sm lg:text-base">
+                Our agents follow up with Marketplaces to convert disputes into
+                successful collections.
               </p>
             </div>
           </div>

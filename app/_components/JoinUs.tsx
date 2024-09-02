@@ -23,7 +23,7 @@ const JoinUs = () => {
     });
   });
   return (
-    <div id="join-us" className="w-full h-screen relative overflow-hidden">
+    <div id="join-us" className="w-full min-h-[110vh] relative overflow-hidden">
       <div className="bg-[url('/JoinUs/background.svg')] w-full h-full absolute"></div>
       <div className="absolute w-full h-full flex items-center justify-center">
         <div className="lg:w-[850px] w-[425px] h-[425px] lg:h-[850px] absolute rounded-full border border-zinc-900/opacity-10" />
@@ -278,10 +278,10 @@ const JoinUs = () => {
                   <p>Interface AI・[V1.1]</p>
                 </div>
                 <p className="text-center w-max text-stone-900 text-lg md:text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
-                  Ready to get organized?
+                  Start Recovering Now
                 </p>
               </div>
-              <div className="flex gap-5 lg:gap-10 justify-center items-center w-full mt-5">
+              <div className="flex gap-5 lg:gap-10 justify-center items-center w-full mt-2">
                 <Link
                   target="_blank"
                   href={"https://calendly.com/rebhav-getinterface/30min"}
@@ -289,7 +289,7 @@ const JoinUs = () => {
                   <button
                     id="yes"
                     className={cn(
-                      "text-center bg-stone-900 text-neutral-50 text-xs rounded-xl border border-b-4 border-r-2 border-neutral-400 lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-4 w-max lg:px-16 py-3 transition-all ease-in-out duration-500",
+                      "text-center bg-stone-900 text-neutral-50 text-base rounded-lg border border-b-4 border-r-2 border-neutral-400 lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-4 w-max sm:px-10 lg:px-16 py-1 transition-all ease-in-out duration-500",
                       organised &&
                         "bg-primary-green text-interface-black border-secondary-green",
                     )}
@@ -303,14 +303,13 @@ const JoinUs = () => {
                     setOrganised(false);
                   }}
                   id="no"
-                  className="text-center text-stone-900 text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-3 px-4 lg:px-16 border border-b-4 border-r-2 rounded-xl border-neutral-400"
+                  className="text-center text-stone-900 text-base lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-1 px-4 sm:px-10 lg:px-16 border border-b-4 border-r-2 rounded-lg border-neutral-400"
                 >
                   No?
                 </button>
               </div>
               <div className="text-center text-zinc-600 text-xs w-max lg:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
-                <Buildings weight="duotone" size={24} />
-                Custom to your company requirements
+                Get a free audit of how much we can save you.
               </div>
             </>
           )}

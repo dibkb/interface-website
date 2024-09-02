@@ -10,11 +10,29 @@ import {
   AccordionContent,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import localFont from "next/font/local";
 
 const playfair = Playfair_Display({
   weight: "variable",
   subsets: ["latin"],
   style: "italic",
+});
+
+const grotesk = localFont({
+  src: [
+    { path: "../../public/Font/ClashGrotesk-Extralight.woff2", weight: "200" },
+    { path: "../../public/Font/ClashGrotesk-Light.woff2", weight: "300" },
+    {
+      path: "../../public/Font/ClashGrotesk-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "../../public/Font/ClashGrotesk-Medium.woff2",
+      weight: "500",
+    },
+    { path: "../../public/Font/ClashGrotesk-SemiBold.woff2", weight: "600" },
+    { path: "../../public/Font/ClashGrotesk-Bold.woff2", weight: "700" },
+  ],
 });
 
 const FAQs = () => {
@@ -42,67 +60,37 @@ const FAQs = () => {
     >
       <div
         ref={container}
-        className="w-full flex flex-col items-center justify-center gap-5 p-10 border border-neutral-200"
+        className="w-full flex flex-col items-center justify-center gap-5 p-5 lg:p-10 border border-neutral-200"
       >
-        <h1 className="text-5xl xl:text-6xl font-semibold text-center">
-          Lorem ipsum dolor sit{" "}
-          <mark
-            className={cn(
-              "bg-primary-green rounded-xl px-4",
-              playfair.className,
-            )}
-          >
-            ipsum dolor sit
-          </mark>{" "}
-          <br />
-          Lorem ipsum dolor sit lorem ipsum
+        <h1
+          className={cn(
+            "xl:text-5xl lg:text-4xl text-3xl 2xl:text-6xl font-semibold text-center",
+            grotesk.className,
+          )}
+        >
+          FAQs
         </h1>
-        <div className="border border-neutral-200 w-full p-10 flex flex-col items-center justify-center gap-5 mt-10">
+        <div className="border border-neutral-200 w-full lg:p-10 p-5 flex flex-col items-center justify-center gap-5">
           <Accordion
             type="single"
             collapsible
             className="w-full flex flex-col items-center justify-center gap-5"
           >
-            <AccordionItem value="item-1" className="w-full">
-              <AccordionTrigger className="w-full border border-neutral-200 p-5">
-                What does it cost to work with you?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2" className="w-full">
-              <AccordionTrigger className="w-full border border-neutral-200 p-5">
-                What does it cost to work with you?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3" className="w-full">
-              <AccordionTrigger className="w-full border border-neutral-200 p-5">
-                What does it cost to work with you?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4" className="w-full">
-              <AccordionTrigger className="w-full border border-neutral-200 p-5">
-                What does it cost to work with you?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5" className="w-full">
-              <AccordionTrigger className="w-full border border-neutral-200 p-5">
-                What does it cost to work with you?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
+            {faqs.map((faq, index) => {
+              return (
+                <AccordionItem value={"item-" + index} className="w-full">
+                  <AccordionTrigger className="w-full lg:text-base border-t border-r border-l border-neutral-200 px-5 text-left font-medium hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="border-r border-l border-b border-neutral-200 px-5 text-neutral-400 font-medium">
+                    <div
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      className="max-w-xl"
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
           </Accordion>
         </div>
       </div>
