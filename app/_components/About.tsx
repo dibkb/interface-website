@@ -34,9 +34,8 @@ const About = () => {
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
       </div>
       <div className="z-10 relative flex flex-col gap-10 items-center justify-center w-full text-neutral-50 py-20 px-10 sm:px-16 lg:px-28 2xl:px-64">
-        <h1 className="font-semibold 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl text-center">
-          Check how much you can <br />
-          reclaim from marketplaces
+        <h1 className="font-semibold 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl text-center max-w-3xl">
+          Check how much you can reclaim from marketplaces
         </h1>
         <div
           className={cn(
