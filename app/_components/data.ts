@@ -53,34 +53,36 @@ export const trustedByBrands = [
 
 export const faqs = [
   {
-    question: "What we do?",
+    question: "How does Interface dispute my marketplace deductions?",
     answer:
-      "Interface is a workforce automation studio for suppliers, distributors, retailers and manufacturers.",
+      "We integrate with your marketplaces to pull data real-time to diagnose and flag any discrepancies. We then sift through all your sources of truth to retrieve supporting documents to raise tickets efficiently and thus increase dispute win rate.",
   },
   {
-    question: "Integrations?",
+    question: "Why Should I Use Interface?",
     answer:
-      "Interface supports seamless integration through all your favourite inventory management systems.",
+      "Interface helps recover funds that sellers may have lost due to marketplace accounting errors. Disputing each claim on average takes up around 10-15 minutes. Save bandwidth and money by being truly hands-off and disputing via Interface",
   },
   {
-    question: "Am i the ideal user?",
-    answer:
-      "If you run an operation-heavy/inventory- intensive team, we’d love to get in touch with you and help address and solve your challenges.",
+    question: "How Does Interface Recover Funds?",
+    answer: `
+      <p>Interface recovers funds by leveraging AI designed to identify, challenge, and resolve discrepancies. Here's how:</p>
+      <ol class="list-decimal pl-5 mt-4">
+        <li>Interface uses distilled LLMs to scan deductions data, flagging significant payment discrepancies.</li>
+        <li>Our browser agents gather and compile rebuttal packages for each flagged issue.</li>
+        <li>We guide retailers through personalized dispute journeys on their preferred channels.</li>
+        <li>Our agents handle all follow-ups, turning disputes into collections.</li>
+      </ol>
+    `,
   },
   {
-    question: "What support do you offer?",
-    answer:
-      "We offer comprehensive support, and a dedicated support team to assist with any questions or issues.",
-  },
-  {
-    question: "How can Interface help my business?",
-    answer:
-      "Our pricing is flexible and tailored to each client. Contact us for details.",
-  },
-  {
-    question: "How do I get started?",
-    answer:
-      "You can book a call with our founders, to cater to your needs on a one-n-one basis, here.",
+    question: "What types of cases do we cover?",
+    answer: `<p>We cover a wide range of discrepancies to ensure accurate reconciliations and reimbursements:</p>
+<ol class="list-decimal pl-5 mt-4">
+<li>Reconcile all transactions against actual stock.</li>
+<li>Address lost, damaged, or destroyed items without authorisation.</li>
+<li>Correct overcharges on fees.</li>
+<li>Resolve inventory discrepancies, such as missing or miscounted items.</li>
+Dispute incorrect reimbursements and refunds.</ol>`,
   },
 ];
 

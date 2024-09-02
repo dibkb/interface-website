@@ -2,90 +2,100 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useMode } from "../Providers/NavbarColor";
 import { faqs } from "./data";
+import { Playfair_Display } from "next/font/google";
+import { cn } from "@/lib/utils";
+import {
+  AccordionItem,
+  Accordion,
+  AccordionContent,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import localFont from "next/font/local";
+
+const playfair = Playfair_Display({
+  weight: "variable",
+  subsets: ["latin"],
+  style: "italic",
+});
+
+const grotesk = localFont({
+  src: [
+    { path: "../../public/Font/ClashGrotesk-Extralight.woff2", weight: "200" },
+    { path: "../../public/Font/ClashGrotesk-Light.woff2", weight: "300" },
+    {
+      path: "../../public/Font/ClashGrotesk-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "../../public/Font/ClashGrotesk-Medium.woff2",
+      weight: "500",
+    },
+    { path: "../../public/Font/ClashGrotesk-SemiBold.woff2", weight: "600" },
+    { path: "../../public/Font/ClashGrotesk-Bold.woff2", weight: "700" },
+  ],
+});
 
 const FAQs = () => {
-    const container = useRef(null)
-    const scrollContainer = useRef(null)
-    const isInView = useInView(container, { amount: 1 })
-    const { mode, setMode } = useMode()
-    useEffect(() => {
-        if (isInView) {
-            setMode("dark")
-        } else {
-            setMode("light")
-        }
-    }, [isInView])
-    const { scrollYProgress } = useScroll({
-        target: scrollContainer,
-        offset: ['start -0.1', '0.9 end']
-    })
-    const headingOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1])
-    return (
-        <section id="faq" ref={scrollContainer} className="lg:h-[250vh] h-fit bg-stone-900 w-full py-20 lg:py-0 px-10 xl:px-20 2xl:px-32">
-            <div ref={container} className="lg:sticky top-0 min-h-screen lg:h-screen bg-stone-900 w-full flex flex-col items-center justify-center gap-10 lg:gap-16">
-                <div className="relative">
-                    <motion.h1 className="text-neutral-50 text-5xl lg:text-6xl font-extrabold lg:leading-[70.40px]">faqs</motion.h1>
-                </div>
-                <div className="lg:grid hidden lg:grid-cols-3 lg:gap-14 gap-y-5 lg:gap-y-16">
-                    {faqs.map((faq, index) => {
-                        const start = index / faqs.length
-                        const end = start + (1 / faqs.length)
-                        const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
-                        const y = useTransform(scrollYProgress, [start, end], [50, 0])
-                        return (
-                            <div key={index} className="relative">
-                                <motion.div style={{ opacity: opacity }}>
-                                    <p className="text-violet-400 lg:text-xl font-semibold leading-7">
-                                        {faq.question}
-                                    </p>
-                                    <p className="text-neutral-50 text-sm lg:text-lg font-medium leading-7">
-                                        {faq.answer}
-                                    </p>
-                                </motion.div>
-                                <motion.div className="opacity-20 absolute top-0 left-0">
-                                    <p className="text-violet-400 lg:text-xl font-semibold leading-7">
-                                        {faq.question}
-                                    </p>
-                                    <p className="text-neutral-50 text-sm lg:text-lg font-medium leading-7">
-                                        {faq.answer}
-                                    </p>
-                                </motion.div>
-                            </div>
-                        )
-                    })}
-                </div>
-                <div className="lg:hidden grid grid-cols-1 lg:gap-14 gap-y-10 lg:gap-y-16">
-                    {faqs.map((faq, index) => {
-                        // const start = index / faqs.length
-                        // const end = start + (1 / faqs.length)
-                        // const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
-                        // const y = useTransform(scrollYProgress, [start, end], [50, 0])
-                        return (
-                            <div key={index} className="relative">
-                                <motion.div>
-                                    <p className="text-violet-400 lg:text-xl font-semibold leading-7">
-                                        {faq.question}
-                                    </p>
-                                    <p className="text-neutral-50 text-sm lg:text-lg font-medium leading-7">
-                                        {faq.answer}
-                                    </p>
-                                </motion.div>
-                                {/* <motion.div className="opacity-20 absolute top-0 left-0">
-                                    <p className="text-violet-400 lg:text-xl font-semibold leading-7">
-                                        {faq.question}
-                                    </p>
-                                    <p className="text-neutral-50 text-sm lg:text-lg font-medium leading-7">
-                                        {faq.answer}
-                                    </p>
-                                </motion.div> */}
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-            {/* <div className="" id="faq"></div> */}
-        </section>
-    );
-}
+  const container = useRef(null);
+  const scrollContainer = useRef(null);
+  const isInView = useInView(container, { amount: 1 });
+  const { mode, setMode } = useMode();
+  // useEffect(() => {
+  //   if (isInView) {
+  //     setMode("dark");
+  //   } else {
+  //     setMode("light");
+  //   }
+  // }, [isInView]);
+  // const { scrollYProgress } = useScroll({
+  //   target: scrollContainer,
+  //   offset: ["start -0.1", "0.9 end"],
+  // });
+  // const headingOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
+  return (
+    <section
+      id="faq"
+      ref={scrollContainer}
+      className="h-fit w-full py-20 lg:py-10 px-10 xl:px-20 2xl:px-48"
+    >
+      <div
+        ref={container}
+        className="w-full flex flex-col items-center justify-center gap-5 p-5 lg:p-10 border border-neutral-200"
+      >
+        <h1
+          className={cn(
+            "xl:text-5xl lg:text-4xl text-3xl 2xl:text-6xl font-semibold text-center",
+            grotesk.className,
+          )}
+        >
+          FAQs
+        </h1>
+        <div className="border border-neutral-200 w-full lg:p-10 p-5 flex flex-col items-center justify-center gap-5">
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full flex flex-col items-center justify-center gap-5"
+          >
+            {faqs.map((faq, index) => {
+              return (
+                <AccordionItem value={"item-" + index} className="w-full">
+                  <AccordionTrigger className="w-full lg:text-xl border-t border-r text-sm border-l border-neutral-200 px-5 text-left font-medium hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="border-r border-l border-b text-sm lg:text-xl border-neutral-200 px-5 text-neutral-400 font-medium">
+                    <div
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      className="lg:pr-10"
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default FAQs;

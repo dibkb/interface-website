@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Outfit } from "next/font/google";
 import "./globals.css";
 
-const inter = Manrope({ subsets: ["latin"], weight : 'variable' });
+const inter = Outfit({ subsets: ["latin"], weight: "variable" });
 
 export const metadata: Metadata = {
   title: "interface",
