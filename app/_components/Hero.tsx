@@ -64,7 +64,7 @@ const Hero = () => {
             disputes
           </span>
           <br />
-          <span className="inline-flex gap-2 text-center items-center">
+          <span className="inline-flex gap-8 text-center items-center">
             <span className="flex xl:text-3xl text-3xl 2xl:text-6xl tracking-tighter font-black">
               <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
               <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
