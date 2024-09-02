@@ -42,7 +42,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[72px] h-[72px] rotate-[-10deg] top-44 left-10 xl:bottom-96 xl:left-32 absolute  rounded-[6.86px] justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100",
+              "w-[72px] h-[72px] rotate-[-10deg] top-44 left-10 xl:top-[30rem] xl:left-32 absolute  rounded-[6.86px] justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100",
               organised &&
                 "opacity-0 top-[50%] xl:left-[50%] xl:bottom-[50%] left-[50%] rotate-0 scale-0",
             )}
@@ -69,7 +69,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[72px] h-[72px] rotate-[17.99deg] bottom-32 right-24 absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-200 ease-in-out",
+              "w-[72px] h-[72px] rotate-[17.99deg] bottom-32 right-24 xl:bottom-32 xl:right-[50%] absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-200 ease-in-out",
               organised &&
                 "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] right-[50%] rotate-0 scale-0",
             )}
