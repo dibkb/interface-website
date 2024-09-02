@@ -55,7 +55,7 @@ const Navbar = () => {
               className="w-full py-2 text-xs lg:text-sm flex justify-around px-5 items-center bg-primary-green font-medium"
             >
               <div></div>
-              <div className="text-center">
+              <div className="text-center text-lg">
                 ⚠️ {timeLeft} : Claim 18 months of Amazon Refunds before new
                 Reimbursement Policy
               </div>

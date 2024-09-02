@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="lg:min-h-screen overflow-hidden flex flex-col items-center justify-center lg:justify-between gap-20 w-full relative"
+      className="lg:min-h-screen overflow-hidden flex flex-col items-center justify-center gap-20 w-full relative"
     >
       <div className="absolute w-full h-full flex items-center justify-around">
         <div className="w-[1px] h-full bg-[#ECEEF2]"></div>
@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="w-[1px] h-full bg-[#ECEEF2]"></div>
         <div className="w-[1px] h-full bg-[#ECEEF2]"></div>
       </div>
-      <div className="w-full flex flex-col items-center justify-center gap-5 px-10 xl:px-20 2xl:px-32 z-10 pt-52">
+      <div className="w-full flex flex-col items-center justify-center gap-5 px-10 xl:px-20 2xl:px-32 z-10 py-52">
         <p
           className={cn(
             "text-black font-semibold text-center lg:text-5xl text-5xl xl:text-6xl 2xl:text-7xl",
@@ -136,13 +136,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center text-[#A9A9A9] gap-2 pb-10 z-10">
-        <p className="text-center lg:text-base text-sm 2xl:text-lg font-medium text-[#A9A9A9]">
-          See how much you can save
-        </p>
-        <div className="flex flex-col items-center justify-center">
-          <CaretDown weight="bold" />
-          <CaretDown weight="bold" />
+      <div className="absolute bottom-0 left-0 w-full">
+        <div className="flex flex-col items-center justify-center text-[#A9A9A9] gap-2 pb-10 z-10">
+          <p className="text-center lg:text-base text-sm 2xl:text-lg font-medium text-[#A9A9A9]">
+            See how much you can save
+          </p>
+          <div className="flex flex-col items-center justify-center">
+            <CaretDown weight="bold" />
+            <CaretDown weight="bold" />
+          </div>
         </div>
       </div>
     </section>

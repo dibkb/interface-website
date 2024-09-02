@@ -79,13 +79,13 @@ const FAQs = () => {
             {faqs.map((faq, index) => {
               return (
                 <AccordionItem value={"item-" + index} className="w-full">
-                  <AccordionTrigger className="w-full lg:text-base border-t border-r border-l border-neutral-200 px-5 text-left font-medium hover:no-underline">
+                  <AccordionTrigger className="w-full lg:text-xl border-t border-r text-sm border-l border-neutral-200 px-5 text-left font-medium hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="border-r border-l border-b border-neutral-200 px-5 text-neutral-400 font-medium">
+                  <AccordionContent className="border-r border-l border-b text-sm lg:text-xl border-neutral-200 px-5 text-neutral-400 font-medium">
                     <div
                       dangerouslySetInnerHTML={{ __html: faq.answer }}
-                      className="max-w-xl"
+                      className="lg:pr-10"
                     />
                   </AccordionContent>
                 </AccordionItem>

@@ -34,14 +34,13 @@ const About = () => {
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
       </div>
       <div className="z-10 relative flex flex-col gap-10 items-center justify-center w-full text-neutral-50 py-20 px-10 sm:px-16 lg:px-28 2xl:px-64">
-        <h1 className="font-semibold 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl max-w-lg text-center">
+        <h1 className="font-semibold 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl text-center">
           Check how much you can <br />
           reclaim from marketplaces
         </h1>
         <div
           className={cn(
             "grid grid-cols-1 md:grid-cols-2 xl:gap-20 lg:gap-16 gap-10 2xl:gap-24 w-full lg:mt-10 mt-2",
-            manrope.className,
           )}
         >
           <div className="w-full px-8 py-6 xl:px-16 xl:py-12 bg-[#FBFBFB]/10 rounded-lg border-2 border-secondary-green backdrop-blur-md flex flex-col items-center justify-center gap-2">
@@ -89,7 +88,6 @@ const About = () => {
           <div
             className={cn(
               "bg-primary-green py-3 px-14 rounded-lg text-interface-black font-bold xl:text-3xl text-2xl 2xl:text-4xl border border-r-2 border-b-4 border-secondary-green",
-              manrope.className,
             )}
           >
             ₹{costSaved}

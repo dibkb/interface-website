@@ -77,24 +77,34 @@ const Define = () => {
         ref={container}
         className="w-full flex flex-col items-center justify-center gap-5 lg:p-10 p-5 border border-neutral-200"
       >
-        <h1
-          className={cn(
-            "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
-            grotesk.className,
-          )}
-        >
-          <span className="z-10">Our Proprietary Models supercharge</span>
-          <br />
-          <mark
+        <div className="flex flex-col items-center justify-center gap-3">
+          <p
             className={cn(
-              "bg-primary-green rounded-lg px-4",
-              playfairNormal.className,
+              "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
+              grotesk.className,
             )}
           >
-            win rates to 92.5%
-          </mark>{" "}
-          <br />
-        </h1>
+            <span className="z-10">Our Proprietary Models supercharge</span>
+          </p>
+          <p
+            className={cn(
+              "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
+              grotesk.className,
+            )}
+          >
+            <mark
+              className={cn(
+                "bg-primary-green rounded-lg px-4 mt-10",
+                playfairNormal.className,
+              )}
+            >
+              win rates to 92.5%
+            </mark>
+          </p>
+        </div>
+        <p className="text-neutral-400 2xl:text-2xl xl:text-xl lg:text-lg text-center">
+          dispute on autopilot in 4 simple steps
+        </p>
         <div className="border border-neutral-200 w-full grid grid-cols-1 md:grid-cols-2 justify-center gap-10 mt-10 py-16">
           <div
             className={cn(

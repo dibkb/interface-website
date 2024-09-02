@@ -23,7 +23,7 @@ const JoinUs = () => {
     });
   });
   return (
-    <div id="join-us" className="w-full min-h-[110vh] relative overflow-hidden">
+    <div id="join-us" className="w-full min-h-screen relative overflow-hidden">
       <div className="bg-[url('/JoinUs/background.svg')] w-full h-full absolute"></div>
       <div className="absolute w-full h-full flex items-center justify-center">
         <div className="lg:w-[850px] w-[425px] h-[425px] lg:h-[850px] absolute rounded-full border border-zinc-900/opacity-10" />
@@ -33,7 +33,7 @@ const JoinUs = () => {
         <div className="relative w-full h-full">
           <div
             className={cn(
-              "w-[72px] h-[72px] right-44 top-16 xl:top-16 xl:right-[40%] absolute rotate-[20.12deg] bg-white rounded-[6.86px] shadow border border-zinc-900/20 justify-center items-center inline-flex transition-all ease-in-out duration-700",
+              "w-[72px] h-[72px] right-24 top-16 xl:top-16 xl:right-[40%] absolute rotate-[20.12deg] bg-white rounded-[6.86px] shadow border border-zinc-900/20 justify-center items-center inline-flex transition-all ease-in-out duration-700",
               organised &&
                 "opacity-0 top-[50%] xl:right-[50%] xl:top-[50%] right-[50%] rotate-0 scale-0",
             )}
@@ -42,16 +42,16 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[72px] h-[72px] rotate-[-10deg] bottom-72 left-16 xl:bottom-96 xl:left-32 absolute bg-white rounded-[6.86px] justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100",
+              "w-[72px] h-[72px] rotate-[-10deg] top-44 left-10 xl:bottom-96 xl:left-32 absolute  rounded-[6.86px] justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100",
               organised &&
-                "opacity-0 bottom-[50%] xl:left-[50%] xl:bottom-[50%] left-[50%] rotate-0 scale-0",
+                "opacity-0 top-[50%] xl:left-[50%] xl:bottom-[50%] left-[50%] rotate-0 scale-0",
             )}
           >
             <Image className="" src={Brightpearl} alt="" />
           </div>
           <div
             className={cn(
-              "w-[72px] h-[72px] rotate-[10deg] top-[50%] right-8 xl:top-96 xl:right-32 absolute bg-white rounded-[6.86px] justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100",
+              "w-[72px] h-[72px] rotate-[32deg] top-52 right-4 xl:top-96 xl:right-32 absolute rounded-[6.86px] justify-center items-center inline-flex transition-all ease-in-out duration-700 delay-100",
               organised &&
                 "opacity-0 top-[50%] xl:right-[50%] xl:top-[50%] right-[50%] rotate-0 scale-0",
             )}
@@ -60,7 +60,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[72px] h-[72px] rotate-[-18.46deg] bottom-20 left-20 xl:bottom-24 xl:left-96 absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-150 ease-in-out",
+              "w-[72px] h-[72px] rotate-[-18.46deg] bottom-16 left-20 xl:bottom-24 xl:left-96 absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-150 ease-in-out",
               organised &&
                 "opacity-0 bottom-[50%] left-[50%] rotate-0 scale-0 xl:left-[50%] xl:bottom-[50%]",
             )}
@@ -69,7 +69,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[72px] h-[72px] rotate-[17.99deg] bottom-24 right-[50%] absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-200 ease-in-out",
+              "w-[72px] h-[72px] rotate-[17.99deg] bottom-32 right-24 absolute bg-white rounded-[6.86px] shadow border border-zinc-90020 justify-center items-center inline-flex transition-all duration-700 delay-200 ease-in-out",
               organised &&
                 "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] right-[50%] rotate-0 scale-0",
             )}
@@ -78,7 +78,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[214px] h-[245px] origin-top-left rotate-[42.48deg] bg-white rounded-3xl shadow border border-zinc-900/20 transition-all duration-1000 ease-in-out absolute opacity-100 top-10 -right-48 xl:right-24",
+              "w-[214px] h-[245px] origin-top-left rotate-[42.48deg] bg-white rounded-3xl shadow border border-zinc-900/20 transition-all duration-1000 ease-in-out absolute opacity-100 top-10 -right-48 xl:right-24 hidden lg:block",
               organised &&
                 "opacity-0 top-[50%] right-[50%] xl:right-[50%] xl:top-[50%] rotate-0 scale-0",
             )}
@@ -95,7 +95,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[214px] h-[245px] origin-top-left rotate-[-33.98deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-150 duration-1000 opacity-100 top-64 xl:top-52 -left-16 xl:left-24",
+              "w-[214px] h-[245px] origin-top-left rotate-[-33.98deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-150 duration-1000 opacity-100 top-64 xl:top-52 -left-16 xl:left-24 hidden lg:block",
               organised &&
                 "opacity-0 top-[50%] left-[50%] rotate-0 scale-0 xl:left-[50%] xl:top-[50%]",
             )}
@@ -124,7 +124,7 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[424px] h-[218px] overflow-hidden origin-top-left rotate-[-25.84deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-200 duration-1000 opacity-100 bottom-0 -right-40 xl:right-24",
+              "w-[424px] h-[218px] overflow-hidden origin-top-left rotate-[-25.84deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-200 duration-1000 opacity-100 bottom-0 -right-40 xl:right-24 hidden lg:block",
               organised &&
                 "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] scale-0 right-[50%] rotate-0",
             )}
@@ -277,7 +277,7 @@ const JoinUs = () => {
                 <div className="text-stone-900 text-xs lg:text-base font-semibold border border-dashed border-neutral-400 p-2 leading-tight w-fit">
                   <p>Interface AI・[V1.1]</p>
                 </div>
-                <p className="text-center w-max text-stone-900 text-lg md:text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
+                <p className="text-center w-max text-stone-900 text-xl md:text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
                   Start Recovering Now
                 </p>
               </div>
@@ -289,7 +289,7 @@ const JoinUs = () => {
                   <button
                     id="yes"
                     className={cn(
-                      "text-center bg-stone-900 text-neutral-50 text-base rounded-lg border border-b-4 border-r-2 border-neutral-400 lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight px-4 w-max sm:px-10 lg:px-16 py-1 transition-all ease-in-out duration-500",
+                      "text-center bg-stone-900 text-neutral-50 text-base rounded-lg border border-b-4 border-r-2 border-neutral-400 lg:text-2xl font-semibold lg:leading-7 tracking-tight px-8 w-max sm:px-10 lg:px-16 py-3 transition-all ease-in-out duration-500",
                       organised &&
                         "bg-primary-green text-interface-black border-secondary-green",
                     )}
@@ -303,7 +303,7 @@ const JoinUs = () => {
                     setOrganised(false);
                   }}
                   id="no"
-                  className="text-center text-stone-900 text-base lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight py-1 px-4 sm:px-10 lg:px-16 border border-b-4 border-r-2 rounded-lg border-neutral-400"
+                  className="text-center text-stone-900 text-base lg:text-2xl font-semibold lg:leading-7 tracking-tight py-3 px-8 sm:px-10 lg:px-16 border border-b-4 border-r-2 rounded-lg border-neutral-400"
                 >
                   No?
                 </button>
