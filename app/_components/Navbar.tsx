@@ -57,7 +57,7 @@ const Navbar = () => {
             >
               <div className="block"></div>
               <Link
-                href={"https://calendly.com/rebhav-getinterface/30min"}
+                href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
                 target="_blank"
               >
                 <div className="text-center text-xs lg:text-lg inline-flex items-center gap-2 px-4">
@@ -167,7 +167,7 @@ const Navbar = () => {
                     "text-center text-sm font-medium leading-none py-3 px-6 border-t boreder-l border-b-4 border-r-2 border-secondary-green transition-all ease-in-out rounded-xl text-interface-black bg-primary-green",
                   )}
                 >
-                  Book a Demo
+                  Recover your Funds
                 </button>
               </Link>
             </div>
