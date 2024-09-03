@@ -52,7 +52,7 @@ const Hero = () => {
         <div className="w-[1px] h-full bg-[#ECEEF2]"></div>
         <div className="w-[1px] h-full bg-[#ECEEF2]"></div>
       </div>
-      <div className="w-full flex flex-col items-center justify-center gap-5 px-10 xl:px-20 2xl:px-32 z-10 py-52">
+      <div className="w-full flex flex-col items-center justify-center gap-5 px-5 sm:px-10 xl:px-20 2xl:px-32 z-10 py-52">
         <p
           className={cn(
             "text-black font-semibold text-center lg:text-5xl text-5xl xl:text-6xl 2xl:text-7xl",
@@ -109,18 +109,18 @@ const Hero = () => {
         </div>
         <div className="flex items-center gap-5 mt-2">
           <Link target="_blank" href={"https://app.getinterface.tech"}>
-            <button className="justify-center gap-2 rounded-xl  bg-neutral-50 border-t border-l border-r-2 border-b-4 border-neutral-950/20 items-center inline-flex text-center text-interface-black 2xl:text-lg lg:text-base text-sm font-medium leading-tight w-fit py-3 px-6">
+            <button className="justify-center gap-2 rounded-xl  bg-neutral-50 border-t border-l border-r-2 border-b-4 border-neutral-950/20 items-center inline-flex text-center text-interface-black 2xl:text-lg lg:text-base text-xs font-medium leading-tight w-fit py-3 px-6">
               Login <ArrowRight weight="bold" />
             </button>
           </Link>
-          <div className="relative">
+          <div className="relative min-w-fit">
             <Link
               target="_blank"
               href={"https://cal.com/rebhav-bharadwaj/introductory-chat"}
             >
               <button
                 className={cn(
-                  "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-sm font-medium leading-tight w-fit py-3 px-6 relative",
+                  "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-xs font-medium leading-tight w-fit py-3 px-6 relative",
                 )}
               >
                 Recover your Funds <ArrowRight weight="bold" />

@@ -12,20 +12,28 @@ const manrope = Manrope({
 });
 
 const About = () => {
-  const [compensatedValue, setCompensatedValue] = useState([15]);
-  const [actualValue, setActualValue] = useState([150000000]);
+  const [compensatedValue, setCompensatedValue] = useState([30]);
+  const [actualValue, setActualValue] = useState(["30,000,000"]);
   const [chargebackPercentage, setChargebackPercentage] = useState([3]);
-  const [costSaved, setCostSaved] = useState([
-    150000000 * (3 / 100) * (95 / 100),
-  ]);
+  const [costSaved, setCostSaved] = useState(["855,000"]);
+  function formatNumberWithCommas(number: number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   useEffect(() => {
     const calculatedCostSaved =
-      actualValue[0] * (chargebackPercentage[0] / 100) * (95 / 100);
+      compensatedValue[0] *
+      1000000 *
+      (chargebackPercentage[0] / 100) *
+      (95 / 100);
     const intValue = Math.round(calculatedCostSaved);
-    setCostSaved([intValue]);
+    const formattedIntValue = formatNumberWithCommas(intValue);
+    setCostSaved([formattedIntValue]);
   }, [compensatedValue, chargebackPercentage, actualValue]);
   return (
-    <section id="about" className="bg-interface-black relative w-full">
+    <section
+      id="about"
+      className="bg-interface-black relative w-full snap-start"
+    >
       <div className="absolute w-full h-full flex items-center justify-around">
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
@@ -33,7 +41,7 @@ const About = () => {
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
       </div>
-      <div className="z-10 relative flex flex-col gap-10 items-center justify-center w-full text-neutral-50 py-20 px-10 sm:px-16 lg:px-28 2xl:px-64">
+      <div className="z-10 relative flex flex-col gap-10 items-center justify-center w-full text-neutral-50 py-40 px-10 sm:px-16 lg:px-28 2xl:px-64">
         <h1 className="font-semibold 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl text-center max-w-3xl">
           Check how much you can reclaim from marketplaces
         </h1>
@@ -45,22 +53,49 @@ const About = () => {
           <div className="w-full px-8 py-6 xl:px-16 xl:py-12 bg-[#FBFBFB]/10 rounded-lg border-2 border-secondary-green backdrop-blur-md flex flex-col items-center justify-center gap-2">
             <div className="flex w-full justify-between 2xl:text-lg lg:text-base text-sm font-semibold mb-5">
               <p>Annual Sales</p>
-              <p>₹{actualValue}</p>
+              <p>${actualValue}</p>
             </div>
-            <Slider
-              defaultValue={[15.4]}
-              value={compensatedValue}
-              onValueChange={(value) => {
-                setCompensatedValue(value);
-                setActualValue([value[0] * 10000000]);
-              }}
-              max={100}
-              min={1}
-              step={0.1}
-            />
+            <div className="relative w-full">
+              <Slider
+                defaultValue={compensatedValue}
+                value={compensatedValue}
+                onValueChange={(value) => {
+                  if (value[0] === 1) {
+                    setCompensatedValue([1]);
+                    setActualValue([formatNumberWithCommas(1000000)]);
+                  } else if (value[0] === 100) {
+                    setCompensatedValue([100]);
+                    setActualValue([formatNumberWithCommas(1000000 * 100)]);
+                  } else {
+                    setCompensatedValue([value[0] - 1]);
+                    setActualValue([
+                      formatNumberWithCommas(1000000 * (value[0] - 1)),
+                    ]);
+                  }
+                }}
+                max={100}
+                min={1}
+                step={10}
+                className="z-10"
+              />
+              {/* <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center"> */}
+              {/*   <div></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/*   <div></div> */}
+              {/*   <div className="w-[4px] h-[4px] aspect-square bg-white opacity-50 rounded-full p-2"></div> */}
+              {/* </div> */}
+            </div>
             <div className="flex w-full justify-between lg:text-base text-sm 2xl:text-lg font-semibold text-neutral-400">
-              <p>₹1 Cr</p>
-              <p>₹100 Cr</p>
+              <p>$1 M</p>
+              <p>$100 M</p>
             </div>
           </div>
           <div className="w-full xl:px-16 xl:py-12 px-8 py-6 bg-[#FBFBFB]/10 rounded-lg border-2 border-secondary-green backdrop-blur-md flex flex-col items-center justify-center gap-2">
@@ -68,14 +103,16 @@ const About = () => {
               <p>Chargeback %</p>
               <p>{chargebackPercentage}%</p>
             </div>
-            <Slider
-              defaultValue={[3]}
-              onValueChange={(value) => setChargebackPercentage(value)}
-              value={chargebackPercentage}
-              max={10}
-              min={0.5}
-              step={0.1}
-            />
+            <div className="relative w-full">
+              <Slider
+                defaultValue={[3]}
+                onValueChange={(value) => setChargebackPercentage(value)}
+                value={chargebackPercentage}
+                max={10}
+                min={0.5}
+                step={1}
+              />
+            </div>
             <div className="flex w-full justify-between 2xl:text-lg lg:text-base text-sm font-semibold text-neutral-400">
               <p>0.5%</p>
               <p>10%</p>
@@ -89,7 +126,7 @@ const About = () => {
               "bg-primary-green py-3 px-14 rounded-lg text-interface-black font-bold xl:text-3xl text-2xl 2xl:text-4xl border border-r-2 border-b-4 border-secondary-green",
             )}
           >
-            ₹{costSaved}
+            ${costSaved}
           </div>
         </div>
         <div className="flex flex-col gap-2 items-center justify-center">

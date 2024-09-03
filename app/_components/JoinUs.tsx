@@ -267,7 +267,7 @@ const JoinUs = () => {
       <div className="absolute top-0 left-0 h-full w-full z-50 flex flex-col items-center justify-center px-32">
         <div
           className={cn(
-            "flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-7 lg:p-24 gap-4 lg:gap-9 transition-all duration-500 ease-in-out h-fit aspect-square sm:aspect-video rounded-xl",
+            "flex flex-col items-center justify-center bg-neutral-50 border border-dashed border-neutral-400 p-7 lg:p-24 gap-4 lg:gap-9 transition-all duration-500 ease-in-out h-fit aspect-square sm:aspect-video",
             organised && "drop-shadow-[0_12px_12px_rgba(81,235,130,0.45)]",
           )}
         >

@@ -23,6 +23,7 @@ export interface AnimatedBeamProps {
   startYOffset?: number;
   endXOffset?: number;
   endYOffset?: number;
+  arrow?: boolean;
 }
 
 export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
@@ -43,10 +44,12 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   startYOffset = 0,
   endXOffset = 0,
   endYOffset = 0,
+  arrow = false,
 }) => {
   const id = useId();
   const [pathD, setPathD] = useState("");
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
+  const [angle, setAngle] = useState(0);
 
   // Calculate the gradient coordinates based on the reverse prop
   const gradientCoordinates = reverse
@@ -83,9 +86,13 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         const endY =
           rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
 
+        const angleInRadians = Math.atan2(endY - startY, endX - startX);
+        const angleInDegrees = (angleInRadians * 180) / Math.PI;
+        setAngle(angleInDegrees);
+
         const controlY = startY - curvature;
         const d = `M ${startX},${startY} Q ${
-          (startX + endX) / 2
+          startX + endX / 1.6
         },${controlY} ${endX},${endY}`;
         setPathD(d);
       }
@@ -134,6 +141,110 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
       )}
       viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
     >
+      <defs>
+        <marker
+          id="arrowhead"
+          markerWidth="10"
+          markerHeight="10"
+          refX="5"
+          refY="5"
+          orient={`${angle}`} // Use the calculated angle
+          markerUnits="strokeWidth"
+        >
+          <path
+            d="M 0 0 L 5 5 L 0 10"
+            fill="none"
+            stroke={pathColor}
+            strokeWidth={pathWidth}
+          />
+        </marker>
+
+        <motion.linearGradient
+          className="transform-gpu"
+          id={id}
+          gradientUnits={"userSpaceOnUse"}
+          initial={{
+            x1: "0%",
+            x2: "0%",
+            y1: "0%",
+            y2: "0%",
+          }}
+          animate={{
+            x1: gradientCoordinates.x1,
+            x2: gradientCoordinates.x2,
+            y1: gradientCoordinates.y1,
+            y2: gradientCoordinates.y2,
+          }}
+          transition={{
+            delay,
+            duration,
+            ease: [0.16, 1, 0.3, 1],
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        >
+          <stop stopColor={gradientStartColor} stopOpacity="0"></stop>
+          <stop stopColor={gradientStartColor}></stop>
+          <stop offset="32.5%" stopColor={gradientStopColor}></stop>
+          <stop
+            offset="100%"
+            stopColor={gradientStopColor}
+            stopOpacity="0"
+          ></stop>
+        </motion.linearGradient>
+      </defs>{" "}
+      {/* <defs> */}
+      {/*   <marker */}
+      {/*     id="arrowhead" */}
+      {/*     markerWidth="10" */}
+      {/*     markerHeight="10" */}
+      {/*     refX="5" */}
+      {/*     refY="5" */}
+      {/*     orient="auto" */}
+      {/*     markerUnits="strokeWidth" */}
+      {/*   > */}
+      {/*     <path */}
+      {/*       d="M 0 0 L 5 5 L 0 10" */}
+      {/*       fill="none" */}
+      {/*       stroke={pathColor} */}
+      {/*       strokeWidth={pathWidth} */}
+      {/*     /> */}
+      {/*   </marker> */}
+      {/**/}
+      {/*   <motion.linearGradient */}
+      {/*     className="transform-gpu" */}
+      {/*     id={id} */}
+      {/*     gradientUnits={"userSpaceOnUse"} */}
+      {/*     initial={{ */}
+      {/*       x1: "0%", */}
+      {/*       x2: "0%", */}
+      {/*       y1: "0%", */}
+      {/*       y2: "0%", */}
+      {/*     }} */}
+      {/*     animate={{ */}
+      {/*       x1: gradientCoordinates.x1, */}
+      {/*       x2: gradientCoordinates.x2, */}
+      {/*       y1: gradientCoordinates.y1, */}
+      {/*       y2: gradientCoordinates.y2, */}
+      {/*     }} */}
+      {/*     transition={{ */}
+      {/*       delay, */}
+      {/*       duration, */}
+      {/*       ease: [0.16, 1, 0.3, 1], // https://easings.net/#easeOutExpo */}
+      {/*       repeat: Infinity, */}
+      {/*       repeatDelay: 0, */}
+      {/*     }} */}
+      {/*   > */}
+      {/*     <stop stopColor={gradientStartColor} stopOpacity="0"></stop> */}
+      {/*     <stop stopColor={gradientStartColor}></stop> */}
+      {/*     <stop offset="32.5%" stopColor={gradientStopColor}></stop> */}
+      {/*     <stop */}
+      {/*       offset="100%" */}
+      {/*       stopColor={gradientStopColor} */}
+      {/*       stopOpacity="0" */}
+      {/*     ></stop> */}
+      {/*   </motion.linearGradient> */}
+      {/* </defs> */}
       <path
         d={pathD}
         stroke={pathColor}
@@ -148,6 +259,26 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         strokeOpacity="1"
         strokeLinecap="round"
       />
+      {arrow && (
+        <>
+          <path
+            d={pathD}
+            stroke={pathColor}
+            strokeWidth={pathWidth}
+            strokeOpacity={pathOpacity}
+            strokeLinecap="round"
+            markerEnd="url(#arrowhead)"
+          />
+          <path
+            d={pathD}
+            strokeWidth={pathWidth}
+            stroke={`url(#${id})`}
+            strokeOpacity="1"
+            strokeLinecap="round"
+            markerEnd="url(#arrowhead)"
+          />
+        </>
+      )}
       <defs>
         <motion.linearGradient
           className="transform-gpu"
