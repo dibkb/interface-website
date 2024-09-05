@@ -25,7 +25,7 @@ export default function Home() {
   //   requestAnimationFrame(raf);
   // }, []);
   return (
-    <main className=" bg-neutral-50 scroll-smooth snap-y snap-proximity overflow-y-scroll h-screen">
+    <main className=" bg-neutral-50 scroll-smooth">
       <Navbar />
       <Hero />
       <About />

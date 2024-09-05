@@ -30,10 +30,7 @@ const About = () => {
     setCostSaved([formattedIntValue]);
   }, [compensatedValue, chargebackPercentage, actualValue]);
   return (
-    <section
-      id="about"
-      className="bg-interface-black relative w-full snap-start"
-    >
+    <section id="about" className="bg-interface-black relative w-full">
       <div className="absolute w-full h-full flex items-center justify-around">
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
         <div className="w-[1px] h-full bg-[#2c2c2c]"></div>
