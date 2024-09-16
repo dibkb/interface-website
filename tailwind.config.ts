@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -20,37 +20,79 @@ const config = {
     extend: {
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        fadeInLeft: {
+        fadeInLeftOut: {
           "0%": { opacity: "0", transform: "translateX(-15px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+          "10%": { opacity: "1", transform: "translateX(0)" },
+          "90%": { opacity: "1", transform: "translateX(0)" },
+          "100%": { opacity: "0", transform: "translateX(15px)" },
         },
-        "fade-in-up": {
-          "0%": {
+        fadeInUpOut: {
+          "0%, 100%": { opacity: "0", transform: "translateY(10px)" },
+          "25%, 75%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeInUpOutGlow: {
+          "0%, 100%": {
             opacity: "0",
             transform: "translateY(10px)",
+            filter: "drop-shadow(0 0 0 rgba(81, 235, 130, 0))",
           },
-          "100%": {
+          "25%": {
             opacity: "1",
             transform: "translateY(0)",
+            filter: "drop-shadow(0 0 0 rgba(81, 235, 130, 0))",
+          },
+          "35%": {
+            opacity: "1",
+            transform: "translateY(0)",
+            filter: "drop-shadow(0 0 10px rgba(81, 235, 130, 0.7))",
+          },
+          "75%": {
+            opacity: "1",
+            transform: "translateY(0)",
+            filter: "drop-shadow(0 0 15px rgba(81, 235, 130, 0.7))",
+          },
+        },
+        fadeInLeftOutGlow: {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-15px)",
+            filter: "drop-shadow(0 0 0 rgba(81, 235, 130, 0))",
+          },
+          "10%": {
+            opacity: "1",
+            transform: "translateX(0)",
+            filter: "drop-shadow(0 0 0 rgba(81, 235, 130, 0))",
+          },
+          "20%": {
+            opacity: "1",
+            transform: "translateX(0)",
+            filter: "drop-shadow(0 0 10px rgba(81, 235, 130, 0.7))",
+          },
+          "80%": {
+            opacity: "1",
+            transform: "translateX(0)",
+            filter: "drop-shadow(0 0 15px rgba(81, 235, 130, 0.7))",
+          },
+          "90%": {
+            opacity: "1",
+            transform: "translateX(0)",
+            filter: "drop-shadow(0 0 10px rgba(81, 235, 130, 0.7))",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateX(15px)",
+            filter: "drop-shadow(0 0 0 rgba(81, 235, 130, 0))",
           },
         },
       },
@@ -60,11 +102,14 @@ const config = {
         "fade-in-1": "fadeIn 2s infinite 0.5s",
         "fade-in-2": "fadeIn 2s infinite 1s",
         "fade-in-3": "fadeIn 2s infinite 1.5s",
-        "fade-in-up-1": "fade-in-up 1s ease-in-out 0.25s",
-        "fade-in-up-2": "fade-in-up 1s ease-in-out 0.5s",
-        "fade-in-up-3": "fade-in-up 1s ease-in-out 0.75s",
-        fadeIn: "fadeIn 1s ease-in-out",
-        fadeInLeft: "fadeInLeft 0.5s ease-in-out",
+        "fade-in-up-out-1": "fadeInUpOut 10s infinite 0s",
+        "fade-in-up-out-2": "fadeInUpOut 10s infinite 0.5s",
+        "fade-in-up-out-3": "fadeInUpOut 10s infinite 1s",
+        "fade-in-up-out-4": "fadeInUpOut 10s infinite 1.5s",
+        "fade-in-up-out-5": "fadeInUpOut 10s infinite 2s",
+        "fade-in-up-out-6": "fadeInUpOutGlow 10s infinite 2.5s",
+        "fade-in-left-out-1": "fadeInLeftOut 6s infinite",
+        "fade-in-left-out-glow-2": "fadeInLeftOutGlow 6s infinite 0.5s",
       },
       colors: {
         "primary-green": "#51eb82",
@@ -74,6 +119,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
 
 export default config;

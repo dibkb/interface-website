@@ -109,13 +109,13 @@ const Define = () => {
                 src={Arrows}
                 alt=""
                 quality={100}
-                className="object-cover pt-6 pb-6 md:pt-10 md:pb-10 animate-fadeIn"
+                className="object-cover pt-6 pb-6 md:pt-10 md:pb-10 animate-fade-in-left-out-1"
               />
               <Image
                 src={Storage}
                 alt=""
                 quality={100}
-                className="object-cover"
+                className="object-cover animate-fade-in-left-out-glow-2"
               />
             </div>
             <div className="w-full mt-5 min-h-16">
@@ -140,31 +140,41 @@ const Define = () => {
             ref={containerRef}
           >
             <div className="flex flex-col gap-0">
-              <Image src={ZIP} alt="" quality={100} className="object-cover" />
+              <Image
+                src={ZIP}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-out-6"
+              />
               <Image
                 src={SingleArrow}
                 alt=""
                 quality={100}
-                className="object-cover animate-fade-in-up-3"
+                className="object-cover animate-fade-in-up-out-5"
               />
               <Image
                 src={Retrieve}
                 alt=""
                 quality={100}
-                className="object-cover"
+                className="object-cover animate-fade-in-up-out-4"
               />
               <Image
                 src={MultipleArrow}
                 alt=""
                 quality={100}
-                className="object-cover animate-fade-in-up-2"
+                className="object-cover animate-fade-in-up-out-3"
               />
-              <Image src={IPA} alt="" quality={100} className="object-cover" />
+              <Image
+                src={IPA}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-out-2"
+              />
               <Image
                 src={SingleArrow}
                 alt=""
                 quality={100}
-                className="object-cover animate-fade-in-up-1"
+                className="object-cover animate-fade-in-up-out-1"
               />
               <Image
                 src={Database}
