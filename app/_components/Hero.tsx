@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { VscSparkle } from "react-icons/vsc";
 import MarqueeComponent from "./MarqueeComponent";
@@ -10,8 +11,11 @@ import { cn } from "@/lib/utils";
 import HomeArrow from "@/public/HomeArrow.png";
 import Amazon from "@/public/Amazon.png";
 import Swiggy from "@/public/Swiggy.png";
-import Brand2 from "@/public/Brand2.png";
-import Brand3 from "@/public/Brand3.png";
+import Instacart from "@/public/Instacart.png";
+import Flipcart from "@/public/Flipcart.png";
+import Walmart from "@/public/Walmart.png";
+import Zepto from "@/public/Zepto.png";
+import Cosco from "@/public/Cosco.png";
 import Image from "next/image";
 import localFont from "next/font/local";
 import ArrowRightSVG from "@/public/ArrowRight.svg";
@@ -40,6 +44,16 @@ const playfair = Playfair_Display({
 });
 
 const Hero = () => {
+  const [country, setCountry] = useState("India");
+
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((response) => response.json())
+      .then((data) => {
+        setCountry(data.country_name);
+      });
+  }, []);
+
   return (
     <section
       id="home"
@@ -56,7 +70,7 @@ const Hero = () => {
         <p
           className={cn(
             "text-black font-semibold text-center lg:text-5xl text-5xl xl:text-6xl 2xl:text-7xl",
-            grotesk.className,
+            grotesk.className
           )}
         >
           Fight Marketplace{" "}
@@ -66,9 +80,21 @@ const Hero = () => {
           <br />
           <span className="inline-flex gap-8 text-center items-center">
             <span className="flex xl:text-3xl text-3xl 2xl:text-6xl tracking-tighter font-black">
-              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
-              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
-              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
+              <Image
+                className="animate-fade-in-1"
+                src={ArrowRightSVG}
+                alt="ArrowRightSVG"
+              />
+              <Image
+                className="animate-fade-in-2"
+                src={ArrowRightSVG}
+                alt="ArrowRightSVG"
+              />
+              <Image
+                className="animate-fade-in-3"
+                src={ArrowRightSVG}
+                alt="ArrowRightSVG"
+              />
               {/* <CaretRight weight="bold" /> */}
               {/* <CaretRight weight="bold" /> */}
               {/* <CaretRight weight="bold" /> */}
@@ -82,30 +108,61 @@ const Hero = () => {
           Get started today and start reclaiming what's rightfully yours.
         </p>
         <div className="flex gap-4 items-center justify-center mt-2">
-          <Image
-            src={Amazon}
-            alt="Amazon"
-            quality={100}
-            className=" aspect-square w-10"
-          />
-          <Image
-            src={Brand2}
-            alt="Amazon"
-            quality={100}
-            className=" aspect-square w-10"
-          />
-          <Image
-            src={Brand3}
-            alt="Amazon"
-            quality={100}
-            className=" aspect-square w-10"
-          />
-          <Image
-            src={Swiggy}
-            alt="Amazon"
-            quality={100}
-            className=" aspect-square w-10"
-          />
+          {country === "India" ? (
+            <div className="flex gap-4">
+              <Image
+                src={Swiggy}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
+                src={Amazon}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
+                src={Flipcart}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
+                src={Zepto}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+            </div>
+          ) : (
+            <div className="flex gap-4">
+              <Image
+                src={Amazon}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
+                src={Instacart}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
+                src={Walmart}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
+                src={Cosco}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+            </div>
+          )}
         </div>
         <div className="flex items-center gap-5 mt-2">
           <Link target="_blank" href={"https://app.getinterface.tech"}>
@@ -120,7 +177,7 @@ const Hero = () => {
             >
               <button
                 className={cn(
-                  "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-xs font-medium leading-tight w-fit py-3 px-6 relative",
+                  "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-xs font-medium leading-tight w-fit py-3 px-6 relative"
                 )}
               >
                 Recover your Funds <ArrowRight weight="bold" />
@@ -146,8 +203,9 @@ const Hero = () => {
             See how much you can save
           </p>
           <div className="flex flex-col items-center justify-center">
-            <CaretDown weight="bold" />
-            <CaretDown weight="bold" />
+            <CaretDown weight="bold" className="animate-fade-in-1" />
+            <CaretDown weight="bold" className="animate-fade-in-2" />
+            <CaretDown weight="bold" className="animate-fade-in-3"/>
           </div>
         </div>
       </div>

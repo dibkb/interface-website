@@ -5,10 +5,18 @@ import React, { forwardRef } from "react";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import Image from "next/image";
 import DiagnoseImage from "@/public/Features/Diagnose.png";
-import Retrieve from "@/public/Features/Retrieve.png";
+import Retrieve from "@/public/Features/Retrive/retrieve.png";
 import Dispute from "@/public/Features/Dispute.png";
 import FollowUp from "@/public/Features/FollowUp.png";
 import localFont from "next/font/local";
+import LLMs from "@/public/Features/Diagnose/LLMs.png";
+import Arrows from "@/public/Features/Diagnose/Arrows.png";
+import Storage from "@/public/Features/Diagnose/Storage.png";
+import Database from "@/public/Features/Retrive/Database.png";
+import IPA from "@/public/Features/Retrive/IPA.png";
+import SingleArrow from "@/public/Features/Retrive/SingleArrow.png";
+import MultipleArrow from "@/public/Features/Retrive/MultipleArrow.png";
+import ZIP from "@/public/Features/Retrive/ZIP.png";
 import { Diagnose } from "./Diagnose";
 
 const playfair = Playfair_Display({
@@ -63,7 +71,7 @@ const Define = () => {
           <p
             className={cn(
               "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
-              grotesk.className,
+              grotesk.className
             )}
           >
             <span className="z-10">Our Proprietary Models supercharge</span>
@@ -71,13 +79,13 @@ const Define = () => {
           <p
             className={cn(
               "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
-              grotesk.className,
+              grotesk.className
             )}
           >
             <mark
               className={cn(
-                "bg-primary-green rounded-lg px-4 mt-10",
-                playfairNormal.className,
+                "bg-primary-green rounded-lg sm:px-1 mt-10 lg:px-4",
+                playfairNormal.className
               )}
             >
               win rates to 92.5%
@@ -90,22 +98,31 @@ const Define = () => {
         <div className="border border-neutral-200 w-full grid grid-cols-1 md:grid-cols-2 justify-center gap-10 mt-10 py-16">
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full",
+              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full"
             )}
             ref={containerRef}
           >
             {/* <Diagnose /> */}
-            <Image
-              src={DiagnoseImage}
-              alt=""
-              quality={100}
-              className=" object-cover"
-            />
+            <div className="flex w-10 md:w-auto">
+              <Image src={LLMs} alt="" quality={100} className="object-cover" />
+              <Image
+                src={Arrows}
+                alt=""
+                quality={100}
+                className="object-cover pt-6 pb-6 md:pt-10 md:pb-10 animate-fadeIn"
+              />
+              <Image
+                src={Storage}
+                alt=""
+                quality={100}
+                className="object-cover"
+              />
+            </div>
             <div className="w-full mt-5 min-h-16">
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-lg lg:text-xl",
+                  "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
                 Diagnose
@@ -118,21 +135,49 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-l border-t border-b p-5",
+              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-l border-t border-b p-5"
             )}
             ref={containerRef}
           >
-            <Image
-              src={Retrieve}
-              alt=""
-              quality={100}
-              className=" object-cover"
-            />
+            <div className="flex flex-col gap-0">
+              <Image src={ZIP} alt="" quality={100} className="object-cover" />
+              <Image
+                src={SingleArrow}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-3"
+              />
+              <Image
+                src={Retrieve}
+                alt=""
+                quality={100}
+                className="object-cover"
+              />
+              <Image
+                src={MultipleArrow}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-2"
+              />
+              <Image src={IPA} alt="" quality={100} className="object-cover" />
+              <Image
+                src={SingleArrow}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-1"
+              />
+              <Image
+                src={Database}
+                alt=""
+                quality={100}
+                className="object-cover"
+              />
+            </div>
             <div className="w-full mt-5">
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-lg lg:text-xl",
+                  "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
                 Retrieve
@@ -145,7 +190,7 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-r border-t border-b p-5",
+              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-r border-t border-b p-5"
             )}
             ref={containerRef}
           >
@@ -159,7 +204,7 @@ const Define = () => {
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-lg lg:text-xl",
+                  "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
                 Dispute
@@ -172,7 +217,7 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-l border-t border-b p-5",
+              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-l border-t border-b p-5"
             )}
             ref={containerRef}
           >
@@ -186,7 +231,7 @@ const Define = () => {
               <h2
                 className={cn(
                   playfairNormal.className,
-                  "font-semibold text-left text-lg lg:text-xl",
+                  "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
                 Follow Up
