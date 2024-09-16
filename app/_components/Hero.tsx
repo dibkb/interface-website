@@ -80,9 +80,21 @@ const Hero = () => {
           <br />
           <span className="inline-flex gap-8 text-center items-center">
             <span className="flex xl:text-3xl text-3xl 2xl:text-6xl tracking-tighter font-black">
-              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
-              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
-              <Image src={ArrowRightSVG} alt="ArrowRightSVG" />
+              <Image
+                className="animate-fade-in-1"
+                src={ArrowRightSVG}
+                alt="ArrowRightSVG"
+              />
+              <Image
+                className="animate-fade-in-2"
+                src={ArrowRightSVG}
+                alt="ArrowRightSVG"
+              />
+              <Image
+                className="animate-fade-in-3"
+                src={ArrowRightSVG}
+                alt="ArrowRightSVG"
+              />
               {/* <CaretRight weight="bold" /> */}
               {/* <CaretRight weight="bold" /> */}
               {/* <CaretRight weight="bold" /> */}
@@ -191,8 +203,8 @@ const Hero = () => {
             See how much you can save
           </p>
           <div className="flex flex-col items-center justify-center">
-            <CaretDown weight="bold" />
-            <CaretDown weight="bold" />
+            <CaretDown weight="bold" className="animate-fade-in-2" />
+            <CaretDown weight="bold" className="animate-fade-in-3"/>
           </div>
         </div>
       </div>
