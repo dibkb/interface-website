@@ -76,7 +76,7 @@ const Define = () => {
           >
             <mark
               className={cn(
-                "bg-primary-green rounded-lg px-4 mt-10",
+                "bg-primary-green rounded-lg sm:px-1 mt-10 lg:px-4",
                 playfairNormal.className,
               )}
             >

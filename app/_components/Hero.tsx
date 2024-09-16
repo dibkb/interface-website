@@ -203,6 +203,7 @@ const Hero = () => {
             See how much you can save
           </p>
           <div className="flex flex-col items-center justify-center">
+            <CaretDown weight="bold" className="animate-fade-in-1" />
             <CaretDown weight="bold" className="animate-fade-in-2" />
             <CaretDown weight="bold" className="animate-fade-in-3"/>
           </div>
