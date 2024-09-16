@@ -11,8 +11,11 @@ import { cn } from "@/lib/utils";
 import HomeArrow from "@/public/HomeArrow.png";
 import Amazon from "@/public/Amazon.png";
 import Swiggy from "@/public/Swiggy.png";
-import Brand2 from "@/public/Brand2.png";
-import Brand3 from "@/public/Brand3.png";
+import Instacart from "@/public/Instacart.png";
+import Flipcart from "@/public/Flipcart.png";
+import Walmart from "@/public/Walmart.png";
+import Zepto from "@/public/Zepto.png";
+import Cosco from "@/public/Cosco.png";
 import Image from "next/image";
 import localFont from "next/font/local";
 import ArrowRightSVG from "@/public/ArrowRight.svg";
@@ -96,25 +99,25 @@ const Hero = () => {
           {country === "India" ? (
             <div className="flex gap-4">
               <Image
+                src={Swiggy}
+                alt="Amazon"
+                quality={100}
+                className="aspect-square w-10"
+              />
+              <Image
                 src={Amazon}
                 alt="Amazon"
                 quality={100}
                 className="aspect-square w-10"
               />
               <Image
-                src={Brand2}
+                src={Flipcart}
                 alt="Amazon"
                 quality={100}
                 className="aspect-square w-10"
               />
               <Image
-                src={Brand3}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Swiggy}
+                src={Zepto}
                 alt="Amazon"
                 quality={100}
                 className="aspect-square w-10"
@@ -129,19 +132,19 @@ const Hero = () => {
                 className="aspect-square w-10"
               />
               <Image
-                src={Brand2}
+                src={Instacart}
                 alt="Amazon"
                 quality={100}
                 className="aspect-square w-10"
               />
               <Image
-                src={Brand3}
+                src={Walmart}
                 alt="Amazon"
                 quality={100}
                 className="aspect-square w-10"
               />
               <Image
-                src={Swiggy}
+                src={Cosco}
                 alt="Amazon"
                 quality={100}
                 className="aspect-square w-10"
