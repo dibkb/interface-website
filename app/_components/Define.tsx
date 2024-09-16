@@ -67,14 +67,14 @@ const Define = () => {
         ref={container}
         className="w-full flex flex-col items-center justify-center gap-5 lg:p-10 p-5 border border-neutral-200"
       >
-        <div className="flex flex-col items-center justify-center gap-3">
+        <div className="flex flex-col items-center justify-center gap-0 md:gap-3">
           <p
             className={cn(
               "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
               grotesk.className
             )}
           >
-            <span className="z-10">Our Proprietary Models supercharge</span>
+            <span className="z-10 text-[50%] md:text-[100%] whitespace-nowrap">Our Proprietary Models supercharge</span>
           </p>
           <p
             className={cn(
@@ -84,7 +84,7 @@ const Define = () => {
           >
             <mark
               className={cn(
-                "bg-primary-green rounded-lg sm:px-1 mt-10 lg:px-4",
+                "bg-primary-green rounded-lg px-4 mt-10 text-[50%] md:text-[100%]",
                 playfairNormal.className
               )}
             >
