@@ -95,6 +95,16 @@ const config: Config = {
             filter: "drop-shadow(0 0 0 rgba(81, 235, 130, 0))",
           },
         },
+        zoomInOutGlow: {
+          "0%, 100%": {
+            transform: "scale(1)",
+            filter: "drop-shadow(0 0 0px rgba(81, 235, 130, 0))",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+            filter: "drop-shadow(0 0 10px rgba(81, 235, 130, 0.7))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +120,7 @@ const config: Config = {
         "fade-in-up-out-6": "fadeInUpOutGlow 10s infinite 2.5s",
         "fade-in-left-out-1": "fadeInLeftOut 6s infinite",
         "fade-in-left-out-glow-2": "fadeInLeftOutGlow 6s infinite 0.5s",
+        "zoom-in-out-glow": "zoomInOutGlow 4s ease-in-out infinite",
       },
       colors: {
         "primary-green": "#51eb82",

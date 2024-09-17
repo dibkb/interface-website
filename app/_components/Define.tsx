@@ -7,7 +7,8 @@ import Image from "next/image";
 import DiagnoseImage from "@/public/Features/Diagnose.png";
 import Retrieve from "@/public/Features/Retrive/retrieve.png";
 import Dispute from "@/public/Features/Dispute.png";
-import FollowUp from "@/public/Features/FollowUp.png";
+import Chat from "@/public/Features/FollowUp/Chat.png";
+import StarIcon from "@/public/Features/FollowUp/StarIcon.png";
 import localFont from "next/font/local";
 import LLMs from "@/public/Features/Diagnose/LLMs.png";
 import Arrows from "@/public/Features/Diagnose/Arrows.png";
@@ -74,7 +75,9 @@ const Define = () => {
               grotesk.className
             )}
           >
-            <span className="z-10 text-[50%] md:text-[100%] whitespace-nowrap">Our Proprietary Models supercharge</span>
+            <span className="z-10 text-[50%] md:text-[100%] whitespace-nowrap">
+              Our Proprietary Models supercharge
+            </span>
           </p>
           <p
             className={cn(
@@ -231,12 +234,15 @@ const Define = () => {
             )}
             ref={containerRef}
           >
-            <Image
-              src={FollowUp}
-              alt=""
-              quality={100}
-              className=" object-cover"
-            />
+            <div className="relative">
+              <Image src={Chat} alt="" quality={100} className="object-cover" />
+              <Image
+                src={StarIcon}
+                alt=""
+                quality={100}
+                className="absolute -top-2 -left-2 object-cover w-10 md:w-[3.75rem] md:-left-9 md:top-6 animate-zoom-in-out-glow"
+              />
+            </div>
             <div className="w-full mt-5">
               <h2
                 className={cn(
