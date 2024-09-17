@@ -7,7 +7,8 @@ import Image from "next/image";
 import DiagnoseImage from "@/public/Features/Diagnose.png";
 import Retrieve from "@/public/Features/Retrive/retrieve.png";
 import Dispute from "@/public/Features/Dispute.png";
-import FollowUp from "@/public/Features/FollowUp.png";
+import Chat from "@/public/Features/FollowUp/Chat.png";
+import StarIcon from "@/public/Features/FollowUp/StarIcon.png";
 import localFont from "next/font/local";
 import LLMs from "@/public/Features/Diagnose/LLMs.png";
 import Arrows from "@/public/Features/Diagnose/Arrows.png";
@@ -17,7 +18,15 @@ import IPA from "@/public/Features/Retrive/IPA.png";
 import SingleArrow from "@/public/Features/Retrive/SingleArrow.png";
 import MultipleArrow from "@/public/Features/Retrive/MultipleArrow.png";
 import ZIP from "@/public/Features/Retrive/ZIP.png";
-import { Diagnose } from "./Diagnose";
+
+import Ticket1 from "@/public/Features/Dispute/Tickets/Ticket1.png";
+import Ticket2 from "@/public/Features/Dispute/Tickets/Ticket2.png";
+import Ticket3 from "@/public/Features/Dispute/Tickets/Ticket3.png";
+import DoneTicket1 from "@/public/Features/Dispute/DoneTickets/DoneTicket1.png";
+import DoneTicket2 from "@/public/Features/Dispute/DoneTickets/DoneTicket2.png";
+import DoneTicket3 from "@/public/Features/Dispute/DoneTickets/DoneTicket3.png";
+
+import LastTickets from "@/public/Features/Dispute/LastTickets.png";
 
 const playfair = Playfair_Display({
   weight: "variable",
@@ -67,14 +76,16 @@ const Define = () => {
         ref={container}
         className="w-full flex flex-col items-center justify-center gap-5 lg:p-10 p-5 border border-neutral-200"
       >
-        <div className="flex flex-col items-center justify-center gap-3">
+        <div className="flex flex-col items-center justify-center gap-0 md:gap-3">
           <p
             className={cn(
               "text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-center",
               grotesk.className
             )}
           >
-            <span className="z-10">Our Proprietary Models supercharge</span>
+            <span className="z-10 text-[50%] md:text-[100%] whitespace-nowrap">
+              Our Proprietary Models supercharge
+            </span>
           </p>
           <p
             className={cn(
@@ -84,7 +95,7 @@ const Define = () => {
           >
             <mark
               className={cn(
-                "bg-primary-green rounded-lg sm:px-1 mt-10 lg:px-4",
+                "bg-primary-green rounded-lg px-4 mt-10 text-[50%] md:text-[100%]",
                 playfairNormal.className
               )}
             >
@@ -109,13 +120,13 @@ const Define = () => {
                 src={Arrows}
                 alt=""
                 quality={100}
-                className="object-cover pt-6 pb-6 md:pt-10 md:pb-10 animate-fadeIn"
+                className="object-cover pt-6 pb-6 md:pt-10 md:pb-10 animate-fade-in-left-out-1"
               />
               <Image
                 src={Storage}
                 alt=""
                 quality={100}
-                className="object-cover"
+                className="object-cover animate-fade-in-left-out-glow-2"
               />
             </div>
             <div className="w-full mt-5 min-h-16">
@@ -140,31 +151,41 @@ const Define = () => {
             ref={containerRef}
           >
             <div className="flex flex-col gap-0">
-              <Image src={ZIP} alt="" quality={100} className="object-cover" />
+              <Image
+                src={ZIP}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-out-6"
+              />
               <Image
                 src={SingleArrow}
                 alt=""
                 quality={100}
-                className="object-cover animate-fade-in-up-3"
+                className="object-cover animate-fade-in-up-out-5"
               />
               <Image
                 src={Retrieve}
                 alt=""
                 quality={100}
-                className="object-cover"
+                className="object-cover animate-fade-in-up-out-4"
               />
               <Image
                 src={MultipleArrow}
                 alt=""
                 quality={100}
-                className="object-cover animate-fade-in-up-2"
+                className="object-cover animate-fade-in-up-out-3"
               />
-              <Image src={IPA} alt="" quality={100} className="object-cover" />
+              <Image
+                src={IPA}
+                alt=""
+                quality={100}
+                className="object-cover animate-fade-in-up-out-2"
+              />
               <Image
                 src={SingleArrow}
                 alt=""
                 quality={100}
-                className="object-cover animate-fade-in-up-1"
+                className="object-cover animate-fade-in-up-out-1"
               />
               <Image
                 src={Database}
@@ -194,12 +215,61 @@ const Define = () => {
             )}
             ref={containerRef}
           >
-            <Image
-              src={Dispute}
-              alt=""
-              quality={100}
-              className=" object-cover"
-            />
+            <div className="flex flex-col space-y-4 w-full max-w-[300px] mx-auto">
+              <div className="relative aspect-[6/1]">
+                <Image
+                  src={Ticket1}
+                  alt="Ticket 1"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-ticket1"
+                />
+                <Image
+                  src={DoneTicket1}
+                  alt="Done Ticket 1"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-done-ticket1"
+                />
+              </div>
+              <div className="relative aspect-[6/1]">
+                <Image
+                  src={Ticket2}
+                  alt="Ticket 2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-ticket2"
+                />
+                <Image
+                  src={DoneTicket2}
+                  alt="Done Ticket 2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-done-ticket2"
+                />
+              </div>
+              <div className="relative aspect-[6/1]">
+                <Image
+                  src={Ticket3}
+                  alt="Ticket 3"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-ticket3"
+                />
+                {/* <Image
+                  src={DoneTicket3}
+                  alt="Done Ticket 3"
+                  layout="fill"
+                  objectFit="cover"
+                /> */}
+              </div>
+              <Image
+                src={LastTickets}
+                alt="Last Tickets"
+                quality={100}
+                className="object-cover"
+              />
+            </div>
             <div className="w-full mt-5">
               <h2
                 className={cn(
@@ -221,12 +291,15 @@ const Define = () => {
             )}
             ref={containerRef}
           >
-            <Image
-              src={FollowUp}
-              alt=""
-              quality={100}
-              className=" object-cover"
-            />
+            <div className="relative">
+              <Image src={Chat} alt="" quality={100} className="object-cover" />
+              <Image
+                src={StarIcon}
+                alt=""
+                quality={100}
+                className="absolute -top-2 -left-2 object-cover w-10 md:w-[3.75rem] md:-left-9 md:top-6 animate-fade-in-out-glow-top-down"
+              />
+            </div>
             <div className="w-full mt-5">
               <h2
                 className={cn(

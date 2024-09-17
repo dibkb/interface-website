@@ -159,7 +159,7 @@ const Hero = () => {
                 src={Cosco}
                 alt="Amazon"
                 quality={100}
-                className="aspect-square w-10"
+                className="aspect-square w-12"
               />
             </div>
           )}
@@ -177,7 +177,7 @@ const Hero = () => {
             >
               <button
                 className={cn(
-                  "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-xs font-medium leading-tight w-fit py-3 px-6 relative"
+                  "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-xs font-medium leading-tight w-fit py-3 px-6 relative custom-width"
                 )}
               >
                 Recover your Funds <ArrowRight weight="bold" />
@@ -205,7 +205,7 @@ const Hero = () => {
           <div className="flex flex-col items-center justify-center">
             <CaretDown weight="bold" className="animate-fade-in-1" />
             <CaretDown weight="bold" className="animate-fade-in-2" />
-            <CaretDown weight="bold" className="animate-fade-in-3"/>
+            <CaretDown weight="bold" className="animate-fade-in-3" />
           </div>
         </div>
       </div>
