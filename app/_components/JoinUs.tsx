@@ -25,10 +25,10 @@ const JoinUs = () => {
   return (
     <div id="join-us" className="w-full min-h-screen relative overflow-hidden">
       <div className="bg-[url('/JoinUs/background.svg')] w-full h-full absolute"></div>
-      <div className="absolute w-full h-full flex items-center justify-center">
+      {/* <div className="absolute w-full h-full flex items-center justify-center">
         <div className="lg:w-[850px] w-[425px] h-[425px] lg:h-[850px] absolute rounded-full border border-zinc-900/opacity-10" />
         <div className="lg:w-[1250px] w-[625px] h-[625px] lg:h-[1250px] relative rounded-full border border-zinc-900/opacity-10" />
-      </div>
+      </div> */}
       <div className="absolute top-0 left-0 h-full w-full z-10">
         <div className="relative w-full h-full">
           <div
