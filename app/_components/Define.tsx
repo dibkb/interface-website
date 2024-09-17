@@ -256,13 +256,12 @@ const Define = () => {
                   objectFit="cover"
                   className="animate-ticket3"
                 />
-                <Image
+                {/* <Image
                   src={DoneTicket3}
                   alt="Done Ticket 3"
                   layout="fill"
                   objectFit="cover"
-                  className="animate-done-ticket3"
-                />
+                /> */}
               </div>
               <Image
                 src={LastTickets}
