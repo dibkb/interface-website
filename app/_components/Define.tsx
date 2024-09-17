@@ -240,7 +240,7 @@ const Define = () => {
                 src={StarIcon}
                 alt=""
                 quality={100}
-                className="absolute -top-2 -left-2 object-cover w-10 md:w-[3.75rem] md:-left-9 md:top-6 animate-zoom-in-out-glow"
+                className="absolute -top-2 -left-2 object-cover w-10 md:w-[3.75rem] md:-left-9 md:top-6 animate-fade-in-out-glow-top-down"
               />
             </div>
             <div className="w-full mt-5">

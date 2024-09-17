@@ -56,7 +56,7 @@ const JoinUs = () => {
                 "opacity-0 top-[50%] xl:right-[50%] xl:top-[50%] right-[50%] rotate-0 scale-0",
             )}
           >
-            <Image className="" src={epos} alt="" />
+            <Image className="hidden sm:block" src={epos} alt="" />
           </div>
           <div
             className={cn(

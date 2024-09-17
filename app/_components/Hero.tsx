@@ -159,7 +159,7 @@ const Hero = () => {
                 src={Cosco}
                 alt="Amazon"
                 quality={100}
-                className="aspect-square w-10"
+                className="aspect-square w-12"
               />
             </div>
           )}
