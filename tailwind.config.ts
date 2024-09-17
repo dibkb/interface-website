@@ -18,6 +18,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        "1026px": "1026px",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

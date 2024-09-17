@@ -11,3 +11,9 @@
 /* html {
   scroll-behavior: smooth;
 } */
+
+@media (min-width: 1024px) and (max-width: 1277px) {
+  .custom-width {
+    @apply p-4 text-[1rem];
+  }
+}
