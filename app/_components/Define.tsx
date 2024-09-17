@@ -18,7 +18,15 @@ import IPA from "@/public/Features/Retrive/IPA.png";
 import SingleArrow from "@/public/Features/Retrive/SingleArrow.png";
 import MultipleArrow from "@/public/Features/Retrive/MultipleArrow.png";
 import ZIP from "@/public/Features/Retrive/ZIP.png";
-import { Diagnose } from "./Diagnose";
+
+import Ticket1 from "@/public/Features/Dispute/Tickets/Ticket1.png";
+import Ticket2 from "@/public/Features/Dispute/Tickets/Ticket2.png";
+import Ticket3 from "@/public/Features/Dispute/Tickets/Ticket3.png";
+import DoneTicket1 from "@/public/Features/Dispute/DoneTickets/DoneTicket1.png";
+import DoneTicket2 from "@/public/Features/Dispute/DoneTickets/DoneTicket2.png";
+import DoneTicket3 from "@/public/Features/Dispute/DoneTickets/DoneTicket3.png";
+
+import LastTickets from "@/public/Features/Dispute/LastTickets.png";
 
 const playfair = Playfair_Display({
   weight: "variable",
@@ -207,12 +215,62 @@ const Define = () => {
             )}
             ref={containerRef}
           >
-            <Image
-              src={Dispute}
-              alt=""
-              quality={100}
-              className=" object-cover"
-            />
+            <div className="flex flex-col space-y-4 w-full max-w-[300px] mx-auto">
+              <div className="relative aspect-[6/1]">
+                <Image
+                  src={Ticket1}
+                  alt="Ticket 1"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-ticket1"
+                />
+                <Image
+                  src={DoneTicket1}
+                  alt="Done Ticket 1"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-done-ticket1"
+                />
+              </div>
+              <div className="relative aspect-[6/1]">
+                <Image
+                  src={Ticket2}
+                  alt="Ticket 2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-ticket2"
+                />
+                <Image
+                  src={DoneTicket2}
+                  alt="Done Ticket 2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-done-ticket2"
+                />
+              </div>
+              <div className="relative aspect-[6/1]">
+                <Image
+                  src={Ticket3}
+                  alt="Ticket 3"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-ticket3"
+                />
+                <Image
+                  src={DoneTicket3}
+                  alt="Done Ticket 3"
+                  layout="fill"
+                  objectFit="cover"
+                  className="animate-done-ticket3"
+                />
+              </div>
+              <Image
+                src={LastTickets}
+                alt="Last Tickets"
+                quality={100}
+                className="object-cover"
+              />
+            </div>
             <div className="w-full mt-5">
               <h2
                 className={cn(
