@@ -8,7 +8,7 @@ import Link from "next/link";
 import { ArrowRight, CaretDown, CaretRight } from "@phosphor-icons/react";
 import { Outfit, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
-import HomeArrow from "@/public/HomeArrow.png";
+import HomeArrow from "@/public/HomeArrow.gif";
 import Amazon from "@/public/Amazon.png";
 import Swiggy from "@/public/Swiggy.png";
 import Instacart from "@/public/Instacart.png";
@@ -191,7 +191,8 @@ const Hero = () => {
                 src={HomeArrow}
                 alt="HomeArrow"
                 quality={100}
-                className="pt-5"
+                style={{ filter: "invert(1) contrast(2) brightness(1.2)" }}
+                className="w-20"
               />
             </div>
           </div>

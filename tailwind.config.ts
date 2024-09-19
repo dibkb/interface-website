@@ -199,7 +199,7 @@ const config: Config = {
         doneTicket3: {
           "0%, 99%": { opacity: "0", transform: "scale(0.8)" },
           "99.01%, 99.99%": { opacity: "1", transform: "scale(1)" },
-        },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -217,12 +217,12 @@ const config: Config = {
         "fade-in-left-out-glow-2": "fadeInLeftOutGlow 6s infinite 0.5s",
         "fade-in-out-glow-top-down":
           "fadeInOutGlowTopDown 4s ease-in-out infinite",
-          ticket1: "ticket1 12s infinite",
-          "done-ticket1": "doneTicket1 12s infinite",
-          ticket2: "ticket2 12s infinite",
-          "done-ticket2": "doneTicket2 12s infinite",
-          ticket3: "ticket3 12s infinite",
-          "done-ticket3": "doneTicket3 12s infinite",
+        ticket1: "ticket1 12s infinite",
+        "done-ticket1": "doneTicket1 12s infinite",
+        ticket2: "ticket2 12s infinite",
+        "done-ticket2": "doneTicket2 12s infinite",
+        ticket3: "ticket3 12s infinite",
+        "done-ticket3": "doneTicket3 12s infinite",
       },
       colors: {
         "primary-green": "#51eb82",
