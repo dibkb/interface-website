@@ -150,7 +150,7 @@ const Define = () => {
             )}
             ref={containerRef}
           >
-            <div className="flex flex-col gap-0">
+            <div className="flex flex-col gap-0 pb-3">
               <Image
                 src={ZIP}
                 alt=""
@@ -300,7 +300,7 @@ const Define = () => {
                 className="absolute -top-2 -left-2 object-cover w-10 md:w-[3.75rem] md:-left-9 md:top-6 animate-fade-in-out-glow-top-down"
               />
             </div>
-            <div className="w-full mt-5">
+            <div className="w-full mt-5 pt-7">
               <h2
                 className={cn(
                   playfairNormal.className,
