@@ -5,7 +5,7 @@ import MarqueeComponent from "./MarqueeComponent";
 import "@devnomic/marquee/dist/index.css";
 import { marqueeContent } from "./data";
 import Link from "next/link";
-import { ArrowRight, CaretDown, CaretRight } from "@phosphor-icons/react";
+import { ArrowRight, CaretDown, CircleNotch } from "@phosphor-icons/react";
 import { Outfit, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
 import HomeArrow from "@/public/HomeArrow.gif";
@@ -44,13 +44,14 @@ const playfair = Playfair_Display({
 });
 
 const Hero = () => {
-  const [country, setCountry] = useState("India");
+  const [country, setCountry] = useState();
 
   useEffect(() => {
     fetch("https://ipapi.co/json/")
       .then((response) => response.json())
       .then((data) => {
         setCountry(data.country_name);
+        console.log(data.country_name);
       });
   }, []);
 
@@ -108,59 +109,65 @@ const Hero = () => {
           Get started today and start reclaiming what's rightfully yours.
         </p>
         <div className="flex gap-4 items-center justify-center mt-2">
-          {country === "India" ? (
-            <div className="flex gap-4">
-              <Image
-                src={Swiggy}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Amazon}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Flipcart}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Zepto}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-            </div>
+          {country && country !== "none" ? (
+            country === "India" ? (
+              <div className="flex gap-4">
+                <Image
+                  src={Swiggy}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+                <Image
+                  src={Amazon}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+                <Image
+                  src={Flipcart}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+                <Image
+                  src={Zepto}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+              </div>
+            ) : (
+              <div className="flex gap-4">
+                <Image
+                  src={Amazon}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+                <Image
+                  src={Instacart}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+                <Image
+                  src={Walmart}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-10"
+                />
+                <Image
+                  src={Cosco}
+                  alt="Amazon"
+                  quality={100}
+                  className="aspect-square w-12"
+                />
+              </div>
+            )
           ) : (
-            <div className="flex gap-4">
-              <Image
-                src={Amazon}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Instacart}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Walmart}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-10"
-              />
-              <Image
-                src={Cosco}
-                alt="Amazon"
-                quality={100}
-                className="aspect-square w-12"
-              />
+            <div className="flex justify-center items-center">
+              <CircleNotch size={53} className="animate-loading text-primary-green" />
             </div>
           )}
         </div>

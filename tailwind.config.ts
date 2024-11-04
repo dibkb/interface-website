@@ -202,6 +202,7 @@ const config: Config = {
         }
       },
       animation: {
+        "loading": 'spin 1s linear infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-1": "fadeIn 2s infinite 0.5s",
