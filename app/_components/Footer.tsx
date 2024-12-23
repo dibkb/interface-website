@@ -16,7 +16,18 @@ const Footer = () => {
         className={cn(
           "w-full h-[55%] sm:h-[50%] lg:h-[37.5%] bottom-0 left-0 absolute z-10 bg-stone-900 border-t-4 border-primary-green group-hover:bg-stone-900/50 group-hover:backdrop-blur-md",
         )}
-      ></div>
+      >
+        <div className="absolute bottom-4 w-full text-center">
+          <a 
+            href="/privacy-policy.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-400 hover:text-primary-green text-sm transition-colors duration-300"
+          >
+            Privacy Policy
+          </a>
+        </div>
+      </div>
       <div className="h-full absolute w-[25%] left-0 top-0 bg-gradient-to-r from-stone-900 via-stone-900 to-transparent z-20"></div>
       <div className="h-full absolute w-[25%] right-0 top-0 bg-gradient-to-l from-stone-900 via-stone-900 to-transparent z-10"></div>
     </footer>
