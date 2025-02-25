@@ -105,8 +105,8 @@ const About = () => {
                 defaultValue={[3]}
                 onValueChange={(value) => setChargebackPercentage(value)}
                 value={chargebackPercentage}
-                max={10}
-                min={0.5}
+                max={1000}
+                min={5}
                 step={1}
               />
             </div>
