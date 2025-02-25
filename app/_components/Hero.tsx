@@ -104,9 +104,9 @@ const Hero = () => {
           </span>
         </p>
         <p className="text-center lg:text-lg text-sm 2xl:text-lg font-medium text-[#A9A9A9]">
-          Stop leaving money on the table.
+          Stop leaving efficiency on the table.
           <br />
-          Get started today and start reclaiming what's rightfully yours.
+          Get started today and start optimizing what's rightfully yours.
         </p>
         {/* <div className="flex gap-4 items-center justify-center mt-2">
           {country && country !== "none" ? (
@@ -195,7 +195,7 @@ const Hero = () => {
             </Link>
             <div className="absolute -top-10 -right-52 text-sm font-medium md:flex md:flex-row-reverse hidden">
               <p className="w-36">
-                get a free audit of how much we can save you
+                Get a free audit of how much bandwidth we can save you.
               </p>
               <Image
                 src={HomeArrow}
