@@ -27,6 +27,10 @@ import DoneTicket2 from "@/public/Features/Dispute/DoneTickets/DoneTicket2.png";
 import DoneTicket3 from "@/public/Features/Dispute/DoneTickets/DoneTicket3.png";
 
 import LastTickets from "@/public/Features/Dispute/LastTickets.png";
+import Diagnose from "./svg/diagnose";
+import Automate from "./svg/automate";
+import Integrate from "./svg/integrate";
+import Optimize from "./svg/optimize";
 
 const playfair = Playfair_Display({
   weight: "variable",
@@ -99,36 +103,25 @@ const Define = () => {
                 playfairNormal.className
               )}
             >
-              win rates to 92.5%
+              your operations by 92.5%
             </mark>
           </p>
         </div>
         <p className="text-neutral-400 2xl:text-2xl xl:text-xl lg:text-lg text-center">
-          dispute on autopilot in 4 simple steps
+          transform your supply chain in 4 simple steps
         </p>
         <div className="border border-neutral-200 w-full grid grid-cols-1 md:grid-cols-2 justify-center gap-10 mt-10 py-16">
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full aspect-square"
             )}
             ref={containerRef}
           >
             {/* <Diagnose /> */}
-            <div className="flex w-10 md:w-auto">
-              <Image src={LLMs} alt="" quality={100} className="object-cover" />
-              <Image
-                src={Arrows}
-                alt=""
-                quality={100}
-                className="object-cover pt-6 pb-6 md:pt-10 md:pb-10 animate-fade-in-left-out-1"
-              />
-              <Image
-                src={Storage}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-left-out-glow-2"
-              />
+            <div className="flex-1 flex items-center justify-center">
+              <Diagnose />
             </div>
+
             <div className="w-full mt-5 min-h-16">
               <h2
                 className={cn(
@@ -139,60 +132,20 @@ const Define = () => {
                 Diagnose
               </h2>
               <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                We distill LLMs on deductions data to flag huge payment records
-                for discrepancies
+                We distill LLMs on transaction data to flag payment
+                discrepancies and potential disputes before they impact your
+                bottom line.
               </p>
             </div>
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-l border-t border-b p-5"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-l border-t border-b p-5 aspect-square"
             )}
             ref={containerRef}
           >
-            <div className="flex flex-col gap-0 pb-3">
-              <Image
-                src={ZIP}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-up-out-6"
-              />
-              <Image
-                src={SingleArrow}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-up-out-5"
-              />
-              <Image
-                src={Retrieve}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-up-out-4"
-              />
-              <Image
-                src={MultipleArrow}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-up-out-3"
-              />
-              <Image
-                src={IPA}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-up-out-2"
-              />
-              <Image
-                src={SingleArrow}
-                alt=""
-                quality={100}
-                className="object-cover animate-fade-in-up-out-1"
-              />
-              <Image
-                src={Database}
-                alt=""
-                quality={100}
-                className="object-cover"
-              />
+            <div className="flex-1 flex items-center justify-center">
+              <Automate />
             </div>
             <div className="w-full mt-5">
               <h2
@@ -201,74 +154,23 @@ const Define = () => {
                   "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
-                Retrieve
+                Automate
               </h2>
               <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                Our browser agents navigate your stack to create a rebuttal
-                package
+                Our AI-powered procurement system streamlines sourcing,
+                negotiation, and approval workflows, reducing cycle times by
+                78%.
               </p>
             </div>
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-r border-t border-b p-5"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-r border-t border-b p-5 aspect-square"
             )}
             ref={containerRef}
           >
-            <div className="flex flex-col space-y-4 w-full max-w-[300px] mx-auto">
-              <div className="relative aspect-[6/1]">
-                <Image
-                  src={Ticket1}
-                  alt="Ticket 1"
-                  layout="fill"
-                  objectFit="cover"
-                  className="animate-ticket1"
-                />
-                <Image
-                  src={DoneTicket1}
-                  alt="Done Ticket 1"
-                  layout="fill"
-                  objectFit="cover"
-                  className="animate-done-ticket1"
-                />
-              </div>
-              <div className="relative aspect-[6/1]">
-                <Image
-                  src={Ticket2}
-                  alt="Ticket 2"
-                  layout="fill"
-                  objectFit="cover"
-                  className="animate-ticket2"
-                />
-                <Image
-                  src={DoneTicket2}
-                  alt="Done Ticket 2"
-                  layout="fill"
-                  objectFit="cover"
-                  className="animate-done-ticket2"
-                />
-              </div>
-              <div className="relative aspect-[6/1]">
-                <Image
-                  src={Ticket3}
-                  alt="Ticket 3"
-                  layout="fill"
-                  objectFit="cover"
-                  className="animate-ticket3"
-                />
-                {/* <Image
-                  src={DoneTicket3}
-                  alt="Done Ticket 3"
-                  layout="fill"
-                  objectFit="cover"
-                /> */}
-              </div>
-              <Image
-                src={LastTickets}
-                alt="Last Tickets"
-                quality={100}
-                className="object-cover"
-              />
+            <div className="flex-1 flex items-center justify-center">
+              <Integrate />
             </div>
             <div className="w-full mt-5">
               <h2
@@ -277,28 +179,22 @@ const Define = () => {
                   "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
-                Dispute
+                Integrate
               </h2>
               <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                Our agents use chain of thought reasoning to validate and
-                dispute all your false deductions
+                Our platform synchronizes product listings and catalogs across
+                multiple marketplaces, maintaining consistent data and pricing.
               </p>
             </div>
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center gap-10 overflow-hidden md:border-l border-t border-b p-5"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-l border-t border-b p-5 aspect-square"
             )}
             ref={containerRef}
           >
-            <div className="relative">
-              <Image src={Chat} alt="" quality={100} className="object-cover" />
-              <Image
-                src={StarIcon}
-                alt=""
-                quality={100}
-                className="absolute -top-2 -left-2 object-cover w-10 md:w-[3.75rem] md:-left-9 md:top-6 animate-fade-in-out-glow-top-down"
-              />
+            <div className="flex-1 flex items-center justify-center">
+              <Optimize />
             </div>
             <div className="w-full mt-5 pt-7">
               <h2
@@ -307,11 +203,12 @@ const Define = () => {
                   "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
-                Follow Up
+                Optimize
               </h2>
               <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                Our agents follow up with Marketplaces to convert disputes into
-                successful collections.
+                Our analytics engine identifies supplier relationship
+                opportunities and operational bottlenecks, turning supply chain
+                data into strategic advantage.
               </p>
             </div>
           </div>

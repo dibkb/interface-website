@@ -44,16 +44,16 @@ const playfair = Playfair_Display({
 });
 
 const Hero = () => {
-  const [country, setCountry] = useState();
+  const [country, setCountry] = useState("India");
 
-  useEffect(() => {
-    fetch("https://ipapi.co/json/")
-      .then((response) => response.json())
-      .then((data) => {
-        setCountry(data.country_name);
-        console.log(data.country_name);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://ipapi.co/json/")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setCountry(data.country_name);
+  //       console.log(data.country_name);
+  //     });
+  // }, []);
 
   return (
     <section
@@ -74,9 +74,9 @@ const Hero = () => {
             grotesk.className
           )}
         >
-          Fight Marketplace{" "}
+          Disrupt Supply Chain{" "}
           <span className={cn(playfair.className, "font-semibold")}>
-            disputes
+            Friction
           </span>
           <br />
           <span className="inline-flex gap-8 text-center items-center">
@@ -108,7 +108,7 @@ const Hero = () => {
           <br />
           Get started today and start reclaiming what's rightfully yours.
         </p>
-        <div className="flex gap-4 items-center justify-center mt-2">
+        {/* <div className="flex gap-4 items-center justify-center mt-2">
           {country && country !== "none" ? (
             country === "India" ? (
               <div className="flex gap-4">
@@ -167,11 +167,14 @@ const Hero = () => {
             )
           ) : (
             <div className="flex justify-center items-center">
-              <CircleNotch size={53} className="animate-loading text-primary-green" />
+              <CircleNotch
+                size={53}
+                className="animate-loading text-primary-green"
+              />
             </div>
           )}
-        </div>
-        <div className="flex items-center gap-5 mt-2">
+        </div> */}
+        <div className="flex items-center gap-5 mt-20">
           <Link target="_blank" href={"https://app.getinterface.tech"}>
             <button className="justify-center gap-2 rounded-xl  bg-neutral-50 border-t border-l border-r-2 border-b-4 border-neutral-950/20 items-center inline-flex text-center text-interface-black 2xl:text-lg lg:text-base text-xs font-medium leading-tight w-fit py-3 px-6">
               Login <ArrowRight weight="bold" />
@@ -187,7 +190,7 @@ const Hero = () => {
                   "bg-primary-green gap-2 justify-center border-r-2 border-t border-l border-b-4 border-secondary-green items-center inline-flex text-center rounded-xl text-interface-black 2xl:text-lg xl:text-base text-xs font-medium leading-tight w-fit py-3 px-6 relative custom-width"
                 )}
               >
-                Recover your Funds <ArrowRight weight="bold" />
+                Book a Call <ArrowRight weight="bold" />
               </button>
             </Link>
             <div className="absolute -top-10 -right-52 text-sm font-medium md:flex md:flex-row-reverse hidden">
@@ -205,7 +208,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full">
+      {/* <div className="absolute bottom-0 left-0 w-full">
         <div className="flex flex-col items-center justify-center text-[#A9A9A9] gap-2 pb-10 z-10">
           <p className="text-center xl:text-lg text-base 2xl:text-xl font-medium text-[#A9A9A9]">
             See how much you can save
@@ -216,7 +219,7 @@ const Hero = () => {
             <CaretDown weight="bold" className="animate-fade-in-3" />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

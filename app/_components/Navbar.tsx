@@ -27,14 +27,18 @@ const Navbar = () => {
 
       const days: number = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
       const hours: number = Math.floor(
-        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
       const minutes: number = Math.floor(
-        (timeDifference % (1000 * 60 * 60)) / (1000 * 60),
+        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
       );
       const seconds: number = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-      const formattedTime: string = `${String(days).padStart(2, "0")}:${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+      const formattedTime: string = `${String(days).padStart(2, "0")}:${String(
+        hours
+      ).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(
+        seconds
+      ).padStart(2, "0")}`;
       setTimeLeft(formattedTime);
     };
 
@@ -47,13 +51,12 @@ const Navbar = () => {
   return (
     <>
       <nav className={"w-full fixed top-0 z-[999] border-b border-neutral-200"}>
-        <AnimatePresence>
-        </AnimatePresence>
+        <AnimatePresence></AnimatePresence>
         <div
           className={cn(
             outfit.className,
             "flex justify-between px-5 sm:px-10 xl:px-20 2xl:px-32 items-center w-full transition-all ease-in-out",
-            mode === "light" ? "bg-neutral-50" : "bg-stone-900",
+            mode === "light" ? "bg-neutral-50" : "bg-stone-900"
           )}
         >
           <Link
@@ -67,7 +70,7 @@ const Navbar = () => {
           >
             <p
               className={cn(
-                "text-center text-black text-lg lg:text-2xl lg:text-[28px] font-medium leading-7 py-6",
+                "text-center text-black text-lg lg:text-2xl lg:text-[28px] font-medium leading-7 py-6"
               )}
             >
               interface
@@ -80,10 +83,10 @@ const Navbar = () => {
           >
             <button
               className={cn(
-                "text-center text-sm font-medium leading-none py-2 px-4 border-t boreder-l border-b-4 border-r-2 border-secondary-green transition-all ease-in-out rounded-xl text-black bg-primary-green",
+                "text-center text-sm font-medium leading-none py-2 px-4 border-t boreder-l border-b-4 border-r-2 border-secondary-green transition-all ease-in-out rounded-xl text-black bg-primary-green"
               )}
             >
-              Recover your Funds
+              Book a Call
             </button>
           </Link>
           <div className="hidden lg:block">
@@ -97,14 +100,14 @@ const Navbar = () => {
                     ?.scrollIntoView({ behavior: "smooth", block: "end" });
                 }}
               >
-                <button
+                {/* <button
                   className={cn(
                     "font-semibold leading-tight transition-all ease-in-out",
-                    mode === "light" ? "text-zinc-900" : "text-white",
+                    mode === "light" ? "text-zinc-900" : "text-white"
                   )}
                 >
                   FAQ
-                </button>
+                </button> */}
               </Link>
               <Link
                 target="_blank"
@@ -113,7 +116,7 @@ const Navbar = () => {
                 <button
                   className={cn(
                     "font-semibold leading-tight transition-all ease-in-out",
-                    mode === "light" ? "text-zinc-900" : "text-white",
+                    mode === "light" ? "text-zinc-900" : "text-white"
                   )}
                 >
                   Join Us
@@ -123,7 +126,7 @@ const Navbar = () => {
                 <button
                   className={cn(
                     "font-semibold leading-tight transition-all ease-in-out",
-                    mode === "light" ? "text-zinc-900" : "text-white",
+                    mode === "light" ? "text-zinc-900" : "text-white"
                   )}
                 >
                   Login
@@ -136,10 +139,10 @@ const Navbar = () => {
               >
                 <button
                   className={cn(
-                    "text-center text-sm font-medium leading-none py-3 px-6 border-t boreder-l border-b-4 border-r-2 border-secondary-green transition-all ease-in-out rounded-xl text-interface-black bg-primary-green",
+                    "text-center text-sm font-medium leading-none py-3 px-6 border-t boreder-l border-b-4 border-r-2 border-secondary-green transition-all ease-in-out rounded-xl text-interface-black bg-primary-green"
                   )}
                 >
-                  Recover your Funds
+                  Book a Call
                 </button>
               </Link>
             </div>

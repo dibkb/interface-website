@@ -40,11 +40,11 @@ const About = () => {
       </div>
       <div className="z-10 relative flex flex-col gap-10 items-center justify-center w-full text-neutral-50 py-40 px-10 sm:px-16 lg:px-28 2xl:px-64">
         <h1 className="font-semibold 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl text-center max-w-3xl">
-          Check how much you can reclaim from marketplaces
+          Boost your top line
         </h1>
         <div
           className={cn(
-            "grid grid-cols-1 md:grid-cols-2 xl:gap-20 lg:gap-16 gap-10 2xl:gap-24 w-full lg:mt-10 mt-2",
+            "grid grid-cols-1 md:grid-cols-2 xl:gap-20 lg:gap-16 gap-10 2xl:gap-24 w-full lg:mt-10 mt-2"
           )}
         >
           <div className="w-full px-8 py-6 xl:px-16 xl:py-12 bg-[#FBFBFB]/10 rounded-lg border-2 border-secondary-green backdrop-blur-md flex flex-col items-center justify-center gap-2">
@@ -97,8 +97,8 @@ const About = () => {
           </div>
           <div className="w-full xl:px-16 xl:py-12 px-8 py-6 bg-[#FBFBFB]/10 rounded-lg border-2 border-secondary-green backdrop-blur-md flex flex-col items-center justify-center gap-2">
             <div className="flex w-full justify-between lg:text-base text-sm 2xl:text-lg font-semibold mb-5">
-              <p>Chargeback %</p>
-              <p>{chargebackPercentage}%</p>
+              <p>No of Employees</p>
+              <p>{chargebackPercentage}</p>
             </div>
             <div className="relative w-full">
               <Slider
@@ -111,8 +111,8 @@ const About = () => {
               />
             </div>
             <div className="flex w-full justify-between 2xl:text-lg lg:text-base text-sm font-semibold text-neutral-400">
-              <p>0.5%</p>
-              <p>10%</p>
+              <p>5</p>
+              <p>1000</p>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ const About = () => {
           <p>Your Savings</p>
           <div
             className={cn(
-              "bg-primary-green py-3 px-14 rounded-lg text-interface-black font-bold xl:text-3xl text-2xl 2xl:text-4xl border border-r-2 border-b-4 border-secondary-green",
+              "bg-primary-green py-3 px-14 rounded-lg text-interface-black font-bold xl:text-3xl text-2xl 2xl:text-4xl border border-r-2 border-b-4 border-secondary-green"
             )}
           >
             ${costSaved}
@@ -132,7 +132,7 @@ const About = () => {
             target="_blank"
           >
             <button className="bg-neutral-50 py-2 px-5 rounded-xl text-interface-black font-medium lg:text-base text-sm 2xl:text-lg border border-r-2 border-b-4 border-neutral-400 flex gap-2 items-center">
-              Recover your Funds <ArrowRight />
+              Book a Call <ArrowRight />
             </button>
           </Link>
           <p className="text-center font-semibold lg:text-base text-sm 2xl:text-lg">

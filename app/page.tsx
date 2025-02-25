@@ -32,7 +32,7 @@ export default function Home() {
       {/* <TrustedBy /> */}
       {/* <Agents /> */}
       <Define />
-      <FAQs />
+      {/* <FAQs /> */}
       <JoinUs />
       <Footer />
     </main>
