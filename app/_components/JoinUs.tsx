@@ -1,15 +1,15 @@
 import { cn } from "@/lib/utils";
-import { ArrowLeft, Buildings } from "@phosphor-icons/react";
+import { ArrowLeft } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import EagleOwl from "@/public/Integrations/Eagleowl.png";
-import Drive from "@/public/Integrations/Drive.png";
+// import EagleOwl from "@/public/Integrations/Eagleowl.png";
+// import Drive from "@/public/Integrations/Drive.png";
 import epos from "@/public/Integrations/eposnow.png";
-import Netsuite from "@/public/Integrations/Netsuite.png";
+// import Netsuite from "@/public/Integrations/Netsuite.png";
 import Brightpearl from "@/public/Integrations/Brightpearl.png";
 import target from "@/public/Integrations/target.png";
 import eu from "@/public/Integrations/eu copy.png";
-import kehe from "@/public/Integrations/kehe.png";
+import kehe from "@/public/Integrations/KeHe.png";
 import Link from "next/link";
 
 const JoinUs = () => {
