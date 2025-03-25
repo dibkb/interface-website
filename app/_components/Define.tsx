@@ -88,7 +88,7 @@ const Define = () => {
             )}
           >
             <span className="z-10 text-[50%] md:text-[100%] whitespace-nowrap">
-              Our Proprietary Models supercharge
+              Over 70% of brands fail at the shelf
             </span>
           </p>
           <p
@@ -103,12 +103,12 @@ const Define = () => {
                 playfairNormal.className
               )}
             >
-              your operations by 92.5%
+              don’t be one of them.
             </mark>
           </p>
         </div>
-        <p className="text-neutral-400 2xl:text-2xl xl:text-xl lg:text-lg text-center">
-          transform your supply chain in 4 simple steps
+        <p className="text-neutral-400 font-normal  xl:text-xl lg:text-lg text-center">
+          supercharge your revenue potential
         </p>
         <div className="border border-neutral-200 w-full grid grid-cols-1 md:grid-cols-2 justify-center gap-10 mt-10 py-16">
           <div
@@ -129,12 +129,12 @@ const Define = () => {
                   "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
-                Diagnose
+                Trade Promotion Management
               </h2>
-              <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                We distill LLMs on transaction data to flag payment
-                discrepancies and potential disputes before they impact your
-                bottom line.
+              <p className="text-neutral-400 font-normal text-sm lg:text-base">
+                Launch and optimize promotional events in seconds. Consolidate
+                your gross-to-net forecasting, analysis, and accruals—all in one
+                central platform
               </p>
             </div>
           </div>
@@ -154,12 +154,11 @@ const Define = () => {
                   "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
-                Automate
+                Deduction Management
               </h2>
-              <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                Our AI-powered procurement system streamlines sourcing,
-                negotiation, and approval workflows, reducing cycle times by
-                78%.
+              <p className="text-neutral-400 font-normal text-sm lg:text-base">
+                Contest invalid claims in a few clicks. Seamlessly route
+                deductions to the right stakeholders across departments
               </p>
             </div>
           </div>
@@ -182,8 +181,8 @@ const Define = () => {
                 Integrate
               </h2>
               <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                Our platform synchronizes product listings and catalogs across
-                multiple marketplaces, maintaining consistent data and pricing.
+                Integrate across all leading retailers - KeHe, UNFI, Target,
+                Walmart, Kroger, Walgreens, and many more
               </p>
             </div>
           </div>
@@ -203,12 +202,11 @@ const Define = () => {
                   "font-semibold text-left text-lg lg:text-xl"
                 )}
               >
-                Optimize
+                Sales Forecasting
               </h2>
               <p className="text-neutral-400 font-medium text-sm lg:text-base">
-                Our analytics engine identifies supplier relationship
-                opportunities and operational bottlenecks, turning supply chain
-                data into strategic advantage.
+                Seamlessly integrated sales and trade forecasting based on past
+                promotions and ML-based approach.
               </p>
             </div>
           </div>

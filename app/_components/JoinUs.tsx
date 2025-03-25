@@ -7,6 +7,9 @@ import Drive from "@/public/Integrations/Drive.png";
 import epos from "@/public/Integrations/eposnow.png";
 import Netsuite from "@/public/Integrations/Netsuite.png";
 import Brightpearl from "@/public/Integrations/Brightpearl.png";
+import target from "@/public/Integrations/target.png";
+import eu from "@/public/Integrations/eu copy.png";
+import kehe from "@/public/Integrations/kehe.png";
 import Link from "next/link";
 
 const JoinUs = () => {
@@ -38,7 +41,7 @@ const JoinUs = () => {
                 "opacity-0 top-[50%] xl:right-[50%] xl:top-[50%] right-[50%] rotate-0 scale-0"
             )}
           >
-            <Image className="" src={EagleOwl} alt="" />
+            <Image className="h-[44px] w-[44px]" src={eu} alt="" />
           </div>
           <div
             className={cn(
@@ -65,7 +68,7 @@ const JoinUs = () => {
                 "opacity-0 bottom-[50%] left-[50%] rotate-0 scale-0 xl:left-[50%] xl:bottom-[50%]"
             )}
           >
-            <Image className="" src={Drive} alt="" />
+            <Image className="" src={kehe} alt="" />
           </div>
           <div
             className={cn(
@@ -74,17 +77,17 @@ const JoinUs = () => {
                 "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] right-[50%] rotate-0 scale-0"
             )}
           >
-            <Image className="" src={Netsuite} alt="" />
+            <Image className="" src={target} alt="" />
           </div>
           <div
             className={cn(
-              "w-[214px] h-[245px] origin-top-left rotate-[42.48deg] bg-white rounded-3xl shadow border border-zinc-900/20 transition-all duration-1000 ease-in-out absolute opacity-100 top-10 -right-48 xl:right-24 hidden lg:block",
+              "w-[214px] h-[245px] origin-top-left rotate-[45deg] bg-white rounded-3xl shadow border border-zinc-900/20 transition-all duration-1000 ease-in-out absolute opacity-100 top-[190px] -right-48 xl:right-[150px] hidden lg:block",
               organised &&
                 "opacity-0 top-[50%] right-[50%] xl:right-[50%] xl:top-[50%] rotate-0 scale-0"
             )}
           >
             <div className="left-[23.16px] top-[27.27px] absolute text-zinc-400 text-xl font-extrabold">
-              Request for Quotation
+              Request for Proposal
             </div>
             <div className="left-[151px] top-[206px] absolute text-zinc-400 text-[8px] font-extrabold">
               sign here
@@ -95,16 +98,16 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[214px] h-[245px] origin-top-left rotate-[-33.98deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-150 duration-1000 opacity-100 top-64 xl:top-52 -left-16 xl:left-24 hidden lg:block",
+              "w-[214px] h-[245px] origin-top-left rotate-[-33.98deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-150 duration-1000 opacity-100 top-64 xl:top-[330px] -left-16 xl:left-[150px] hidden lg:block",
               organised &&
                 "opacity-0 top-[50%] left-[50%] rotate-0 scale-0 xl:left-[50%] xl:top-[50%]"
             )}
           >
             <div className="left-[23.16px] top-[27.27px] absolute text-zinc-400 text-xl font-extrabold ">
-              Settlement Report
+              Invoice
             </div>
             <div className="left-[22.32px] top-[63.94px] absolute text-zinc-400 text-[11px] font-extrabold ">
-              FBA Fees:
+              Deductions:
             </div>
             <div className="w-[88.34px] h-[9.39px] left-[22.09px] top-[87.80px] absolute bg-zinc-300 rounded-[13.25px]" />
             <div className="w-[59.08px] h-[9.39px] left-[22.09px] top-[104.92px] absolute bg-zinc-300 rounded-[13.25px]" />
@@ -124,13 +127,13 @@ const JoinUs = () => {
           </div>
           <div
             className={cn(
-              "w-[424px] h-[218px] overflow-hidden origin-top-left rotate-[-25.84deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-200 duration-1000 opacity-100 bottom-0 -right-40 xl:right-24 hidden lg:block",
+              "w-[424px] h-[218px] overflow-hidden origin-top-left rotate-[-30deg] bg-white rounded-3xl shadow border border-zinc-900/20 absolute transition-all ease-in-out delay-200 duration-1000 opacity-100 bottom-[100px] -right-40 xl:right-[100px] hidden lg:block",
               organised &&
                 "opacity-0 bottom-[50%] xl:right-[50%] xl:bottom-[50%] scale-0 right-[50%] rotate-0"
             )}
           >
             <div className="left-[23.16px] top-[27.27px] absolute text-zinc-400 text-xl font-extrabold ">
-              Goods Received Note (GRN)
+              Sales Forecast
             </div>
             <div className="left-[20px] top-[63px] absolute flex-col justify-start items-start inline-flex">
               <div className="justify-start items-start inline-flex">
@@ -278,7 +281,7 @@ const JoinUs = () => {
                   <p>Interface AI・[V1.1]</p>
                 </div>
                 <p className="text-center w-max text-stone-900 text-xl md:text-2xl lg:text-[44.12px] font-semibold  leading-[58.50px]">
-                  Start Automating Now
+                  Say Goodbye to Excel
                 </p>
               </div>
               <div className="flex gap-5 lg:gap-10 justify-center items-center w-full mt-2">
@@ -309,7 +312,7 @@ const JoinUs = () => {
                 </button>
               </div>
               <div className="text-center text-zinc-600 text-xs w-max lg:text-[21.92px] font-semibold flex gap-2 lg:gap-5 leading-loose items-center mt-2">
-                Get a free audit of how much we can save you.
+                Boost your top-line today!
               </div>
             </>
           )}

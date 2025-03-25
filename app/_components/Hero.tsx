@@ -74,9 +74,9 @@ const Hero = () => {
             grotesk.className
           )}
         >
-          Disrupt Supply Chain{" "}
+          Run Deductions and{" "}
           <span className={cn(playfair.className, "font-semibold")}>
-            Friction
+            Promotions
           </span>
           <br />
           <span className="inline-flex gap-8 text-center items-center">
@@ -100,13 +100,13 @@ const Hero = () => {
               {/* <CaretRight weight="bold" /> */}
               {/* <CaretRight weight="bold" /> */}
             </span>
-            with AI
+            on autopilot
           </span>
         </p>
         <p className="text-center lg:text-lg text-sm 2xl:text-lg font-medium text-[#A9A9A9]">
-          Stop leaving efficiency on the table.
+          Harness AI to optimize every promotion and recoup retailer deductions.
           <br />
-          Get started today and start optimizing what's rightfully yours.
+          Start maximizing your profits today.
         </p>
         {/* <div className="flex gap-4 items-center justify-center mt-2">
           {country && country !== "none" ? (
@@ -194,9 +194,7 @@ const Hero = () => {
               </button>
             </Link>
             <div className="absolute -top-10 -right-52 text-sm font-medium md:flex md:flex-row-reverse hidden">
-              <p className="w-36">
-                Get a free audit of how much bandwidth we can save you.
-              </p>
+              <p className="w-36">Boost your top-line today!</p>
               <Image
                 src={HomeArrow}
                 alt="HomeArrow"
@@ -208,10 +206,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 left-0 w-full">
+      <div className="absolute bottom-0 left-0 w-full">
         <div className="flex flex-col items-center justify-center text-[#A9A9A9] gap-2 pb-10 z-10">
           <p className="text-center xl:text-lg text-base 2xl:text-xl font-medium text-[#A9A9A9]">
-            See how much you can save
+            Say Goodbye to Excel
           </p>
           <div className="flex flex-col items-center justify-center">
             <CaretDown weight="bold" className="animate-fade-in-1" />
@@ -219,7 +217,7 @@ const Hero = () => {
             <CaretDown weight="bold" className="animate-fade-in-3" />
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

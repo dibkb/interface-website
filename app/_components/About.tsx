@@ -97,7 +97,7 @@ const About = () => {
           </div>
           <div className="w-full xl:px-16 xl:py-12 px-8 py-6 bg-[#FBFBFB]/10 rounded-lg border-2 border-secondary-green backdrop-blur-md flex flex-col items-center justify-center gap-2">
             <div className="flex w-full justify-between lg:text-base text-sm 2xl:text-lg font-semibold mb-5">
-              <p>No of Employees</p>
+              <p>Number of retailers</p>
               <p>{chargebackPercentage}</p>
             </div>
             <div className="relative w-full">
@@ -117,7 +117,7 @@ const About = () => {
           </div>
         </div>
         <div className="lg:mt-10 mt-2 flex flex-col items-center justify-center gap-2">
-          <p>Your Savings</p>
+          <p>Accelerate your top-line growth</p>
           <div
             className={cn(
               "bg-primary-green py-3 px-14 rounded-lg text-interface-black font-bold xl:text-3xl text-2xl 2xl:text-4xl border border-r-2 border-b-4 border-secondary-green"
