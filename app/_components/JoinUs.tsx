@@ -341,7 +341,7 @@ const JoinUs = () => {
                 />
                 <button
                   className={cn(
-                    "text-center min-w-max bg-stone-900 text-neutral-50 text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight w-max px-3 py-3"
+                    "text-center min-w-max bg-stone-900 text-neutral-50 text-xs lg:text-[21.74px] font-semibold lg:leading-7 tracking-tight w-full px-3 py-3"
                   )}
                 >
                   Get Updates

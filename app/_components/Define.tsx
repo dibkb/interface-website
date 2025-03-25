@@ -113,7 +113,7 @@ const Define = () => {
         <div className="border border-neutral-200 w-full grid grid-cols-1 md:grid-cols-2 justify-center gap-10 mt-10 py-16">
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full aspect-square"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full md:aspect-square"
             )}
             ref={containerRef}
           >
@@ -140,7 +140,7 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-l border-t border-b p-5 aspect-square"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-l border-t border-b p-5 h-full md:aspect-square"
             )}
             ref={containerRef}
           >
@@ -164,7 +164,7 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-r border-t border-b p-5 aspect-square"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-r border-t border-b p-5 h-full md:aspect-square"
             )}
             ref={containerRef}
           >
@@ -188,7 +188,7 @@ const Define = () => {
           </div>
           <div
             className={cn(
-              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-l border-t border-b p-5 aspect-square"
+              "relative flex flex-col w-full items-center justify-between gap-10 overflow-hidden md:border-l border-t border-b p-5 h-full md:aspect-square"
             )}
             ref={containerRef}
           >

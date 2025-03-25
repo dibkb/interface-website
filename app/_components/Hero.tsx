@@ -80,7 +80,7 @@ const Hero = () => {
           </span>
           <br />
           <span className="inline-flex gap-8 text-center items-center">
-            <span className="flex xl:text-3xl text-3xl 2xl:text-6xl tracking-tighter font-black">
+            <span className="hidden sm:flex xl:text-3xl text-3xl 2xl:text-6xl tracking-tighter font-black">
               <Image
                 className="animate-fade-in-1"
                 src={ArrowRightSVG}
